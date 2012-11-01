@@ -10,13 +10,6 @@ describe "UserPages" do
 
   end
 
-  describe "profile page" do
-    let(:user) { FactoryGirl.create(:user) }
-    before { visit user_path(user) }
-
-    it { should have_valid_header_and_title(user.name, user.name) }
-  end
-
   describe "signup" do
 
     before { visit signup_path }
@@ -101,51 +94,75 @@ describe "UserPages" do
 
   end
 
-  describe "index" do
+  describe "show" do
+    let(:user) { FactoryGirl.create(:user) }
     before do
-      valid_signin FactoryGirl.create(:user)
-      FactoryGirl.create(:user, name: "Bob", email: "bob@example.com")
-      FactoryGirl.create(:user, name: "Ben", email: "ben@example.com")
-      visit users_path
+      valid_signin(user)
+      visit user_path(user)    # should redirect to Home
     end
-
-    it { should have_valid_header_and_title('All users','All users') }
-
-    describe "pagination" do
-
-      before(:all) { 30.times { FactoryGirl.create(:user) } }
-      after(:all)  { User.delete_all }
-
-      it { should have_selector('div.pagination') }
-
-      it "should list each user" do
-        User.paginate(page: 1).each do |user|
-          page.should have_selector('li', text: user.name)
-        end
-      end
-    end
-
-    describe "delete links" do
-
-      it { should_not have_link('delete') }
-
-      describe "as an admin user" do
-        let(:admin) { FactoryGirl.create(:admin) }
-        before do
-          valid_signin admin
-          visit users_path
-        end
-
-        it { should have_link('delete', href: user_path(User.first)) }
-        it "should be able to delete another user" do
-          expect { click_link('delete') }.to change(User, :count).by(-1)
-        end
-        it { should_not have_link('delete', href: user_path(admin)) }
-      end
-    end
-
+    it { should have_valid_header_and_title(user.name, user.name) }
   end
 
+  describe "index" do
+    describe "with non-admin user" do
+      let(:user) { FactoryGirl.create(:user) }
+      before do
+        valid_signin(user)
+        visit users_path    # should redirect to Home
+      end
+      it { should have_valid_header_and_title('Homewatch', '') }
+    end
+
+    describe "with admin user" do
 
 
+      let(:admin) { FactoryGirl.create(:admin) }
+      # FactoryGirl.create(:user, name: "Bob", email: "bob@example.com")
+      # FactoryGirl.create(:user, name: "Ben", email: "ben@example.com")
+      before do
+        valid_signin admin
+        visit users_path
+      end
+
+      it { should have_valid_header_and_title('All users','All users') }
+
+      describe "pagination" do
+
+        before(:all) { 30.times { FactoryGirl.create(:user) } }
+        after(:all)  { User.delete_all }
+
+        it { should have_selector('div.pagination') }
+
+        it "should list each user" do
+          User.paginate(page: 1).each do |user|
+            page.should have_selector('li', text: user.name)
+          end
+        end
+
+        describe "user links" do
+          let(:user) { User.first }
+          it { should have_link('delete', href: user_path(user)) }
+          it { should_not have_link('edit', href: edit_user_path(user)) }
+        end
+
+        describe "view other user profile" do
+          let(:user) { User.first }
+          before do
+            click_link(user.name)
+          end
+          it { should have_valid_header_and_title(user.name, user.name) }
+        end
+
+        describe "delete other user" do
+          it "should be able to delete another user" do
+            expect { click_link('delete') }.to change(User, :count).by(-1)
+          end
+        end
+      end
+      describe "Check admin links" do
+        it { should_not have_link('delete', href: user_path(admin)) }
+        it { should have_link('edit', href: edit_user_path(admin)) }
+      end
+    end
+  end
 end

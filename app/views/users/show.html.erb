@@ -5,6 +5,7 @@
       <h1>
         <%= gravatar_for @user, size: 40 %>
         <%= @user.name %>
+        <%=  render "user_edit_links", user: @user, current_user: current_user %>
       </h1>
     </section>
   </aside>

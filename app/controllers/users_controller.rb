@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, only: [:edit, :update, :index, :destroy]
+  before_filter :signed_in_user, only: [:edit, :update, :destroy, :show]
   before_filter :correct_user,   only: [:edit, :update]
-  before_filter :admin_user,     only: :destroy
+  before_filter :correct_or_admin_user, only: [:show]
+  before_filter :admin_user,     only: [:destroy, :index]
   before_filter :signed_out_user, only: [:create, :new ]
 
 
@@ -17,7 +18,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       sign_in @user
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "Welcome to Homewatch"
       redirect_to @user
     else
       render 'new'
@@ -72,9 +73,14 @@ class UsersController < ApplicationController
   end
 
   def admin_user
-    redirect_to(root_path) unless current_user.admin?
+    redirect_to(root_path) unless (current_user && current_user.admin?)
   end
 
+  def correct_or_admin_user
+    @user = User.find(params[:id])
+    redirect_to(root_path) unless (current_user?(@user) || (current_user && current_user.admin?))
+  end
+                                                                                               quit
 
 
 end

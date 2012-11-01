@@ -33,17 +33,24 @@ describe "Authentication" do
 
       it { should have_valid_header_and_title(nil, user.name) }
 
-      it { should have_link('Users',    href: users_path) }
+      it { should_not have_link('Users',    href: users_path) }
       it { should have_link('Profile', href: user_path(user)) }
       it { should have_link('Settings', href: edit_user_path(user)) }
       it { should have_link('Sign out', href: signout_path) }
 
       it { should_not have_link('Sign in', href: signin_path) }
 
-      describe "followed by signout" do
+     describe "followed by signout" do
         before { click_link "Sign out" }
         it { should have_link('Sign in') }
-      end
+     end
+
+     describe "with admin user" do
+        let(:admin) { FactoryGirl.create(:admin) }
+        before { valid_signin(admin) }
+        it { should have_link('Users',    href: users_path) }
+     end
+
 
     end
   end
@@ -64,6 +71,11 @@ describe "Authentication" do
 
         describe "visiting the edit page" do
           before { visit edit_user_path(user) }
+          it { should have_valid_header_and_title(nil, 'Sign in') }
+        end
+
+        describe "visiting the profile page" do
+          before { visit user_path(user) }
           it { should have_valid_header_and_title(nil, 'Sign in') }
         end
 
@@ -104,7 +116,7 @@ describe "Authentication" do
 
         describe "visiting the user index" do
           before { visit users_path }
-          it { should have_selector('title', text: 'Sign in') }
+          it { should have_valid_header_and_title('Homewatch', '') }
         end
 
       end
@@ -124,6 +136,12 @@ describe "Authentication" do
         before { put user_path(wrong_user) }
         specify { response.should redirect_to(root_path) }
       end
+
+      describe "profile page" do
+        before { visit user_path(wrong_user) }
+       it { should have_valid_header_and_title('Homewatch', '') }
+      end
+
     end
 
     describe "as non-admin user" do
@@ -144,7 +162,7 @@ describe "Authentication" do
 
       describe "trying to sign up" do
         before { visit signup_path }
-        it { should have_valid_header_and_title('Sample App', '') }
+        it { should have_valid_header_and_title('Homewatch', '') }
         # specify { response.should redirect_to(root_path) }
       end
 

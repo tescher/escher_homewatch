@@ -7,7 +7,7 @@ describe "Static pages" do
 
   describe "Home page" do
     before { visit root_path }
-    it { should have_valid_header_and_title('Sample App', '') }
+    it { should have_valid_header_and_title('Homewatch', '') }
     it { should_not have_home_title }
   end
 
@@ -38,7 +38,7 @@ describe "Static pages" do
     click_link "Home"
     click_link "Sign up now!"
     page.should have_valid_header_and_title(nil, 'Sign up')
-    click_link "sample app"
+    click_link "homewatch"
     page.should # fill in
   end
 end
