@@ -14,7 +14,7 @@ EscherHomewatch::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
@@ -34,4 +34,17 @@ EscherHomewatch::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # ActionMailer settings
+  config.action_mailer.default_url_options = { :host => "192.168.0.123:3000" }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      address:              'mail.eschers.com',
+      port:                 26,
+      domain:               'eschers.com',
+      user_name:            'dummy@eschers.com',
+      password:             'terrid1',
+      authentication:       'plain',
+      enable_starttls_auto: false  }
+
 end
