@@ -16,6 +16,9 @@ describe User do
   before do
     @user = User.new(name: "Example User", email: "user@example.com",
                      password: "foobar", password_confirmation: "foobar")
+    @user.password_reset_token = "12345"
+    @user.password_reset_sent_at = Time.zone.now
+
   end
 
   subject { @user }
@@ -28,6 +31,8 @@ describe User do
   it { should respond_to(:remember_token) }
   it { should respond_to(:admin) }
   it { should respond_to(:authenticate) }
+  it { should respond_to(:password_reset_token) }
+  it { should respond_to(:password_reset_sent_at) }
 
 
   it { should be_valid }

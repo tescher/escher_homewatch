@@ -46,6 +46,12 @@ describe "Authentication" do
       end
 
     end
+
+    describe "forgot password" do
+      before { click_link "Forgot password?" }
+      it { should have_valid_header_and_title('Password Reset', 'Password Reset') }
+    end
+
   end
 
   describe "authorization" do
