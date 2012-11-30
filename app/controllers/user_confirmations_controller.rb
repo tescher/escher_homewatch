@@ -1,5 +1,4 @@
 class UserConfirmationsController < ApplicationController
-  include UserConfirmationsHelper
 
   def new
   end
