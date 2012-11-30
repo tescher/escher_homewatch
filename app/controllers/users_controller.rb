@@ -1,7 +1,6 @@
 
 
 class UsersController < ApplicationController
-  include UserConfirmationsHelper
 
   before_filter :signed_in_user, only: [:edit, :update, :destroy, :show]
   before_filter :correct_user,   only: [:edit, :update]
