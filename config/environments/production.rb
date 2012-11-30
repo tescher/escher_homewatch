@@ -66,7 +66,7 @@ EscherHomewatch::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   # ActionMailer settings
-  config.action_mailer.default_url_options = { :host => "shielded-castle-3741.herokuapp.com" }
+  config.action_mailer.default_url_options = { :host => "https://shielded-castle-3741.herokuapp.com" }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
       address:              'mail.eschers.com',
