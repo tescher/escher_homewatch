@@ -1,0 +1,11 @@
+<% provide(:title, "User Confirmation") %>
+<h1>User Confirmation</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_tag user_confirmations_path, :method => :post do %>
+       <%= hidden_field_tag 'email', params[:email] %>
+       <div class="actions"><%= submit_tag "Send confirmation e-mail" %></div>
+    <% end %>
+  </div>
+</div>
