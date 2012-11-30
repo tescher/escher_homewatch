@@ -2,11 +2,18 @@
 #
 # Table name: users
 #
-#  id         :integer          not null, primary key
-#  name       :string(255)
-#  email      :string(255)
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id                     :integer          not null, primary key
+#  name                   :string(255)
+#  email                  :string(255)
+#  created_at             :datetime         not null
+#  updated_at             :datetime         not null
+#  password_digest        :string(255)
+#  remember_token         :string(255)
+#  admin                  :boolean          default(FALSE)
+#  password_reset_token   :string(255)
+#  password_reset_sent_at :datetime
+#  state                  :string(255)
+#  confirmation_token     :string(255)
 #
 
 require 'spec_helper'
@@ -33,6 +40,10 @@ describe User do
   it { should respond_to(:authenticate) }
   it { should respond_to(:password_reset_token) }
   it { should respond_to(:password_reset_sent_at) }
+  it { should respond_to(:pend) }
+  it { should respond_to(:activate) }
+  it { should respond_to(:state) }
+  it { should respond_to(:confirmation_token) }
 
   it { should be_valid }
   it { should_not be_admin }
@@ -44,6 +55,23 @@ describe User do
     end
 
     it { should be_admin }
+  end
+
+  describe "Pended upon creation" do
+    it { should be_pended }
+  end
+
+  describe "Activate" do
+    before { @user.activate! }
+    it { should be_active }
+  end
+
+  describe "Re-pend" do
+    before {
+      @user.activate!
+      @user.pend!
+    }
+    it { should be_pended }
   end
 
   describe "accessible attributes" do
@@ -154,6 +182,22 @@ describe User do
   describe "remember token" do
     before { @user.save }
     its(:remember_token) { should_not be_blank }
+  end
 
+  describe "password reset token" do
+    before {
+      @user.save!
+      @user.password = @user.password_confirmation = nil
+      @user.send_password_reset
+    }
+    its(:password_reset_token) { should_not be_blank }
+  end
+
+  describe "confirmation token" do
+    before {
+      @user.save!
+      @user.send_confirmation
+    }
+    its(:confirmation_token) { should_not be_blank }
   end
 end

@@ -1,11 +1,19 @@
 EscherHomewatch::Application.routes.draw do
+  # get "user_confirmations/new"
+
   get "password_resets/new"
+
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :password_resets
+  resources :user_confirmations
+
+  # match 'user_confirmations/:id' => 'user_confirmations#update', via: :get
 
   root to: 'static_pages#home'
+
+
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'

@@ -1,4 +1,8 @@
+
+
 class UsersController < ApplicationController
+  include UserConfirmationsHelper
+
   before_filter :signed_in_user, only: [:edit, :update, :destroy, :show]
   before_filter :correct_user,   only: [:edit, :update]
   before_filter :correct_or_admin_user, only: [:show]
@@ -17,9 +21,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      sign_in @user
-      flash[:success] = "Welcome to Homewatch"
-      redirect_to @user
+      send_user_confirmation
+      redirect_to root_url
     else
       render 'new'
     end

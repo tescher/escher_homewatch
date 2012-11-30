@@ -40,16 +40,28 @@ describe "Authentication" do
 
       it { should_not have_link('Sign in', href: signin_path) }
 
-     describe "followed by signout" do
+      describe "followed by signout" do
         before { click_link "Sign out" }
         it { should have_link('Sign in') }
-     end
+      end
 
-     describe "with admin user" do
+      describe "with admin user" do
         let(:admin) { FactoryGirl.create(:admin) }
         before { valid_signin(admin) }
         it { should have_link('Users',    href: users_path) }
-     end
+      end
+
+      describe "as pending user" do
+        let(:pended) { FactoryGirl.create(:pended) }
+        before { valid_signin(pended) }
+        it { should have_valid_header_and_title('User Confirmation', 'User Confirmation') }
+        it { should have_error_message('not confirmed') }
+        describe "send confirmation again" do
+          before { click_button "Send confirmation e-mail" }
+          it { should have_valid_header_and_title('Welcome', '') }
+          it { should have_success_message('Confirmation e-mail sent') }
+        end
+      end
 
 
     end

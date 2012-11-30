@@ -6,8 +6,13 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by_email(params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
-      sign_in user
-      redirect_back_or user
+      if !user.active?
+        flash[:error] = 'Your user record is not confirmed. Follow instructions on your confirmation e-mail or click below to re-send the e-mail.'
+        redirect_to new_user_confirmation_path email: user.email
+      else
+        sign_in user
+        redirect_back_or user
+      end
     else
       flash.now[:error] = 'Invalid email/password combination'
       render 'new'

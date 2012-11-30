@@ -45,11 +45,10 @@ describe "UserPages" do
 
       describe "after saving the user" do
         before { click_button submit }
-        let(:user) { User.find_by_email('user@example.com') }
 
-        it { should have_valid_header_and_title(nil, user.name) }
-        it { should have_success_message('Welcome') }
-        it { should have_link('Sign out') }
+        it { should have_valid_header_and_title('Welcome', '') }
+        it { should have_success_message('Confirmation e-mail') }
+        it { should have_link('Sign in') }
 
       end
 
