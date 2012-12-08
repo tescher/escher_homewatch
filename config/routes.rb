@@ -1,13 +1,18 @@
 EscherHomewatch::Application.routes.draw do
+  # get "sensors/new"
+
   # get "user_confirmations/new"
 
   get "password_resets/new"
 
 
   resources :users
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :sessions, only: [:new, :create, :destroy] do
+    get 'isadmin', on: :collection
+  end
   resources :password_resets
   resources :user_confirmations
+  resources :sensors, only: [:new, :create, :update, :edit, :index, :destroy]
 
   # match 'user_confirmations/:id' => 'user_confirmations#update', via: :get
 

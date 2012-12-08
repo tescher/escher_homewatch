@@ -1,0 +1,66 @@
+
+<%= form_for(@sensor, class: "formSensor", remote: true) do |f| %>
+    <%= render 'shared/error_messages', :subject => @sensor %>
+    <%=  field_set_tag 'Basic' do %>
+
+        <table id="sensor_basic_table">
+          <tr>
+            <td><%= f.label :name, "Name:" %></td>
+            <td><%= f.text_field :name %></td>
+            <td><%= f.label :trigger_upper_limit, "Alarm High:" %></td>
+            <td><%= f.text_field :trigger_upper_limit %></td>
+            <td><%= f.label :trigger_upper_name, "Name:" %></td>
+            <td><%= f.text_field :trigger_upper_name %></td>
+          </tr>
+          <tr>
+            <td><%= f.label :group, "Group:" %></td>
+            <td><%= f.text_field :group %></td>
+            <td><%= f.label :trigger_lower_limit, "Alarm Low:" %></td>
+            <td><%= f.text_field :trigger_lower_limit %></td>
+            <td><%= f.label :trigger_lower_name, "Name:" %></td>
+            <td><%= f.text_field :trigger_lower_name %></td>
+          </tr>
+          <tr>
+            <td><%= f.label :controller, "Controller:" %></td>
+            <td><%= f.text_field :controller %></td>
+            <td><%= f.label :trigger_email, "Alarm Email:" %></td>
+            <td colspan="3"><%= f.text_field :trigger_email %></td>
+          </tr>
+          <tr>
+            <td><%= f.label :addressH, "Addr High:" %></td>
+            <td><%= f.text_field :addressH %></td>
+            <td><%= f.label :trigger_delay, "Alarm Delay:" %></td>
+            <td><%= f.text_field :trigger_delay %></td>
+          </tr>
+          <tr>
+            <td><%= f.label :addressL, "Addr Low:" %></td>
+            <td><%= f.text_field :addressL %></td>
+            <td ><%= f.check_box :trigger_enabled %></td>
+            <td><%= f.label :trigger_enabled, "Alarm Enabled" %></td>
+            <td ><%= f.check_box :absence_alert %></td>
+            <td><%= f.label :addressL, "Absence Alarm" %></td>
+          </tr>
+        </table>
+
+    <% end %>
+
+    <%=  field_set_tag 'Advanced' do %>
+
+        <table id="sensor_advanced_table">
+          <tr>
+            <td><%= f.label :sensor_type_id, "Type:" %></td>
+            <td><%= f.collection_select :sensor_type_id, SensorType.all, :id, :name, :prompt => true %></td>
+            <td><%= f.label :offset, "Offset:" %></td>
+            <td><%= f.text_field :offset %></td>
+          </tr>
+          <tr>
+            <td><%= f.label :interval, "Interval:" %></td>
+            <td><%= f.text_field :interval %></td>
+            <td><%= f.label :scale, "Scale:" %></td>
+            <td><%= f.text_field :scale %></td>
+        </table>
+
+    <% end %>
+
+
+<% end %>

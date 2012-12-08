@@ -11,7 +11,38 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121125165114) do
+ActiveRecord::Schema.define(:version => 20121204144408) do
+
+  create_table "sensor_types", :force => true do |t|
+    t.string   "name"
+    t.float    "offset"
+    t.float    "scale"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "sensors", :force => true do |t|
+    t.string   "name"
+    t.integer  "sensor_type_id"
+    t.integer  "user_id"
+    t.string   "group"
+    t.string   "controller"
+    t.integer  "addressH"
+    t.integer  "addressL"
+    t.float    "offset"
+    t.float    "scale"
+    t.integer  "interval"
+    t.float    "trigger_upper_limit"
+    t.float    "trigger_lower_limit"
+    t.integer  "trigger_delay"
+    t.string   "trigger_email"
+    t.boolean  "trigger_enabled"
+    t.boolean  "absence_alert"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.string   "trigger_lower_name"
+    t.string   "trigger_upper_name"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"

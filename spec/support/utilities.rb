@@ -37,3 +37,38 @@ def valid_signin(user)
   cookies[:remember_token] = user.remember_token
 end
 
+def valid_email_check(subject)
+  pp subject
+  describe "when email format is invalid" do
+    it "should be invalid" do
+      addresses = %w[user@foo,com user_at_foo.org example.user@foo.
+                     foo@bar_baz.com foo@bar+baz.com]
+      addresses.each do |invalid_address|
+        subject.email = invalid_address
+        subject.should_not be_valid
+      end
+    end
+  end
+
+  describe "when email format is valid" do
+    it "should be valid" do
+      addresses = %w[user@foo.COM A_US-ER@f.b.org frst.lst@foo.jp a+b@baz.cn]
+      addresses.each do |valid_address|
+        subject.email = valid_address
+        subject.should be_valid
+      end
+    end
+  end
+
+  describe "email address with mixed case" do
+    let(:mixed_case_email) { "Foo@ExAMPle.CoM" }
+
+    it "should be saved as all lower-case" do
+      subject.email = mixed_case_email
+      subject.save
+      subject.reload.email.should == mixed_case_email.downcase
+    end
+  end
+
+end
+

@@ -23,4 +23,18 @@ class SessionsController < ApplicationController
     sign_out
     redirect_to root_url
   end
+
+  def isadmin
+    if signed_in?
+      if current_user.admin?
+        puts "Rendering true"
+        render text: 'true'
+      else
+        puts "Rendering false"
+        render text: 'false'
+      end
+    else
+      render nothing: true
+    end
+  end
 end

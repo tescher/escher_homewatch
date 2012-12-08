@@ -15,7 +15,10 @@
   <% end %>
   <%= yield %>
   <%= render 'layouts/footer' %>
-  <%= debug(params) if Rails.env.development? %>
+  <% if Rails.env.development? %>
+    <% paramsplus = params.merge(current_user: current_user.id) if current_user %>
+    <%= debug(paramsplus) %>
+  <% end %>
 </div>
 </body>
 </html>

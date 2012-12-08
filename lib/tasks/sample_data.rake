@@ -18,4 +18,10 @@ namespace :db do
       user.activate!
     end
   end
+  desc "Seed with the reference data"
+  namespace :test do
+    task :prepare => :environment do
+      Rake::Task["db:seed"].invoke
+    end
+  end
 end
