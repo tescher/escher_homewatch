@@ -17,29 +17,36 @@ describe "SensorPages" do
 
 
   describe "index" do
-    describe "with non-admin user", js: true  do
+    describe "with non-admin user"  do
       let(:user) { FactoryGirl.create(:user) }
       before do
         2.times { FactoryGirl.create(:sensor, user_id: user.id) }
         valid_signin(user)
-        visit sensors_path
       end
-      it { should have_valid_header_and_title('Manage Sensors', 'Manage Sensors') }
+      it {
+        visit sensors_path
+        should have_valid_header_and_title('Manage Sensors', 'Manage Sensors')
+      }
 
       it "should list this user's sensors" do
         get sensors_path, format: "js"
+        pp response.body
         parsed_body = JSON.parse(response.body)
         parsed_body["rows"].count.should == 2
         parsed_body["rows"].each do |row|
           cell = row["cell"]
-          cell[cell.length-1].should == user.id
+          cell[cell.length-1].should == user.name
         end
       end
 
-      it "should pop-up an edit form" do
-        page.find(:xpath, "//table[@id='flexSensors']//tr/td").click
-        page.should have_xpath ("//div[@role='dialog']")
-      end
+      #it "should pop-up an edit form" do
+      #  visit sensors_path
+      #  wait_for_ajax
+      #  wait_for_dom
+      #  pp page.body
+      #  page.find(:xpath, "//table[@id='flexSensors']//tr/td").click
+      #  page.should have_xpath ("//div[@role='dialog']")
+      #end
     end
 
 
@@ -125,10 +132,33 @@ describe "SensorPages" do
         post sensors_path
         response.should redirect_to(root_url)
       end
-
-
-
     end
+
+    describe "get config" do
+      let(:sensor) { Sensor.first }
+
+      it "should list this controller's sensors" do
+        cntrl = sensor.controller
+        key_hash = 0
+        cntrl.each_byte do |b|
+          key_hash += b
+        end
+        key_hash *= REQUEST_KEY_MAGIC
+        pp key_hash
+        get getconfig_sensors_path, cntrl: cntrl, key: key_hash
+        pp response.body
+        response.body.should_not be_blank
+        parsed_body = JSON.parse(response.body)
+        parsed_body.count.should == 8
+        parsed_body.each do |row|
+          row["id"].should_not be_nil
+          row["addressH"].should_not be_nil
+          row["addressL"].should_not be_nil
+          row["interval"].should_not be_nil
+        end
+      end
+    end
+
 
   end
 end

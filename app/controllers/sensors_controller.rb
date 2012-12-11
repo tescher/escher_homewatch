@@ -93,6 +93,27 @@ class SensorsController < ApplicationController
     end #respond_to  end
   end
 
+  def getconfig
+    @count = 0 if !@count
+    @count += 1
+    if @count > 1
+      raise
+    end
+    cntrl = params[:cntrl]
+    key_hash = params[:key]
+    if request_key_valid(key_hash, cntrl)
+      sensors = Sensor.find_all_by_controller(cntrl)
+      render :json =>
+          sensors.collect{|s| {
+              :id => s.id,
+              :addressH => s.addressH,
+              :addressL => s.addressL,
+              :interval => s.interval}}
+    else
+      render nothing: true
+    end
+  end
+
   def destroy
     if request.xhr?
       Sensor.find(params[:id]).destroy

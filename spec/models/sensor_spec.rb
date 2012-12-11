@@ -107,6 +107,24 @@ describe Sensor do
     it { should_not be_valid }
   end
 
+  describe "when offset is not present" do
+    before { @sensor.offset = nil }
+    it { should_not be_valid }
+  end
+
+  describe "when scale is not present" do
+    before { @sensor.scale = nil }
+    it { should_not be_valid }
+  end
+
+  describe "Default interval" do
+    before do
+      @sensor.interval = nil
+      @sensor.save!
+    end
+    it { @sensor.interval.should eql(30000) }
+  end
+
   describe "when another device already has that address" do
     before do
       sensor_with_same_address = @sensor.dup

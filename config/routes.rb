@@ -1,7 +1,4 @@
 EscherHomewatch::Application.routes.draw do
-  # get "sensors/new"
-
-  # get "user_confirmations/new"
 
   get "password_resets/new"
 
@@ -12,7 +9,10 @@ EscherHomewatch::Application.routes.draw do
   end
   resources :password_resets
   resources :user_confirmations
-  resources :sensors, only: [:new, :create, :update, :edit, :index, :destroy]
+  resources :sensors, only: [:new, :create, :update, :edit, :index, :destroy] do
+    get 'getconfig', on: :collection
+  end
+  resources :measurements, only: [:index, :create]
 
   # match 'user_confirmations/:id' => 'user_confirmations#update', via: :get
 
