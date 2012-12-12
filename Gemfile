@@ -12,6 +12,7 @@ gem 'pg', '0.12.2'
 gem 'state_machine'
 gem 'validates_existence'
 gem 'jquery-ui-rails'
+gem 'rack-ssl-enforcer'
 
 group :development, :test do
   # gem 'sqlite3', '1.3.5'
