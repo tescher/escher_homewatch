@@ -5,7 +5,7 @@ describe "SensorPages" do
   before(:each) do
     3.times { FactoryGirl.create(:user) }
     User.all.each do |user|
-      2.times { FactoryGirl.create(:sensor, user_id: user.id) }
+      2.times { FactoryGirl.create(:sensor, user_id: user.id, controller: "BasementArduino") }
     end
   end
   after(:each) do
@@ -70,7 +70,7 @@ describe "SensorPages" do
   describe "with direct accesses" do
     let(:user) { FactoryGirl.create(:user) }
     before do
-      2.times { FactoryGirl.create(:sensor, user_id: user.id) }
+      2.times { FactoryGirl.create(:sensor, user_id: user.id, controller: "BasementArduino") }
     end
 
     describe "with logged out user" do
@@ -144,6 +144,7 @@ describe "SensorPages" do
           key_hash += b
         end
         key_hash *= REQUEST_KEY_MAGIC
+        key_hash %= 32768
         pp key_hash
         get getconfig_sensors_path, cntrl: cntrl, key: key_hash
         pp response.body

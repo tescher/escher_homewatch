@@ -6,6 +6,7 @@ module SensorsHelper
       check_hash += b
     end
     check_hash *= REQUEST_KEY_MAGIC
+    check_hash %= 32768
     hash.to_i == check_hash
   end
 end
