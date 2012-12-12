@@ -14,7 +14,37 @@ $grayMediumLight: #eaeaea;
   background-color: $blueDark;
   background-image: none;
   background-repeat: no-repeat;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;;
   filter: none;
+}
+
+.navbar-fixed-top {
+  right: auto;
+  left: auto;
+}
+
+// Links
+.navbar .nav > li > a {
+  color: #DDD;
+  font-weight: bold;
+}
+
+// Hover
+.navbar .nav > li > a:hover {
+  // background-color: $navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover from .active
+  color: white;
+  text-decoration: underline;
+}
+
+.btn-cell {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+table.center {
+  margin: auto;
 }
 
 /* universal */
@@ -25,6 +55,8 @@ html {
 
 body {
   padding-top: 60px;
+  width: 940px;
+  margin: auto;
 }
 
 section {
@@ -42,6 +74,10 @@ textarea {
   }
 }
 
+.active-area {
+  width: auto;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,6 +89,13 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+}
+
+.page-title {
+  h1 {
+    font-size: 2em;
+    text-align: left;
+  }
 }
 
 h2 {
@@ -75,13 +118,15 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
+  font-size: 2em;
+  font-family: "Verdana";
   color: white;
   /* text-transform: uppercase; */
   letter-spacing: -1px;
   padding-top: 9px;
+  padding-left: 10px;
   font-weight: bold;
-  line-height: 1;
+  /* line-height: 1; */
   &:hover {
     color: white;
     text-decoration: none;

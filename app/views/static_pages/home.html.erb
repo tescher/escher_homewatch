@@ -2,10 +2,18 @@
   <h1>Welcome to Homewatch</h1>
 
   <h2>
-    Need some text here.
+    DIY Home Monitoring
   </h2>
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+  <table class="center"><tr>
+  <% if signed_in? %>
+      <td class="btn-cell"><%= link_to "Manage sensors", sensors_path, class: "btn btn-large btn-primary" %></td>
+      <td class="btn-cell"><%= link_to "Help", help_path, class: "btn btn-large btn-primary" %></td>
+  <% else  %>
+      <td class="btn-cell"><%= link_to "Learn more", help_path, class: "btn btn-large btn-primary" %></td>
+      <td class="btn-cell"><%= link_to "Sign in", signin_path, class: "btn btn-large btn-primary" %></td>
+      <td class="btn-cell"><%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %></td>
+  <% end %>
+  </tr></table>
 </div>
 
 <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
