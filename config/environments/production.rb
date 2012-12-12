@@ -29,7 +29,7 @@ EscherHomewatch::Application.configure do
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
-  config.middleware.use Rack::SslEnforcer, except: ['/sensors/getconfig', '/measurements/file']
+  config.middleware.use Rack::SslEnforcer, except: ['/sensors/getconfig', '/measurements']
 
   # See everything in the log (default is :info)
   # config.log_level = :debug

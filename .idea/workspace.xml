@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
     </list>
     <ignored path="sample_app.iws" />
@@ -90,7 +89,7 @@
           <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="8" column="52" selection-start="362" selection-end="362" vertical-scroll-proportion="0.15364917">
+                <state line="31" column="88" selection-start="1265" selection-end="1265" vertical-scroll-proportion="0.5953905">
                   <folding />
                 </state>
               </provider>
@@ -1315,13 +1314,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/initializers/constants.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/sensor_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="72" column="21" selection-start="2210" selection-end="2210" vertical-scroll-proportion="0.0">
@@ -1420,9 +1412,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/measurements_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="29" selection-start="810" selection-end="810" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="52" selection-start="362" selection-end="362" vertical-scroll-proportion="0.15364917">
+        <state line="31" column="88" selection-start="1265" selection-end="1265" vertical-scroll-proportion="0.5953905">
           <folding />
         </state>
       </provider>
