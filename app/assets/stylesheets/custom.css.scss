@@ -50,13 +50,21 @@ table.center {
 /* universal */
 
 html {
-  overflow-y: scroll;
+  height: 100%;
+  background-color: #eee;
 }
 
 body {
   padding-top: 60px;
   width: 940px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: white;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 section {
@@ -74,8 +82,10 @@ textarea {
   }
 }
 
-.active-area {
-  width: auto;
+.container {
+  height: 100%;
+  margin-bottom: -60px;
+  width: 95%;
 }
 
 /* typography */
@@ -200,6 +210,21 @@ aside {
 }
 
 /* forms */
+
+legend, .control-group, legend + .control-group {
+  margin-top: 0;
+  vertical-align: top;
+}
+
+select {
+  padding: 0 !important;
+}
+/* dialog */
+
+
+
+
+/* general */
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;

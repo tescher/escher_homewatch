@@ -16,7 +16,7 @@ describe "Password reset pages" do
     describe "send reset message" do
       before do
         fill_in "Email",    with: @user.email
-        click_button "Reset Password"
+        click_button "Get new password"
         @password_reset_token = @user.reload.password_reset_token
         pp @password_reset_token
       end

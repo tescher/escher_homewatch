@@ -71,20 +71,12 @@ class SensorsController < ApplicationController
             :total=>sensors.size,
             :rows=>sensors.collect{|r| {:id=>r.id, :cell=>[
                                         r.name,
-                                        SensorType.find_by_id(r.sensor_type_id).name,
-                                        r.group,
                                         r.controller,
-                                        r.addressH,
-                                        r.addressL,
                                         r.trigger_enabled,
                                         r.trigger_upper_limit,
                                         r.trigger_lower_limit,
-                                        r.trigger_delay,
                                         r.trigger_email,
                                         r.absence_alert,
-                                        r.offset,
-                                        r.scale,
-                                        r.interval,
                                         User.find_by_id(r.user_id).name]}},
          }.to_json
 

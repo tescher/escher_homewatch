@@ -11,6 +11,7 @@ describe SensorsHelper do
       key_hash += b
     end
     key_hash *= REQUEST_KEY_MAGIC
+    key_hash %= 32768
     request_key_valid(key_hash, controller).should be_true
     request_key_valid(key_hash, "Random Name").should be_false
   end
