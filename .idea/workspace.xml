@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/escher_homewatch.iml" afterPath="$PROJECT_DIR$/.idea/escher_homewatch.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/sensors.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/sensors.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/sensors_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/sensors_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sensors/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/sensors/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/helpers/sensors_helper_spec.rb" afterPath="$PROJECT_DIR$/spec/helpers/sensors_helper_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/requests/password_reset_pages_spec.rb" afterPath="$PROJECT_DIR$/spec/requests/password_reset_pages_spec.rb" />
     </list>
     <ignored path="sample_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,7 +31,7 @@
       <file leaf-file-name="custom.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="218" column="6" selection-start="3101" selection-end="3101" vertical-scroll-proportion="0.0">
+            <state line="22" column="16" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -44,7 +40,7 @@
       <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/users/edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="147" selection-end="147" vertical-scroll-proportion="-3.125">
+            <state line="5" column="0" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -53,16 +49,16 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/sensors/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="68" selection-start="3760" selection-end="3760" vertical-scroll-proportion="-19.333334">
+            <state line="95" column="117" selection-start="3473" selection-end="3473" vertical-scroll-proportion="-59.375">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sensors.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="sensors.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/sensors.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="967" selection-end="967" vertical-scroll-proportion="0.0">
+            <state line="26" column="66" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.55119455">
               <folding />
             </state>
           </provider>
@@ -86,10 +82,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sensors_helper_spec.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sensors_helper_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/helpers/sensors_helper_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="35" selection-start="274" selection-end="274" vertical-scroll-proportion="0.505618">
+            <state line="5" column="31" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -118,12 +114,12 @@
         <option value="$PROJECT_DIR$/app/views/users/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/password_resets/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-        <option value="$PROJECT_DIR$/app/views/sensors/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/sensors.js" />
         <option value="$PROJECT_DIR$/app/controllers/sensors_controller.rb" />
         <option value="$PROJECT_DIR$/spec/requests/password_reset_pages_spec.rb" />
         <option value="$PROJECT_DIR$/spec/helpers/sensors_helper_spec.rb" />
+        <option value="$PROJECT_DIR$/app/views/sensors/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/sensors.js" />
       </list>
     </option>
   </component>
@@ -135,8 +131,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="83" />
-    <option name="y" value="50" />
+    <option name="x" value="74" />
+    <option name="y" value="42" />
     <option name="width" value="1307" />
     <option name="height" value="801" />
   </component>
@@ -902,12 +898,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="restartRequiresConfirmation" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
   </component>
@@ -931,7 +927,7 @@
       <recent name="$PROJECT_DIR$/app/views/user_mailer" />
     </key>
   </component>
-  <component name="RunManager" selected="RSpec.sensors_helper_spec">
+  <component name="RunManager" selected="RSpec.All specs in: spec">
     <configuration default="false" name="measurement_pages_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="escher_homewatch" />
@@ -1232,6 +1228,13 @@
       <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="false" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -1263,13 +1266,6 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="false" name="All specs in: spec" type="RSpecRunConfigurationType" factoryName="RSpec">
@@ -1372,7 +1368,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="83" y="50" width="1307" height="801" extended-state="0" />
+    <frame x="74" y="42" width="1307" height="801" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943755" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1380,11 +1376,11 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24143426" sideWeight="0.32395384" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24818109" sideWeight="0.6273006" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.283751" sideWeight="0.5766871" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39956173" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24143426" sideWeight="0.32756132" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3250548" sideWeight="0.20050761" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37269938" sideWeight="0.79505074" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42331287" sideWeight="0.79505074" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1495,28 +1491,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="147" selection-end="147" vertical-scroll-proportion="-3.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="218" column="6" selection-start="3101" selection-end="3101" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sensors/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="68" selection-start="3760" selection-end="3760" vertical-scroll-proportion="-19.333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/sensors.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="967" selection-end="967" vertical-scroll-proportion="0.0">
+        <state line="5" column="0" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1537,7 +1512,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/helpers/sensors_helper_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="35" selection-start="274" selection-end="274" vertical-scroll-proportion="0.505618">
+        <state line="5" column="31" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="16" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/sensors/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="117" selection-start="3473" selection-end="3473" vertical-scroll-proportion="-59.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/sensors.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="66" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.55119455">
           <folding />
         </state>
       </provider>

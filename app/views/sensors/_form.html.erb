@@ -2,102 +2,119 @@
     <%= render 'shared/error_messages', :subject => @sensor %>
     <%= field_set_tag 'Basic' do %>
 
-        <div class="dialog-form">
-          <div class="control-group">
-            <%= f.label :name, "Name:", class: "control-label" %>
-            <div class="controls">
+          <div class="row-fluid">
+            <div class="span3">
+              <%= f.label :name, "Name:", class: "control-label" %>
+            </div>
+            <div class="span3">
               <%= f.text_field :name %>
             </div>
-          </div>
-          <div class="control-group">
-            <%= f.label :sensor_type_id, "Type:", class: "control-label" %>
-            <div class="controls">
+            <div class="span3">
+              <%= f.label :sensor_type_id, "Type:", class: "control-label" %>
+            </div>
+            <div class="span3">
               <%= f.collection_select :sensor_type_id, SensorType.all, :id, :name, :prompt => true %>
             </div>
           </div>
-          <div class="control-group">
-            <%= f.label :controller, "Controller:", class: "control-label" %>
-            <div class="controls">
+          <div class="row-fluid">
+            <div class="span3">
+              <%= f.label :controller, "Controller:", class: "control-label" %>
+            </div>
+            <div class="span3">
               <%= f.text_field :controller %>
             </div>
           </div>
-          <div class="control-group">
-            <%= f.label :addressH, "Addr High:", class: "control-label" %>
-            <div class="controls">
+          <div class="row-fluid">
+            <div class="span3">
+              <%= f.label :addressH, "Address High:", class: "control-label" %>
+            </div>
+            <div class="span3">
               <%= f.text_field :addressH %>
             </div>
-          </div>
-          <div class="control-group">
-            <%= f.label :addressL, "Addr Low:", class: "control-label" %>
-            <div class="controls">
+            <div class="span3">
+              <%= f.label :addressL, "Address Low:", class: "control-label" %>
+            </div>
+            <div class="span3">
               <%= f.text_field :addressL %>
             </div>
           </div>
     <% end %>
     <%= field_set_tag 'Alarms' do %>
-        <div class="control-group">
-          <div class="controls">
-            <%= f.check_box :trigger_enabled %> Alarms Enabled &nbsp;&nbsp;
-            <%= f.check_box :absence_alert %> Send alarm if no values received in 24 hours
+        <div class="row-fluid">
+          <div class="span3"></div>
+          <div class="span3">
+            <%= f.check_box :trigger_enabled %> &nbsp; Alarms Enabled
+          </div>
+          <div class="span6">
+            <%= f.check_box :absence_alert %> &nbsp; Send alarm if no values received in 24 hours
           </div>
         </div>
-        <div class="control-group">
-          <%= f.label :trigger_upper_name, "High Alarm Name:", class: "control-label" %>
-          <div class="controls">
+        <div class="row-fluid">
+          <div class="span3">
+            <%= f.label :trigger_upper_name, "High Alarm Name:", class: "control-label" %>
+          </div>
+          <div class="span3">
             <%= f.text_field :trigger_upper_name %>
           </div>
-        </div>
-        <div class="control-group">
-          <%= f.label :trigger_upper_limit, "High Alarm Value:", class: "control-label" %>
-          <div class="controls">
+          <div class="span3">
+            <%= f.label :trigger_upper_limit, "High Alarm Value:", class: "control-label" %>
+          </div>
+          <div class="span3">
             <%= f.text_field :trigger_upper_limit %>
           </div>
         </div>
-        <div class="control-group">
-          <%= f.label :trigger_lower_name, "Low Alarm Name:", class: "control-label" %>
-          <div class="controls">
+        <div class="row-fluid">
+          <div class="span3">
+            <%= f.label :trigger_lower_name, "Low Alarm Name:", class: "control-label" %>
+          </div>
+          <div class="span3">
             <%= f.text_field :trigger_lower_name %>
           </div>
-        </div>
-        <div class="control-group">
-          <%= f.label :trigger_lower_limit, "Low Alarm Value:", class: "control-label" %>
-          <div class="controls">
+          <div class="span3">
+            <%= f.label :trigger_lower_limit, "Low Alarm Value:", class: "control-label" %>
+          </div>
+          <div class="span3">
             <%= f.text_field :trigger_lower_limit %>
           </div>
         </div>
-        <div class="control-group">
-          <%= f.label :trigger_email, "Alarm Email:", class: "control-label" %>
-          <div class="controls">
+        <div class="row-fluid">
+          <div class="span3">
+            <%= f.label :trigger_email, "Alarm Email:", class: "control-label" %>
+          </div>
+          <div class="span3">
             <%= f.text_field :trigger_email %>
           </div>
-        </div>
-        <div class="control-group">
-          <%= f.label :trigger_delay, "Delay between alarms (seconds):", class: "control-label" %>
-          <div class="controls">
+          <div class="span3">
+            <%= f.label :trigger_delay, "Delay between alarms (seconds):", class: "control-label" %>
+          </div>
+          <div class="span3">
             <%= f.text_field :trigger_delay %>
           </div>
-        </div>
         </div>
 
     <% end %>
 
     <%= field_set_tag 'Advanced' do %>
 
-        <div class="control-group">
-          <%= f.label :offset, "Offset:", class: "control-label" %>
-          <div class="controls">
+        <div class="row-fluid">
+          <div class="span3">
+            <%= f.label :offset, "Offset:", class: "control-label" %>
+          </div>
+          <div class="span3">
             <%= f.text_field :offset %>
           </div>
-        </div>
-        <div class="control-group">
-          <%= f.label :scale, "Scale:", class: "control-label" %>
-          <div class="controls">
+          <div class="span3">
+            <%= f.label :scale, "Scale:", class: "control-label" %>
+          </div>
+          <div class="span3">
             <%= f.text_field :scale %>
           </div>
         </div>
-        <div class="control-group">
-          <%= f.label :interval, "Interval:", class: "control-label" %>
-          <div class="controls">
+        <div class="row-fluid">
+          <div class="span3">
+            <%= f.label :interval, "Interval:", class: "control-label" %>
+          </div>
+          <div class="span3">
             <%= f.text_field :interval %>
           </div>
         </div>

@@ -21,8 +21,10 @@ $(function() {
               success: function(data) {
                   if (data == "true") {
                       showColumn('#flexSensors','user', true);
+                      $("#flexSensors").dialog("options","width: 680");
                   } else {
                       showColumn('#flexSensors','user', false);
+                      $("#flexSensors").dialog("options","width: 580");
                   };
               },
               async: false,
@@ -32,12 +34,14 @@ $(function() {
       },
       sortorder: "asc",
       usepager: false,
+      width: 'auto',
       title: 'Sensors'
       }
     );
 
     $("#dialogSensors").dialog({
         modal: true,
+        title: "Sensor Properties",
         disabled: true,
         autoOpen: false,
         width: 800,

@@ -23,6 +23,7 @@ $grayMediumLight: #eaeaea;
 .navbar-fixed-top {
   right: auto;
   left: auto;
+  z-index: 1001;
 }
 
 // Links
@@ -219,6 +220,24 @@ legend, .control-group, legend + .control-group {
 select {
   padding: 0 !important;
 }
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  float: left;
+  height: auto !important;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+.control-label {
+  float: right !important;
+}
+
+.row-fluid {
+  padding-bottom: 10px;
+}
+
 /* dialog */
 
 
@@ -226,14 +245,6 @@ select {
 
 /* general */
 
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  padding: 10px;
-  height: auto !important;
-  margin-bottom: 15px;
-  @include box_sizing;
-}
 
 #error_explanation {
   color: #f00;
