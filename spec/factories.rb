@@ -22,6 +22,13 @@ FactoryGirl.define do
     sequence(:addressL) { |n| n}
     controller "Controller A"
     sensor_type_id SensorType.find_by_name("generic").id
+  end
 
+  factory :monitor_window do
+    sequence(:name)  { |n| "Window #{n}" }
+  end
+
+  factory :monitor_sensor do
+    sequence(:legend)  { |n| "Monitor Sensor #{n}" }
   end
  end

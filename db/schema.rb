@@ -11,13 +11,40 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121211143035) do
+ActiveRecord::Schema.define(:version => 20121227150734) do
 
   create_table "measurements", :force => true do |t|
     t.integer  "sensor_id"
     t.float    "value"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "monitor_sensors", :force => true do |t|
+    t.integer  "sensor_id"
+    t.integer  "monitor_window_id"
+    t.string   "legend"
+    t.string   "color"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  create_table "monitor_windows", :force => true do |t|
+    t.string   "monitor_type"
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "y_axis_min"
+    t.boolean  "y_axis_min_auto"
+    t.integer  "y_axis_max"
+    t.boolean  "y_axis_max_auto"
+    t.integer  "x_axis_days"
+    t.boolean  "x_axis_auto"
+    t.string   "background_color"
+    t.boolean  "public"
+    t.string   "url"
+    t.string   "width"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "sensor_types", :force => true do |t|

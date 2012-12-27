@@ -13,6 +13,7 @@ gem 'state_machine'
 gem 'validates_existence'
 gem 'jquery-ui-rails'
 gem 'rack-ssl-enforcer'
+gem 'enumerated_attribute'
 
 group :development, :test do
   # gem 'sqlite3', '1.3.5'

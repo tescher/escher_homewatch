@@ -22,6 +22,7 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation
   has_secure_password
   has_many :sensors
+  has_many :monitor_windows
 
   before_create {
     generate_token(:remember_token)
