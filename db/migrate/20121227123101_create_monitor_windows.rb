@@ -11,6 +11,7 @@ class CreateMonitorWindows < ActiveRecord::Migration
       t.integer :x_axis_days
       t.boolean :x_axis_auto
       t.string :background_color
+      t.boolean :legend
       t.boolean :public
       t.string :url
       t.string :width

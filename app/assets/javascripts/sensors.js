@@ -64,7 +64,7 @@ $(function() {
     })
 
     $("#linkNewSensor").click(function(evt) {
-        loadDialog(false, null);
+        loadSensorDialog(false, null);
         return false;
     })
 
@@ -81,13 +81,13 @@ $(function() {
 function procMe(celDiv, id) {
   $(celDiv).click ( function()
   {
-    loadDialog(true, id);
+    loadSensorDialog(true, id);
     return false;
   });
 
 }
 
-function loadDialog(editing, id) {
+function loadSensorDialog(editing, id) {
     var url = "/sensors/";
     if (editing) {
         url += id + "/edit";

@@ -5,8 +5,11 @@ class MonitorWindowsController < ApplicationController
 
 
   def new
+    puts "In new"
     if request.xhr?
       @monitor_window = MonitorWindow.new
+      puts "New Window"
+      puts @monitor_window
       render partial: 'form'
     else
       redirect_to root_url

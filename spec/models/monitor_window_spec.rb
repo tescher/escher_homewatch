@@ -12,6 +12,7 @@
 #  x_axis_days      :integer
 #  x_axis_auto      :boolean
 #  background_color :string(255)
+#  legend           :boolean
 #  public           :boolean
 #  url              :string(255)
 #  width            :string(255)
@@ -40,6 +41,7 @@ describe MonitorWindow do
   it { should respond_to(:x_axis_days) }
   it { should respond_to(:x_axis_auto) }
   it { should respond_to(:background_color) }
+  it { should respond_to(:legend) }
   it { should respond_to(:public) }
   it { should respond_to(:url) }
   it { should respond_to(:width) }
@@ -59,7 +61,10 @@ describe MonitorWindow do
       @monitor_window.monitor_type.should == :graph
     end
     it "should have dark grey color" do
-      @monitor_window.background_color.should == "404040"
+      @monitor_window.background_color.should == "#404040"
+    end
+    it "should have a legend" do
+      @monitor_window.legend.should == true
     end
     it "should not be public" do
       @monitor_window.public.should == false

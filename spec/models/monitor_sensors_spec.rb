@@ -13,6 +13,6 @@
 
 require 'spec_helper'
 
-describe MonitorSensors do
+describe MonitorSensor do
   pending "add some examples to (or delete) #{__FILE__}"
 end
