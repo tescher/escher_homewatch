@@ -83,4 +83,15 @@
         </div>
     <% end %>
 
+    <%=  field_set_tag 'Sensors' do %>
+        <table id="flexMonitorSensors" class="sensors"></table>
+        <p><%= link_to "Add a sensor", "#", id: "linkNewMonitorSensor" %></p>
+    <% end %>
+
+    <%=  f.hidden_field :initial_token %>
+    <%=  f.hidden_field :id %>
+
+    <div id="dialogMonitorSensors"></div>
+
+
 <% end %>

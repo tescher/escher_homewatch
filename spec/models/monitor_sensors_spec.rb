@@ -5,6 +5,7 @@
 #  id                :integer          not null, primary key
 #  sensor_id         :integer
 #  monitor_window_id :integer
+#  initial_window_token :string(255)
 #  legend            :string(255)
 #  color             :string(255)
 #  created_at        :datetime         not null

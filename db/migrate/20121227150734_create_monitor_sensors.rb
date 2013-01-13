@@ -5,6 +5,7 @@ class CreateMonitorSensors < ActiveRecord::Migration
       t.integer :monitor_window_id
       t.string :legend
       t.string :color
+      t.string :initial_window_token
 
       t.timestamps
     end

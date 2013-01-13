@@ -14,7 +14,9 @@
 //= require jquery_ujs
 //= require jquery.ui.button
 //= require jquery.ui.dialog
+//= require jquery.flot
 //= require flexigrid
 //= require spectrum
 //= require bootstrap
+//= require utilities
 //= require_tree .

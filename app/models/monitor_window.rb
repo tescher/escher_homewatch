@@ -17,6 +17,7 @@
 #  public           :boolean
 #  url              :string(255)
 #  width            :string(255)
+#  initial_token    :string(255)
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #
@@ -26,7 +27,7 @@ require 'enumerated_attribute'
 class MonitorWindow < ActiveRecord::Base
   enum_attr :monitor_type, %w(^graph table)
   enum_attr :width, %w(^normal wide)
-  attr_accessible :background_color, :monitor_type, :name, :user_id, :legend, :public, :url, :width, :x_axis_auto, :x_axis_days, :y_axis_max, :y_axis_max_auto, :y_axis_min, :y_axis_min_auto
+  attr_accessible :background_color, :monitor_type, :name, :user_id, :legend, :public, :url, :width, :x_axis_auto, :x_axis_days, :y_axis_max, :y_axis_max_auto, :y_axis_min, :y_axis_min_auto, :initial_token
 
   belongs_to :user
 
@@ -43,6 +44,15 @@ class MonitorWindow < ActiveRecord::Base
     monitor_window.y_axis_max_auto = true if y_axis_max.nil?
   end
 
+  after_save do |monitor_window|
+    monitor_window.reload
+    MonitorSensor.find_all_by_initial_window_token(monitor_window.initial_token).each do |ms|
+      ms.monitor_window_id = monitor_window.id
+      ms.save
+    end
+
+  end
+
   validates :name, presence: true
 
   private
@@ -55,5 +65,11 @@ class MonitorWindow < ActiveRecord::Base
     self.x_axis_auto = true if self.x_axis_auto.nil?
     self.y_axis_min_auto = true if self.y_axis_min_auto.nil?
     self.y_axis_max_auto = true if self.y_axis_max_auto.nil?
+    if !self.initial_token
+      begin
+        self.initial_token = SecureRandom.urlsafe_base64
+      end while MonitorWindow.exists?(:initial_token => self.initial_token)
+    end
   end
+
 end

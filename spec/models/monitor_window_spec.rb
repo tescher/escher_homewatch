@@ -16,6 +16,7 @@
 #  public           :boolean
 #  url              :string(255)
 #  width            :string(255)
+#  initial_token    :string(255)
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #
@@ -45,6 +46,7 @@ describe MonitorWindow do
   it { should respond_to(:public) }
   it { should respond_to(:url) }
   it { should respond_to(:width) }
+  it { should respond_to(:initial_token) }
 
   it { should be_valid }
 
@@ -80,6 +82,9 @@ describe MonitorWindow do
     end
     it "should have y_axis_max_auto" do
       @monitor_window.y_axis_max_auto.should == true
+    end
+    it "should have an initial_token" do
+      @monitor_window.initial_token.should_not be_empty
     end
   end
 

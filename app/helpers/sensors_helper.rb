@@ -9,4 +9,5 @@ module SensorsHelper
     check_hash %= 32768
     hash.to_i == check_hash
   end
+
 end

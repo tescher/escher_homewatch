@@ -25,8 +25,9 @@ ActiveRecord::Schema.define(:version => 20121227150734) do
     t.integer  "monitor_window_id"
     t.string   "legend"
     t.string   "color"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.string   "initial_window_token"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
   end
 
   create_table "monitor_windows", :force => true do |t|
@@ -44,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20121227150734) do
     t.boolean  "public"
     t.string   "url"
     t.string   "width"
+    t.string   "initial_token"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end

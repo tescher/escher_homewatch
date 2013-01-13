@@ -55,7 +55,7 @@ class Sensor < ActiveRecord::Base
   def no_duplicate_addresses
     dup = Sensor.find_by_addressH_and_addressL(addressH, addressL)
     errors.add(:addressH, "is a duplicate sensor address, already in use") if dup && (dup != self)
-    end
+  end
 
   private
   def default_values

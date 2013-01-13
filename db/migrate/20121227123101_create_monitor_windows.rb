@@ -15,6 +15,7 @@ class CreateMonitorWindows < ActiveRecord::Migration
       t.boolean :public
       t.string :url
       t.string :width
+      t.string :initial_token
 
       t.timestamps
     end

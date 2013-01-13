@@ -57,7 +57,7 @@ class MonitorWindowsController < ApplicationController
 
   def index
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
 
       format.js do
 
@@ -68,6 +68,7 @@ class MonitorWindowsController < ApplicationController
         render :json => {
             :monitor_windows=>monitor_windows.collect{|mw| {
                 :background_color => mw.background_color,
+                :id => mw.id,
                 :monitor_type => mw.monitor_type,
                 :name => mw.name,
                 :public => mw.public,
@@ -79,11 +80,15 @@ class MonitorWindowsController < ApplicationController
                 :y_axis_max_auto => mw.y_axis_max_auto,
                 :y_axis_min => mw.y_axis_min,
                 :y_axis_min_auto => mw.y_axis_min_auto,
-                :monitor_sensors => MonitorSensor.find_all_by_monitor_window_id(mw.id).collect{|ms| {
-                    :sensor_id => ms.sensor_id,
-                    :legend => ms.legend,
-                    :color => ms.color}
-                }}
+                :monitor_sensors => MonitorSensor.find_all_by_monitor_window(mw.id, mw.initial_token).collect{|ms|
+                    sensor_name =  Sensor.find(ms.sensor_id).name
+                    {
+                      :sensor_id => ms.sensor_id,
+                      :sensor_name => sensor_name,
+                      :legend => (ms.legend.empty?) ? sensor_name : ms.legend,
+                      :color => ms.color
+                    }
+               }}
             }
         }.to_json
 
@@ -92,35 +97,12 @@ class MonitorWindowsController < ApplicationController
     end #respond_to  end
   end
 
-  def getconfig
-    @count = 0 if !@count
-    @count += 1
-    if @count > 1
-      raise
-    end
-    id = params[:id]
-    monitor_window = MonitorWindow.find(id)
-    name = monitor_window.name
-    puts name
-    key_hash = params[:key]
-    puts key_hash
-    if request_key_valid(key_hash, name)
-      monitor_sensors = MonitorSensor.find_all_by_monitor_window_id(id)
-      render :json => {
-          id: id,
-          monitor_sensors: monitor_sensors.collect{|ms| {
-              :sensor_id => ms.id,
-              :legend => ms.legend}
-          }
-      }.to_json
-    else
-      render nothing: true
-    end
-  end
-
   def destroy
     if request.xhr?
-      MonitorWindow.find(params[:id]).destroy
+      mw = MonitorWindow.find(params[:id])
+      MonitorSensor.find_all_by_monitor_window_id(mw.id).each{ |ms| ms.destroy }
+      MonitorSensor.find_all_by_initial_window_token(mw.initial_token).each{ |ms| ms.destroy }
+      mw.destroy
       render nothing: true
     else
       redirect_to root_url
