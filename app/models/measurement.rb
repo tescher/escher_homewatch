@@ -9,9 +9,9 @@
 #  updated_at :datetime         not null
 #
 
-require 'application_helper'
-
 class Measurement < ActiveRecord::Base
+
+  include Utilities
 
   attr_accessor :check_value, :check_hash
   attr_accessible :sensor_id, :value, :check_value, :check_hash
