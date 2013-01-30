@@ -19,4 +19,3 @@
 //= require spectrum
 //= require bootstrap
 //= require utilities
-//= require_tree .
