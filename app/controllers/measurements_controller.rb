@@ -11,8 +11,10 @@ class MeasurementsController < ApplicationController
   end
 
   def index
-    params[:start] = (Time.now - 3600*24*7).utc.strftime("%Y-%m-%d %H:%M:%S %:z") if !params[:start]
-    params[:end] = (Time.now + 3600).utc.strftime("%Y-%m-%d %H:%M:%S %:z") if !params[:end]
+    params[:start] = (Time.now - 3600*24*7).utc.strftime("%Y-%m-%d %H:%M:%S %z") if !params[:start]
+    params[:end] = (Time.now + 3600).utc.strftime("%Y-%m-%d %H:%M:%S %z") if !params[:end]
+    puts params[:start]
+    puts params[:end]
     render :json =>  {
         :id=>params[:sensor_id],
         :label=>Sensor.find(params[:sensor_id]).name,
