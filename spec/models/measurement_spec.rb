@@ -11,6 +11,8 @@
 
 require 'spec_helper'
 
+include Utilities
+
 describe Measurement do
 
   before do
