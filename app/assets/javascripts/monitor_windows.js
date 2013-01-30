@@ -51,6 +51,7 @@ function MonitorWindow(config, windowDiv) {
         },
         xaxis: {
             mode: "time", timeformat: "%b %d",
+            min: ((!config.x_axis_auto && config.x_axis_days != "") ? Date.now() - 1000*60*60*24*config.x_axis_days : null),
             minTickSize: [1, "day"],
             monthNames: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
             color: "#909090"

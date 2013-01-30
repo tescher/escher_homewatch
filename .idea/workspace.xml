@@ -82,7 +82,7 @@
       <file leaf-file-name="monitor_windows.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="83" selection-start="1791" selection-end="1791" vertical-scroll-proportion="0.54879063">
+            <state line="42" column="74" selection-start="1715" selection-end="1715" vertical-scroll-proportion="0.49874896">
               <folding />
             </state>
           </provider>
@@ -1689,13 +1689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/monitor_windows/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="88" vertical-scroll-proportion="9.833333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/monitor_windows_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="25" selection-start="296" selection-end="309" vertical-scroll-proportion="0.0">
@@ -1703,9 +1696,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/monitor_windows/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="88" vertical-scroll-proportion="9.833333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="83" selection-start="1791" selection-end="1791" vertical-scroll-proportion="0.54879063">
+        <state line="42" column="74" selection-start="1715" selection-end="1715" vertical-scroll-proportion="0.49874896">
           <folding />
         </state>
       </provider>
