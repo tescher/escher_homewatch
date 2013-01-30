@@ -105,6 +105,11 @@ describe "MonitorWindowPages" do
         post monitor_windows_path
         response.should redirect_to(signin_path)
       end
+
+      it "Should redirect get of sensors to signin page" do
+        get monitor_sensors_path
+        response.should redirect_to(signin_path)
+      end
     end
 
     describe "with logged in user" do
@@ -135,33 +140,5 @@ describe "MonitorWindowPages" do
         response.should redirect_to(root_url)
       end
     end
-
-    describe "get config" do
-      let(:monitor_window) { MonitorWindow.first }
-
-      it "should list this monitor's sensors" do
-        window_name = monitor_window.name
-        pp window_name
-        key_hash = 0
-        window_name.each_byte do |b|
-          key_hash += b
-        end
-        key_hash *= REQUEST_KEY_MAGIC
-        key_hash %= 32768
-        pp key_hash
-        get getconfig_monitor_windows_path, id: monitor_window.id, key: key_hash
-        pp response.body
-        response.body.should_not be_blank
-        parsed_body = JSON.parse(response.body)
-        parsed_body["id"].should == monitor_window.id.to_s
-        parsed_body["monitor_sensors"].count.should == 2
-        parsed_body["monitor_sensors"].each do |ms|
-          ms["sensor_id"].should_not be_nil
-          ms["legend"].should_not be_nil
-        end
-      end
-    end
-
-
   end
 end

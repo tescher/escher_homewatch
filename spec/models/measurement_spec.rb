@@ -21,7 +21,7 @@ describe Measurement do
                          user_id: @user.id, controller: "House", addressH: 1, addressL: 2)
     @sensor.save!
 
-    @measurement = Measurement.new(sensor_id: @sensor.id, value: 60.5)
+    @measurement = Measurement.new(sensor_id: @sensor.id, value: 60.5, check_value: "60.5", check_hash: request_key("60.5"))
 
   end
 
@@ -54,12 +54,18 @@ describe Measurement do
     it { should_not be_valid }
   end
 
+  describe "when hash is invalid" do
+    before { @measurement.check_hash = "xxx" }
+    it { should_not be_valid }
+  end
+
   describe "Saved value should take into account offset and scale" do
     before do
       @sensor.offset = 15
       @sensor.scale = 2
       @sensor.save!
-      @measurement = Measurement.new(sensor_id: @sensor.id, value: 60.5)
+      pp request_key("60.5")
+      @measurement = Measurement.new(sensor_id: @sensor.id, value: 60.5, check_value: "60.5", check_hash: request_key("60.5"))
       @measurement.save!
     end
     it {@measurement.reload.value.should eql(60.5*2 + 15)}

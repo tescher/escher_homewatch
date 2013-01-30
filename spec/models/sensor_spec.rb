@@ -56,7 +56,6 @@ describe Sensor do
   it { should respond_to(:trigger_email) }
   it { should respond_to(:trigger_enabled) }
   it { should respond_to(:absence_alert) }
-  it { should respond_to(:users_list) }
 
   it { should be_valid }
 
