@@ -273,3 +273,40 @@ input, textarea, select, .uneditable-input {
     }
   }
 }
+
+/* Monitor windows */
+
+.monitor-container {
+  padding: 0px;
+  .mw-normal {
+    width: 400px;
+    display: inline;
+  }
+  .mw-wide {
+    width: 800px;
+    display: block;
+  }
+}
+
+.monitor-window {
+  height: 600px;
+  width: 100%;
+  display: block;
+}
+
+.monitor-title {
+  height: 20px;
+  width: 100%;
+  display: block;
+  padding: 2px;
+  background-color: #303030;
+  span {
+    float: left;
+    color: white;
+  }
+}
+
+.monitor-config-link {
+  background-color: #303030;
+  float: right;
+}

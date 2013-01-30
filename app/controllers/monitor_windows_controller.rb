@@ -88,8 +88,9 @@ class MonitorWindowsController < ApplicationController
                       :legend => (ms.legend.empty?) ? sensor_name : ms.legend,
                       :color => ms.color
                     }
-               }}
-            }
+                },
+                :html => render_to_string(partial: 'window_container', locals: { mw_width: mw.width, mw_id: mw.id, mw_title: mw.title })
+            }}
         }.to_json
 
       end #format.js

@@ -127,23 +127,13 @@ $(function() {
         method: "GET",
         dataType: "json",
         success: function(data) {
-            var container_div = document.getElementById("monitor-container");
+            var container_div = document.getElementById("monitors-container");
             for (var index in data.monitor_windows) {
                 var config = data.monitor_windows[index];
-                var mw_div = document.createElement("div");
-                mw_div.className = "monitor-div";
-                mw_div.style.height = "600px";
-                if (config.width == "normal") {
-                    mw_div.style.width = "400px";
-                    mw_div.style.display = "inline-block";
-                } else {
-                    mw_div.style.width = "800px";
-                    mw_div.style.display = "block";
-                }
-                var mw_div_id = "mw"+config.id;
-                mw_div.setAttribute("id", mw_div_id);
-                container_div.appendChild(mw_div);
-                var mw = new MonitorWindow(config, mw_div);
+                var mw_container_div = document.createElement("div");
+                mw_container_div.outerHTML(config.html);
+                container_div.appendChild(mw_container_div);
+                var mw = new MonitorWindow(config, mw_container_div);
                 mw.plot();
             }
         },
