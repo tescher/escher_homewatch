@@ -46,8 +46,8 @@ function MonitorWindow(config, windowDiv) {
         },
         yaxis: {
             color: "#909090",
-            min: -10,
-            max: 120
+            min: ((!config.y_axis_auto && config.y_axis_min != "") ? config.y_axis_min : -10),
+            max: ((!config.y_axis_auto && config.y_axis_max != "") ? config.y_axis_max : 120)
         },
         xaxis: {
             mode: "time", timeformat: "%b %d",
@@ -59,7 +59,7 @@ function MonitorWindow(config, windowDiv) {
             hoverable: true,
             clickable: true,
             color: "#909090",
-            backgroundColor: (config.backgroundColor != "" ? config.backgroundColor : null)
+            backgroundColor: (config.background_color != "" ? config.background_color : null)
         },
         zoom: { interactive: true },
         pan: { interactive: true }
