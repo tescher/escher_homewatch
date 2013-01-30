@@ -1,4 +1,5 @@
 require 'spec_helper'
+include Utilities
 
 describe "MeasurementPages" do
 
@@ -55,7 +56,7 @@ describe "MeasurementPages" do
       parsed_body["label"].should  == @sensor.name
       parsed_body["id"].should == @sensor.id.to_s
       parsed_body["data"].count.should == 1
-      parsed_body["data"][0][0].should == (60.5*2+15)
+      parsed_body["data"][0][1].should == (60.5*2+15)
     end
 
   end

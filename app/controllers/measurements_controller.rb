@@ -17,7 +17,7 @@ class MeasurementsController < ApplicationController
         :id=>params[:sensor_id],
         :label=>Sensor.find(params[:sensor_id]).name,
         # :data=> Measurement.where("sensor_id = ?", params[:sensor_id].to_i).collect{|m| {
-        :data=> Measurement.where("sensor_id = ? and created_at >= ? and created_at <= ?", params[:sensor_id].to_i, params[:start], params[:end]).collect{|m| [m.value, m.created_at.strftime("%Y-%m-%d %H:%M:%S %:z") ]}}.to_json
+        :data=> Measurement.where("sensor_id = ? and created_at >= ? and created_at <= ?", params[:sensor_id].to_i, params[:start], params[:end]).collect{|m| [m.created_at.to_i*1000, m.value ]}}.to_json
     #:ts=>m.created_at.strftime("%Y-%m-%d %H:%M:%S %:z"),
     # :value=>m.value
 
