@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/measurement.rb" afterPath="$PROJECT_DIR$/app/models/measurement.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/measurement_spec.rb" afterPath="$PROJECT_DIR$/spec/models/measurement_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/utilities.rb" afterPath="$PROJECT_DIR$/lib/utilities.rb" />
     </list>
     <ignored path="sample_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,10 +43,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="measurement.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="measurement.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/measurement.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="77" selection-start="651" selection-end="651" vertical-scroll-proportion="0.56284153">
+            <state line="32" column="101" selection-start="871" selection-end="871" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utilities.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/utilities.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="32" selection-start="296" selection-end="296" vertical-scroll-proportion="0.3469751">
               <folding />
             </state>
           </provider>
@@ -98,15 +106,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="monitor_window.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/monitor_window.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environment.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -136,7 +135,6 @@
         <option value="$PROJECT_DIR$/app/views/sensors/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-        <option value="$PROJECT_DIR$/lib/utilities.rb" />
         <option value="$PROJECT_DIR$/app/controllers/sensors_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/monitor_sensors_controller.rb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
@@ -145,6 +143,7 @@
         <option value="$PROJECT_DIR$/app/controllers/measurements_controller.rb" />
         <option value="$PROJECT_DIR$/spec/models/measurement_spec.rb" />
         <option value="$PROJECT_DIR$/app/models/measurement.rb" />
+        <option value="$PROJECT_DIR$/lib/utilities.rb" />
       </list>
     </option>
   </component>
@@ -1599,13 +1598,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/sensors_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="19" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/sensors_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1736,7 +1728,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/measurement.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="77" selection-start="651" selection-end="651" vertical-scroll-proportion="0.56284153">
+        <state line="32" column="101" selection-start="871" selection-end="871" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/utilities.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="32" selection-start="296" selection-end="296" vertical-scroll-proportion="0.3469751">
           <folding />
         </state>
       </provider>

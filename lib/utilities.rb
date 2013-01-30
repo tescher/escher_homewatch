@@ -7,7 +7,7 @@ module Utilities
       check_hash += b
     end
     check_hash *= REQUEST_KEY_MAGIC
-    check_hash %= 32768
+    check_hash %= 65536
     hash.to_i == check_hash
   end
 
@@ -18,7 +18,7 @@ module Utilities
       check_hash += b
     end
     check_hash *= REQUEST_KEY_MAGIC
-    check_hash %= 32768
+    check_hash %= 65536
     check_hash
   end
 
