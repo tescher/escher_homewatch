@@ -30,7 +30,7 @@ class Measurement < ActiveRecord::Base
   validate :valid_hash
 
   def valid_hash()
-    errors.add(:check_hash, "is an invalid hash key") if !request_key_valid(check_hash, check_value)
+    errors.add(check_hash, "is an invalid hash key for", check_value) if !request_key_valid(check_hash, check_value)
   end
 
 end

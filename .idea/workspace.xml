@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/measurements_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/measurements_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/measurement.rb" afterPath="$PROJECT_DIR$/app/models/measurement.rb" />
     </list>
     <ignored path="sample_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="measurements_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="measurements_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/measurements_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="61" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.6284153">
+            <state line="23" column="61" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -43,10 +43,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="measurement.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="measurement.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/measurement.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="20" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
+            <state line="19" column="74" selection-start="459" selection-end="459" vertical-scroll-proportion="0.5191257">
               <folding />
             </state>
           </provider>
@@ -140,10 +140,10 @@
         <option value="$PROJECT_DIR$/app/controllers/sensors_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/monitor_sensors_controller.rb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
-        <option value="$PROJECT_DIR$/app/models/measurement.rb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/spec/requests/measurement_pages_spec.rb" />
         <option value="$PROJECT_DIR$/app/controllers/measurements_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/measurement.rb" />
       </list>
     </option>
   </component>
@@ -1719,13 +1719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/measurement.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="20" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/requests/measurement_pages_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="58" column="30" selection-start="1693" selection-end="1693" vertical-scroll-proportion="0.0">
@@ -1735,7 +1728,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/measurements_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="61" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.6284153">
+        <state line="23" column="61" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/measurement.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="74" selection-start="459" selection-end="459" vertical-scroll-proportion="0.5191257">
           <folding />
         </state>
       </provider>
