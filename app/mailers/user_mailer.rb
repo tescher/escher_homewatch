@@ -14,4 +14,10 @@ class UserMailer < ActionMailer::Base
     @user = user
     mail :to => user.email, :subject => "User Confirmation"
   end
+  def alert_email(subject, body, email_to)
+    puts "In mailer"
+    @body = body
+    mail :to => email_to, :subject => subject
+    puts "After mail sent"
+  end
 end

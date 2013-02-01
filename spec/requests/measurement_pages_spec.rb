@@ -48,7 +48,7 @@ describe "MeasurementPages" do
     end
 
     it "should retrieve the value just entered" do
-      post measurements_path, sensor_id: @sensor.id, value: 60.5, key: request_key("60.5")
+      post measurements_path, sensor_id: @sensor.id, monitor_sensor_id: 1, value: 60.5, key: request_key("60.5")
       pp response.body
       get measurements_path, sensor_id: @sensor.id
       parsed_body = JSON.parse(response.body)

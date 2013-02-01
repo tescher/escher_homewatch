@@ -35,16 +35,20 @@ EscherHomewatch::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
+  config.log_level = :debug
+
   # ActionMailer settings
   config.action_mailer.default_url_options = { :host => "192.168.0.123:3000" }
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
-      address:              'mail.eschers.com',
-      port:                 26,
+      address:              'aries.addaction.net',
+      port:                 465,
       domain:               'eschers.com',
       user_name:            'dummy@eschers.com',
       password:             'terrid1',
-      authentication:       'plain',
-      enable_starttls_auto: false  }
+      authentication:       :plain,
+      enable_starttls_auto: true  }
 
 end

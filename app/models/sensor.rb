@@ -32,6 +32,7 @@ class Sensor < ActiveRecord::Base
   belongs_to :sensor_type
   belongs_to :monitor_sensors
   has_many :measurements
+  has_many :alerts
 
   after_initialize :default_values
 
@@ -39,6 +40,7 @@ class Sensor < ActiveRecord::Base
   before_save do |sensor|
     sensor.trigger_email = trigger_email.downcase if !trigger_email.blank?
     sensor.interval ||= 30000
+    sensor.trigger_delay ||= 600
   end
 
   validates :name, presence: true, length: { maximum: 50 }
@@ -62,6 +64,7 @@ class Sensor < ActiveRecord::Base
     self.interval ||= 30000
     self.offset ||= 0.0
     self.scale ||= 1.0
+    self.trigger_delay ||= 600
   end
 
   end

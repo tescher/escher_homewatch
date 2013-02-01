@@ -25,6 +25,7 @@ function MonitorWindow(config, windowDiv) {
                 var old = false;
                 // console.log(legend_data[0][sensor_id]['ts']);
                 var last_value = "";
+                var limit_reached = false;
                 var formatted = '<span id="legend">' + label + " (";
                 var last = series['data'].length - 1;
                 if (last >= 0) {
@@ -35,9 +36,19 @@ function MonitorWindow(config, windowDiv) {
                 } else {
                     last_value = "No Data";
                 }
+                if ((series['trigger_upper_limit']) && (parseFloat(last_value) >= parseFloat(series['trigger_upper_limit']))) {
+                    limit_reached = true;
+                }
+                if ((series['trigger_lower_limit']) && (parseFloat(last_value) <= parseFloat(series['trigger_lower_limit']))) {
+                    limit_reached = true;
+                }
+
                 var style_code = "legendcurrent";
                 if (old) {
                     style_code = "legendold";
+                }
+                if (limit_reached) {
+                    style_code += "limit";
                 }
                 formatted += '<span id="' + style_code + '">' + last_value + '</span>)</span>';
                 // console.log(formatted);
@@ -54,6 +65,7 @@ function MonitorWindow(config, windowDiv) {
             min: ((!config.x_axis_auto && config.x_axis_days != "") ? Date.now() - 1000*60*60*24*config.x_axis_days : null),
             minTickSize: [1, "day"],
             monthNames: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            zoomRage: [0.1,3600000000],
             color: "#909090"
         },
         grid: {
@@ -68,9 +80,19 @@ function MonitorWindow(config, windowDiv) {
     this.plot = function() {
         series_all = [];
         for (var index in config.monitor_sensors) {
-            var sensor = config.monitor_sensors[index];
+            var ms = config.monitor_sensors[index];
             $.ajax({
-                url: "/measurements?sensor_id="+sensor.sensor_id,
+                url: "/measurements?monitor_sensor_id="+ms.id+"&sensor_id="+ms.sensor_id,
+                method: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    series_all.push(data)
+                },
+                cache: false,
+                async: false
+            });
+            $.ajax({
+                url: "/measurements?monitor_sensor_id="+ms.id+"&sensor_id="+ms.sensor_id+"&alerts=true",
                 method: 'GET',
                 dataType: 'json',
                 success: function(data) {
@@ -94,7 +116,7 @@ $(function() {
         autoOpen: false,
         width: 800,
         close: function (event, ui ) {
-            // $("#flexMonitorSensors").flexReload();
+            location.reload();
         }
     })
 
@@ -120,6 +142,30 @@ $(function() {
         }
     })
 
+    var previousPoint = null;
+    $(".monitor-window").live("plothover", function (event, pos, item) {
+
+        if (item) {
+            if (previousPoint != item.dataIndex) {
+                previousPoint = item.dataIndex;
+
+                $("#data-tooltip").remove();
+                var x = item.datapoint[0],
+                    y = item.datapoint[1];
+                var d1 = new Date();
+                x += d1.getTimezoneOffset() * 60000;
+                var d = new Date(x);
+                var label = item.series.label;
+                if (!label) label = "Alert";
+                showTooltip(item.pageX, item.pageY, label + " = " + y.toFixed(1) + " at " + d.toLocaleDateString() + " " + d.toLocaleTimeString());
+            }
+        } else {
+            $("#tooltip").remove();
+            previousPoint = null;
+        }
+    });
+
+
     // Get all the windows and display them
 
     $.ajax({
@@ -130,12 +176,21 @@ $(function() {
             var container_div = document.getElementById("monitors-container");
             for (var index in data.monitor_windows) {
                 var config = data.monitor_windows[index];
+                // var parser = new DOMParser(), doc = parser.parseFromString(config.html,"text/xml");
                 var mw_container_div = document.createElement("div");
-                mw_container_div.outerHTML(config.html);
+                mw_container_div.className = "monitor-container-parent"
+                mw_container_div.innerHTML = config.html;
                 container_div.appendChild(mw_container_div);
-                var mw = new MonitorWindow(config, mw_container_div);
+                var placeholder = document.getElementById("mw-"+config.id);
+                var mw = new MonitorWindow(config, placeholder);
                 mw.plot();
-            }
+                $('<div class="monitor-config" id="cfg-'+config.id+'" style="right:20px;top:20px"><img src="/assets/config.png" alt="Config" /></div>').appendTo(placeholder).click(function (e) {
+                    e.preventDefault();
+                    loadDialog("Window", true, this.id.split("-")[1]);
+                    return false;
+                });
+                $('<span class="monitor-title" style="left:50px;top:20px">'+config.name+'</span>').appendTo(placeholder);
+             }
         },
         cache: false,
         async: false
@@ -298,4 +353,19 @@ function setupDialog(element, data) {
     if (mw_token == null) mw_token = $("input#monitor_window_initial_token").val();
 
 }
+
+// Set up the tooltips for the data points
+function showTooltip(x, y, contents) {
+    $('<div id="data-tooltip">' + contents + '</div>').css( {
+        position: 'absolute',
+        display: 'none',
+        top: y + 5,
+        left: x + 5,
+        // border: '1px solid #fdd',
+        padding: '2px'
+        // 'background-color': '#fee',
+        // opacity: 0.80
+    }).appendTo("body").fadeIn(200);
+}
+
 

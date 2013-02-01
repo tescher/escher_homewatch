@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121227150734) do
+ActiveRecord::Schema.define(:version => 20130131204434) do
+
+  create_table "alerts", :force => true do |t|
+    t.integer  "sensor_id"
+    t.float    "value"
+    t.float    "limit"
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "measurements", :force => true do |t|
     t.integer  "sensor_id"

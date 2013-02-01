@@ -62,7 +62,7 @@ class MonitorWindowsController < ApplicationController
       format.js do
 
         # Get windows for this user
-        monitor_windows = MonitorWindow.find_all_by_user_id(current_user.id)
+        monitor_windows = MonitorWindow.find_all_by_user_id(current_user.id, :order => "id")
 
         # Rendering
         render :json => {
@@ -84,12 +84,13 @@ class MonitorWindowsController < ApplicationController
                     sensor_name =  Sensor.find(ms.sensor_id).name
                     {
                       :sensor_id => ms.sensor_id,
+                      :id => ms.id,
                       :sensor_name => sensor_name,
                       :legend => (ms.legend.empty?) ? sensor_name : ms.legend,
                       :color => ms.color
                     }
                 },
-                :html => render_to_string(partial: 'window_container', locals: { mw_width: mw.width, mw_id: mw.id, mw_title: mw.title })
+                :html => render_to_string(partial: 'window_container', locals: { mw_width: mw.width, mw_id: mw.id, mw_name: mw.name })
             }}
         }.to_json
 

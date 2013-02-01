@@ -2,14 +2,14 @@
 #
 # Table name: monitor_sensors
 #
-#  id                :integer          not null, primary key
-#  sensor_id         :integer
-#  monitor_window_id :integer
-#  legend            :string(255)
-#  color             :string(255)
+#  id                   :integer          not null, primary key
+#  sensor_id            :integer
+#  monitor_window_id    :integer
+#  legend               :string(255)
+#  color                :string(255)
 #  initial_window_token :string(255)
-#  created_at        :datetime         not null
-#  updated_at        :datetime         not null
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
 #
 
 class MonitorSensor < ActiveRecord::Base

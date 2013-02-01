@@ -35,7 +35,7 @@ describe "MonitorWindowPages" do
       end
       it {
         visit monitor_windows_path
-        should have_valid_header_and_title('Monitors', 'Monitors')
+        should have_valid_header_and_title('Monitor', 'Monitor')
       }
 
       it "should list this user's monitors and sensors" do

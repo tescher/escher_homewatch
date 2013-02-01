@@ -6,7 +6,7 @@
   </h2>
   <table class="center"><tr>
   <% if signed_in? %>
-      <td class="btn-cell"><%= link_to "Manage sensors", sensors_path, class: "btn btn-large btn-primary" %></td>
+      <td class="btn-cell"><%= link_to "Monitor", monitor_windows_path, class: "btn btn-large btn-primary" %></td>
       <td class="btn-cell"><%= link_to "Help", help_path, class: "btn btn-large btn-primary" %></td>
   <% else  %>
       <td class="btn-cell"><%= link_to "Learn more", help_path, class: "btn btn-large btn-primary" %></td>
