@@ -15,6 +15,7 @@
 //= require jquery.ui.button
 //= require jquery.ui.dialog
 //= require jquery.flot
+//= require jquery.flot.navigate.min
 //= require flexigrid
 //= require spectrum
 //= require bootstrap

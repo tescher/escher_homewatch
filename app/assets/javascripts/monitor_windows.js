@@ -1,6 +1,7 @@
 var mw_id = null;
 var mw_token = null;
 var series_all = [];
+var mw = [];
 
 // Window object
 function MonitorWindow(config, windowDiv) {
@@ -57,6 +58,7 @@ function MonitorWindow(config, windowDiv) {
         },
         yaxis: {
             color: "#909090",
+            zoomAmount: 1.25,
             min: ((!config.y_axis_auto && config.y_axis_min != "") ? config.y_axis_min : -10),
             max: ((!config.y_axis_auto && config.y_axis_max != "") ? config.y_axis_max : 120)
         },
@@ -65,7 +67,7 @@ function MonitorWindow(config, windowDiv) {
             min: ((!config.x_axis_auto && config.x_axis_days != "") ? Date.now() - 1000*60*60*24*config.x_axis_days : null),
             minTickSize: [1, "day"],
             monthNames: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-            zoomRage: [0.1,3600000000],
+            zoomAmount: 1.25,
             color: "#909090"
         },
         grid: {
@@ -103,6 +105,17 @@ function MonitorWindow(config, windowDiv) {
             });
         }
         var plot = $.plot(this.windowDiv, series_all, this.plotOptions);
+        $('<div class="monitor-config" id="cfg-'+config.id+'" style="right:20px;top:20px"><img src="/assets/config.png" alt="Config" /></div>').appendTo(this.windowDiv).click(function (e) {
+            e.preventDefault();
+            loadDialog("Window", true, this.id.split("-")[1]);
+            return false;
+        });$('<div class="monitor-refresh" id="ref-'+config.id+'" style="right:40px;top:20px"><img src="/assets/refresh.png" alt="Config" /></div>').appendTo(this.windowDiv).click(function (e) {
+            e.preventDefault();
+            mw[this.id.split("-")[1]].plot();
+            return false;
+        });
+        $('<span class="monitor-title" style="left:50px;top:20px">'+config.name+'</span>').appendTo(this.windowDiv);
+
     }
 
 }
@@ -182,14 +195,8 @@ $(function() {
                 mw_container_div.innerHTML = config.html;
                 container_div.appendChild(mw_container_div);
                 var placeholder = document.getElementById("mw-"+config.id);
-                var mw = new MonitorWindow(config, placeholder);
-                mw.plot();
-                $('<div class="monitor-config" id="cfg-'+config.id+'" style="right:20px;top:20px"><img src="/assets/config.png" alt="Config" /></div>').appendTo(placeholder).click(function (e) {
-                    e.preventDefault();
-                    loadDialog("Window", true, this.id.split("-")[1]);
-                    return false;
-                });
-                $('<span class="monitor-title" style="left:50px;top:20px">'+config.name+'</span>').appendTo(placeholder);
+                mw[config.id] = new MonitorWindow(config, placeholder);
+                mw[config.id].plot();
              }
         },
         cache: false,
