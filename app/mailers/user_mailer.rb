@@ -16,6 +16,9 @@ class UserMailer < ActionMailer::Base
   end
   def alert_email(subject, body, email_to)
     puts "In mailer"
+    puts email_to
+    puts subject
+    puts body
     @body = body
     mail :to => email_to, :subject => subject
     puts "After mail sent"
