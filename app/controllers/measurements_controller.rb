@@ -90,7 +90,7 @@ class MeasurementsController < ApplicationController
     end
     if alert.email != ""
       puts "Calling mailer"
-      UserMailer.alert_email(subject, body, alert.email)
+      UserMailer.alert_email(subject, body, alert.email).deliver
     end
   end
 
