@@ -69,13 +69,15 @@ EscherHomewatch::Application.configure do
   # ActionMailer settings
   config.action_mailer.default_url_options = { :host => "https://shielded-castle-3741.herokuapp.com" }
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
-      address:              'mail.eschers.com',
-      port:                 26,
+      address:              'smtp.gmail.com',
+      port:                 465,
       domain:               'eschers.com',
-      user_name:            'dummy@eschers.com',
-      password:             'terrid1',
+      user_name:            'okeewi@gmail.com',
+      password:             'mariann1',
       authentication:       'plain',
-      enable_starttls_auto: false  }
+      enable_starttls_auto: true  }
 
 end
