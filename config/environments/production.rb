@@ -73,7 +73,7 @@ EscherHomewatch::Application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
       address:              'smtp.gmail.com',
-      port:                 465,
+      port:                 587,
       domain:               'eschers.com',
       user_name:            'okeewi@gmail.com',
       password:             'mariann1',
