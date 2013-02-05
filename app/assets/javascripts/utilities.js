@@ -21,3 +21,23 @@ function showColumn(tbl, columnName, visible) {
 
 }
 
+// Format a time
+function niceTime(dt) {
+    var hours = dt.getHours()
+    var minutes = dt.getMinutes()
+
+    if (minutes < 10)
+        minutes = "0" + minutes
+
+    var suffix = "AM";
+    if (hours >= 12) {
+        suffix = "PM";
+        hours = hours - 12;
+    }
+    if (hours == 0) {
+        hours = 12;
+    }
+
+    return hours + ":" + minutes + " " + suffix;
+}
+

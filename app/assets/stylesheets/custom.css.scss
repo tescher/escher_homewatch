@@ -287,8 +287,19 @@ input, textarea, select, .uneditable-input {
   height: auto;
   width: auto;
   display: inline-block;
-  padding-right: 20px;
 }
+
+.mw-parent-normal {
+  margin-left: 25px;
+  margin-right: 10px;
+}
+
+.mw-parent-wide {
+  margin-left: 35px;
+  margin-right: 10px;
+}
+
+
 
 .monitor-window {
   height: 600px;
@@ -305,14 +316,18 @@ input, textarea, select, .uneditable-input {
 }
 
 .monitor-title {
-  height: 20px;
   width: auto;
   position: absolute;
-  padding: 2px;
+  padding: 0px;
   padding-left: 5px;
   padding-right: 5px;
-  background-color: #303030;
-  color: white;
+  background-color: $grayLighter;
+  border-style: solid;
+  border-color: $black;
+  border-width: 2px;
+  border-radius: 4px;
+
+  color: #000000;
 }
 
 .monitor-config {
@@ -326,21 +341,43 @@ input, textarea, select, .uneditable-input {
 
 #data-tooltip {
   color: #000;
-  background-color: $grayLight;
+  padding: 2px;
+  background-color: $white;
+  border-style: solid;
+  border-color: $grayDark;
+  border-width: 2px;
+  border-radius: 4px;
+  opacity: 0.80;
 }
 
-#legendcurrent, #legend {
-  color: #e0e0e0;
+
+div.legend table {
+  border-style: solid;
+  border-color: $black;
+  border-width: 2px;
+  border-radius: 4px;
+  padding: 2px;
+  color: $black;
+  background-color: #eeeeee;
 }
+
+#legendcurrent {
+  color: $black;
+}
+
+#legend {
+  color: $black;
+}
+
 #legendold {
-  color: yellow;
+  color: $yellow;
 }
 #legendoldlimit {
-  color: yellow;
+  color: $yellow;
   font-weight: bold;
 }
 #legendcurrentlimit {
-  color: red;
+  color: $red;
   font-weight: bold;
 }
 

@@ -5,7 +5,7 @@ class MeasurementsController < ApplicationController
     @measurement = Measurement.new(sensor_id: sensor_id, value: value, check_value: params[:value], check_hash: params[:key])
     if @measurement.save
       render text: "Filed successfully"
-      check_alerts(sensor_id, value)
+      check_alerts(sensor_id, @measurement.reload.value)
     else
       render text: "Error: \n" + @measurement.errors.full_messages.join("\n")
     end

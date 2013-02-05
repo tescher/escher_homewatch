@@ -16,8 +16,10 @@ module Utilities
     check_hash = 0
     cntrl.each_byte do |b|
       check_hash += b
+      pp check_hash
     end
     check_hash *= REQUEST_KEY_MAGIC
+    pp check_hash
     check_hash %= 65536
     check_hash
   end

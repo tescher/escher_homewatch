@@ -35,7 +35,7 @@ class MonitorWindow < ActiveRecord::Base
 
   before_save do |monitor_window|
     monitor_window.monitor_type = :graph if monitor_type.blank?
-    monitor_window.background_color = "#404040" if background_color.blank?
+    monitor_window.background_color = "#ffffff" if background_color.blank?
     monitor_window.legend = true if legend.nil?
     monitor_window.public = false if public.nil?
     monitor_window.width = :normal if width.blank?
@@ -58,7 +58,7 @@ class MonitorWindow < ActiveRecord::Base
   private
   def default_values
     self.monitor_type ||= :graph
-    self.background_color ||= "#404040"
+    self.background_color ||= "#ffffff"
     self.legend = true if self.legend.nil?
     self.public = false if self.public.nil?
     self.width ||= :normal

@@ -12,12 +12,12 @@ function MonitorWindow(config, windowDiv) {
             lines: { show: false },
             shadowSize: 0
         },
-        lines: { show: true },
+        lines: { show: true, lineWidth: 1 },
         points: { show: false },
-        colors: ["#ffff80", "#80ff80", "#80ffff", "#ff80ff", "#c0c080", "#80c080", "#80c0c0", "#c080c0"],
+        colors: ["#ffff40", "#40ff40", "#40ffff", "#ff40ff", "#c0c040", "#40c040", "#40c0c0", "#c040c0"],
         legend: {
-            backgroundColor: "#303030",
-            color: "#e0e0e0",
+            backgroundColor: "#eeeeee",
+            color: "#000000",
             position: "sw",
             labelFormatter: function(label, series) {
                 // series is the series object for the label
@@ -74,13 +74,15 @@ function MonitorWindow(config, windowDiv) {
             hoverable: true,
             clickable: true,
             color: "#909090",
-            backgroundColor: (config.background_color != "" ? config.background_color : null)
+            backgroundColor: (config.background_color != "" ? config.background_color : "white"),
+            borderWidth: 2
         },
         zoom: { interactive: true },
         pan: { interactive: true }
     };
     this.plot = function() {
         series_all = [];
+        var color_seq = 0;
         for (var index in config.monitor_sensors) {
             var ms = config.monitor_sensors[index];
             $.ajax({
@@ -88,6 +90,9 @@ function MonitorWindow(config, windowDiv) {
                 method: 'GET',
                 dataType: 'json',
                 success: function(data) {
+                    if (data.color == "") {
+                        data.color = ++color_seq;
+                    }
                     series_all.push(data)
                 },
                 cache: false,
@@ -109,12 +114,14 @@ function MonitorWindow(config, windowDiv) {
             e.preventDefault();
             loadDialog("Window", true, this.id.split("-")[1]);
             return false;
-        });$('<div class="monitor-refresh" id="ref-'+config.id+'" style="right:40px;top:20px"><img src="/assets/refresh.png" alt="Config" /></div>').appendTo(this.windowDiv).click(function (e) {
+        });
+        $('<div class="monitor-refresh" id="ref-'+config.id+'" style="right:40px;top:20px"><img src="/assets/refresh.png" alt="Config" /></div>').appendTo(this.windowDiv).click(function (e) {
             e.preventDefault();
             mw[this.id.split("-")[1]].plot();
             return false;
         });
-        $('<span class="monitor-title" style="left:50px;top:20px">'+config.name+'</span>').appendTo(this.windowDiv);
+        $('<span class="monitor-title ui-corner-all" style="left:50px;top:20px">'+config.name+'</span>').appendTo(this.windowDiv);
+        $('div.legend').className = "legend ui-corner-all";
 
     }
 
@@ -166,14 +173,14 @@ $(function() {
                 var x = item.datapoint[0],
                     y = item.datapoint[1];
                 var d1 = new Date();
-                x += d1.getTimezoneOffset() * 60000;
+                // x += d1.getTimezoneOffset() * 60000;
                 var d = new Date(x);
                 var label = item.series.label;
-                if (!label) label = "Alert";
-                showTooltip(item.pageX, item.pageY, label + " = " + y.toFixed(1) + " at " + d.toLocaleDateString() + " " + d.toLocaleTimeString());
+                if (!label) label = "<span style='color:red;font-weight:bold'>Alert</span>";
+                showTooltip(item.pageX, item.pageY, $.datepicker.formatDate('DD, M d, yy', d) + ", " + niceTime(d) + "<br/>" + label + ": " + y.toFixed(1));
             }
         } else {
-            $("#tooltip").remove();
+            $("#data-tooltip").remove();
             previousPoint = null;
         }
     });
@@ -191,7 +198,7 @@ $(function() {
                 var config = data.monitor_windows[index];
                 // var parser = new DOMParser(), doc = parser.parseFromString(config.html,"text/xml");
                 var mw_container_div = document.createElement("div");
-                mw_container_div.className = "monitor-container-parent"
+                mw_container_div.className = "monitor-container-parent mw-parent-" + config.width;
                 mw_container_div.innerHTML = config.html;
                 container_div.appendChild(mw_container_div);
                 var placeholder = document.getElementById("mw-"+config.id);
@@ -366,13 +373,10 @@ function showTooltip(x, y, contents) {
     $('<div id="data-tooltip">' + contents + '</div>').css( {
         position: 'absolute',
         display: 'none',
-        top: y + 5,
-        left: x + 5,
-        // border: '1px solid #fdd',
+        top: y + 10,
+        left: x + 10,
         padding: '2px'
-        // 'background-color': '#fee',
-        // opacity: 0.80
-    }).appendTo("body").fadeIn(200);
+     }).appendTo("body").fadeIn(200);
 }
 
 

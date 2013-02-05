@@ -67,6 +67,7 @@ describe Measurement do
       @sensor.scale = 2
       @sensor.save!
       pp request_key("60.5")
+      pp request_key("Office")
       @measurement = Measurement.new(sensor_id: @sensor.id, value: 60.5, check_value: "60.5", check_hash: request_key("60.5"))
       @measurement.save!
     end

@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jquery.ui.button
 //= require jquery.ui.dialog
+//= require jquery.ui.datepicker
 //= require jquery.flot
 //= require jquery.flot.navigate.min
 //= require flexigrid
