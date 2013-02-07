@@ -110,6 +110,7 @@ function MonitorWindow(config, windowDiv) {
                 async: false
             });
         }
+        blockScreen(this.windowDiv);
         var plot = $.plot(this.windowDiv, series_all, this.plotOptions);
         $('<div class="monitor-config" id="cfg-'+config.id+'" style="right:20px;top:20px"><img src="/assets/config.png" alt="Config" /></div>').appendTo(this.windowDiv).click(function (e) {
             e.preventDefault();
@@ -123,6 +124,7 @@ function MonitorWindow(config, windowDiv) {
         });
         $('<span class="monitor-title ui-corner-all" style="left:50px;top:20px">'+config.name+'</span>').appendTo(this.windowDiv);
         $('div.legend').className = "legend ui-corner-all";
+        unblockScreen();
 
     }
 
@@ -379,5 +381,19 @@ function showTooltip(x, y, contents) {
         padding: '2px'
      }).appendTo("body").fadeIn(200);
 }
+
+function blockScreen(placeholder) {
+    if (hosted) {
+        $(".screenblock").show();
+    } else {
+        // Fage graph area
+        $('<div class="screenblock"></div>').appendTo(placeholder).show();
+    }
+}
+
+function unblockScreen() {
+    $(".screenblock").hide();
+}
+
 
 

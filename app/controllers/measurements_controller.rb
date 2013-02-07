@@ -30,6 +30,7 @@ class MeasurementsController < ApplicationController
           :id=>params[:sensor_id],
           :label=> (ms.nil? || ms.legend.empty? ? sensor.name : ms.legend),
           :color=> (ms.nil? || ms.color.empty? ? "" : ms.color),
+          :color_auto=> (ms.nil? ? true : ms.color_auto),
           :trigger_upper_limit => sensor.trigger_upper_limit,
           :trigger_lower_limit => sensor.trigger_lower_limit,
           :data=> Measurement.where("sensor_id = ? and created_at >= ? and created_at <= ?", params[:sensor_id].to_i, params[:start], params[:end]).collect{|m| [m.created_at.to_i*1000, m.value ]}}.to_json
