@@ -75,7 +75,7 @@ function MonitorWindow(config, windowDiv) {
             hoverable: true,
             clickable: true,
             color: "#909090",
-            backgroundColor: (config.background_color != "" ? config.background_color : "white"),
+            backgroundColor: ((!config.background_color_auto && config.background_color != "") ? config.background_color : "white"),
             borderWidth: 2
         },
         zoom: { interactive: true },
