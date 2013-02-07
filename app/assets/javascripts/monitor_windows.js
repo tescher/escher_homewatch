@@ -84,6 +84,7 @@ function MonitorWindow(config, windowDiv) {
     this.plot = function() {
         series_all = [];
         var color_seq = 0;
+        blockScreen(this.windowDiv);
         for (var index in config.monitor_sensors) {
             var ms = config.monitor_sensors[index];
             $.ajax({
@@ -110,7 +111,6 @@ function MonitorWindow(config, windowDiv) {
                 async: false
             });
         }
-        blockScreen(this.windowDiv);
         var plot = $.plot(this.windowDiv, series_all, this.plotOptions);
         $('<div class="monitor-config" id="cfg-'+config.id+'" style="right:20px;top:20px"><img src="/assets/config.png" alt="Config" /></div>').appendTo(this.windowDiv).click(function (e) {
             e.preventDefault();
@@ -387,7 +387,7 @@ function blockScreen(placeholder) {
 //        $(".screenblock").show();
 //    } else {
         $('<div class="screenblock"></div>').appendTo(placeholder).show();
-    }
+//    }
 }
 
 function unblockScreen() {

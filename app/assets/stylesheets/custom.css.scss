@@ -384,7 +384,7 @@ div.legend table {
 div.screenblock {
   opacity:0.4;
   filter:alpha(opacity=40); /* For IE8 and earlier */
-  background: #ffffff url(ajax-loader.gif) no-repeat center center;
+  background: #ffffff url(/assets/ajax-loader.gif) no-repeat center center;
   z-index: 1000;
   position: absolute;
   display: none;
