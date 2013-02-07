@@ -48,8 +48,8 @@ class MeasurementsController < ApplicationController
     Sensor.where("id <> ? and absence_alert", sensor_id).each { |sensor|
       last_measurement = Measurement.order("created_at desc").where("sensor_id = ?", sensor.id).limit(1)[0]
       if last_measurement && ((Time.now.utc.to_i - last_measurement.created_at.utc.to_i) > 24*60*60)
-        last_alert = Alert.order("created_at desc").where("sensor_id = ?", sensor.id).limit(1)
-        if !last_alert || ((Time.now.utc - last_alert.created_at.to_i) > 24*60*60)
+        last_alert = Alert.order("created_at desc").where("sensor_id = ?", sensor.id).limit(1)[0]
+        if !last_alert || ((Time.now.utc.to_i - last_alert.created_at.to_i) > 24*60*60)
           send_alert(sensor, "", "", last_measurement)
         end
       end
@@ -70,28 +70,5 @@ class MeasurementsController < ApplicationController
     end
   end
 
-  def send_alert(sensor, value, limit, last_measurement)
-    alert = Alert.new()
-    alert.sensor_id = sensor.id
-    alert.email = sensor.trigger_email
-    subject = "Homewatch Alert from sensor "+sensor.name
-    if (value == "")
-      alert.save
-      if last_measurement
-        body = "No measurement since " + last_measurement.created_at.utc.strftime("%Y-%m-%d %H:%M:%S %z")
-      else
-        body = "No measurement yet received."
-      end
-    else
-      alert.value = value
-      alert.limit = limit
-      alert.save
-      body = "Limit reached by sensor: Value: " + value.to_s + " Limit: " + limit.to_s + " Time: " + Time.now.utc.strftime("%Y-%m-%d %H:%M:%S %z")
-    end
-    if alert.email != ""
-      puts "Calling mailer"
-      UserMailer.alert_email(subject, body, alert.email).deliver
-    end
-  end
 
 end

@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   include UserConfirmationsHelper
   include SensorsHelper
+  include MeasurementsHelper
 
   unless  Rails.application.config.consider_all_requests_local
     rescue_from Exception, :with => :render_404

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails escher_homewatch: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="924d18aa-8945-4c1a-bc4b-30485ab5ba3d">
+    <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+    <jdbc-url>jdbc:postgresql:escherhomewatch_development</jdbc-url>
+    <user-name>postgres</user-name>
+    <user-password>dfe7dfcbdfd8dfc3dfcbdfc4dfc4df9b</user-password>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/postgresql-driver-license.txt</url>
+      </library>
+      <library>
+        <url>jar://$USER_HOME$/.RubyMine50/config/jdbc-drivers/postgresql-9.1-901.jdbc3.jar!/</url>
+      </library>
+    </libraries>
+  </data-source>
+  <data-source source="LOCAL" name="Rails escher_homewatch: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="e65c0452-23f8-441c-ab3d-376352bee5f9">
+    <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+    <jdbc-url>jdbc:postgresql:escherhomewatch_test</jdbc-url>
+    <user-name>postgres</user-name>
+    <user-password>dfe7dfcbdfd8dfc3dfcbdfc4dfc4df9b</user-password>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine50/config/jdbc-drivers/postgresql-driver-license.txt</url>
+      </library>
+      <library>
+        <url>jar://$USER_HOME$/.RubyMine50/config/jdbc-drivers/postgresql-9.1-901.jdbc3.jar!/</url>
+      </library>
+    </libraries>
+  </data-source>
+</component>

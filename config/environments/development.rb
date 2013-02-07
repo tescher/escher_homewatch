@@ -43,12 +43,12 @@ EscherHomewatch::Application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
-      address:              'aries.addaction.net',
-      port:                 465,
+      address:              'smtp.gmail.com',
+      port:                 587,
       domain:               'eschers.com',
-      user_name:            'dummy@eschers.com',
-      password:             'terrid1',
+      user_name:            'okeewi@gmail.com',
+      password:             'Mariann1',
       authentication:       :plain,
-      enable_starttls_auto: true  }
+      enable_starttls_auto: true}
 
 end
