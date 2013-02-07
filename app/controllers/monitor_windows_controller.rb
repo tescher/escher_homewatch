@@ -71,6 +71,7 @@ class MonitorWindowsController < ApplicationController
                 :id => mw.id,
                 :monitor_type => mw.monitor_type,
                 :name => mw.name,
+                :legend => mw.legend,
                 :public => mw.public,
                 :url => mw.url,
                 :width => mw.width,

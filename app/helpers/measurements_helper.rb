@@ -24,9 +24,9 @@ module MeasurementsHelper
         subject += (sensor.trigger_lower_name.empty? ? sensor.name : sensor.trigger_lower_name)
         body = (sensor.trigger_lower_name.empty? ? (sensor.name + " lower limit reached") : sensor.trigger_lower_name)
       end
-      body += "\n Value: " + value.to_s
-      body += "\n Limit: " + limit.to_s
-      body += "\n Time: " + alert.created_at.utc.strftime("%a %b %e, %Y, %l:%M %p")
+      body += "\nValue: " + value.to_s
+      body += "\nLimit: " + limit.to_s
+      body += "\nTime: " + alert.created_at.utc.strftime("%a %b %e, %Y, %l:%M %p")
     end
     if alert.email != ""
       puts "Calling mailer"

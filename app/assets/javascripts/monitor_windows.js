@@ -18,6 +18,7 @@ function MonitorWindow(config, windowDiv) {
         legend: {
             backgroundColor: "#eeeeee",
             color: "#000000",
+            show: (config.legend),
             position: "sw",
             labelFormatter: function(label, series) {
                 // series is the series object for the label
