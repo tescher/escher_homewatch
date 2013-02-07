@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/alert.rb" afterPath="$PROJECT_DIR$/app/models/alert.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/alert_mailer.rb" afterPath="$PROJECT_DIR$/app/mailers/alert_mailer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/measurements_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/measurements_helper.rb" />
     </list>
     <ignored path="sample_app.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360243925895" ignored="false" />
     <file path="/alert_mailer.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360260077440" ignored="false" />
-    <file path="/measurements_helper.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360259764471" ignored="false" />
+    <file path="/measurements_helper.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360260428328" ignored="false" />
     <file path="/alert.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360249425069" ignored="false" />
     <file path="/application_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360248559032" ignored="false" />
     <file path="/development.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360252776771" ignored="false" />
@@ -73,7 +72,7 @@
       <file leaf-file-name="alert_email.text.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/alert_mailer/alert_email.text.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="13" selection-start="28" selection-end="28" vertical-scroll-proportion="-1.875">
+            <state line="3" column="23" selection-start="38" selection-end="38" vertical-scroll-proportion="-1.875">
               <folding />
             </state>
           </provider>
@@ -88,10 +87,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="measurements_helper.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="measurements_helper.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/helpers/measurements_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="27" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0">
+            <state line="14" column="110" selection-start="501" selection-end="501" vertical-scroll-proportion="0.45064378">
               <folding />
             </state>
           </provider>
@@ -115,10 +114,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="alert_mailer.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="alert_mailer.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/mailers/alert_mailer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="54" selection-start="388" selection-end="388" vertical-scroll-proportion="0.43841335">
+            <state line="14" column="61" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -155,9 +154,9 @@
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/app/views/alert_mailer/alert_email.text.erb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
-        <option value="$PROJECT_DIR$/app/helpers/measurements_helper.rb" />
         <option value="$PROJECT_DIR$/app/models/alert.rb" />
         <option value="$PROJECT_DIR$/app/mailers/alert_mailer.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/measurements_helper.rb" />
       </list>
     </option>
   </component>
@@ -1816,9 +1815,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/alert.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="40" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/alert_mailer/alert_email.text.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="13" selection-start="28" selection-end="28" vertical-scroll-proportion="-1.875">
+        <state line="3" column="23" selection-start="38" selection-end="38" vertical-scroll-proportion="-1.875">
           <folding />
         </state>
       </provider>
@@ -1826,6 +1832,13 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/measurements_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="0" selection-start="3008" selection-end="3008" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/mailers/alert_mailer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="61" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1839,21 +1852,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/measurements_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="27" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/alert.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="40" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/mailers/alert_mailer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="54" selection-start="388" selection-end="388" vertical-scroll-proportion="0.43841335">
+        <state line="14" column="110" selection-start="501" selection-end="501" vertical-scroll-proportion="0.45064378">
           <folding />
         </state>
       </provider>
