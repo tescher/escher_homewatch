@@ -20,8 +20,11 @@
           <div class="span3">
             <%= f.label :color, "Color:", class: "control-label" %>
           </div>
-          <div class="span3">
+          <div class="span1">
             <%= f.text_field :color, class: "color"  %>
+          </div>
+          <div class="span2">
+            <%= f.check_box :color_auto %> &nbsp; Auto
           </div>
           <%=  f.hidden_field :monitor_window_id %>
           <%=  f.hidden_field :initial_window_token %>

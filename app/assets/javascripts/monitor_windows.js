@@ -91,7 +91,7 @@ function MonitorWindow(config, windowDiv) {
                 method: 'GET',
                 dataType: 'json',
                 success: function(data) {
-                    if (data.color == "") {
+                    if (data.color_auto || (data.color == "")) {
                         data.color = ++color_seq;
                     }
                     series_all.push(data)

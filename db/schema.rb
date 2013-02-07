@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130207183232) do
+ActiveRecord::Schema.define(:version => 20130207185236) do
 
   create_table "alerts", :force => true do |t|
     t.integer  "sensor_id"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20130207183232) do
     t.string   "initial_window_token"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
+    t.boolean  "color_auto"
   end
 
   create_table "monitor_windows", :force => true do |t|
