@@ -383,10 +383,9 @@ function showTooltip(x, y, contents) {
 }
 
 function blockScreen(placeholder) {
-    if (hosted) {
-        $(".screenblock").show();
-    } else {
-        // Fage graph area
+//    if (hosted) {
+//        $(".screenblock").show();
+//    } else {
         $('<div class="screenblock"></div>').appendTo(placeholder).show();
     }
 }
