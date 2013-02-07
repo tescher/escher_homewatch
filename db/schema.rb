@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130131204434) do
+ActiveRecord::Schema.define(:version => 20130207183232) do
 
   create_table "alerts", :force => true do |t|
     t.integer  "sensor_id"
@@ -55,8 +55,9 @@ ActiveRecord::Schema.define(:version => 20130131204434) do
     t.string   "url"
     t.string   "width"
     t.string   "initial_token"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.boolean  "background_color_auto"
   end
 
   create_table "sensor_types", :force => true do |t|

@@ -13,6 +13,7 @@
 #  x_axis_days      :integer
 #  x_axis_auto      :boolean
 #  background_color :string(255)
+#  background_color_auto :boolean
 #  legend           :boolean
 #  public           :boolean
 #  url              :string(255)
@@ -27,7 +28,7 @@ require 'enumerated_attribute'
 class MonitorWindow < ActiveRecord::Base
   enum_attr :monitor_type, %w(^graph table)
   enum_attr :width, %w(^normal wide)
-  attr_accessible :background_color, :monitor_type, :name, :user_id, :legend, :public, :url, :width, :x_axis_auto, :x_axis_days, :y_axis_max, :y_axis_max_auto, :y_axis_min, :y_axis_min_auto, :initial_token
+  attr_accessible :background_color, :background_color_auto, :monitor_type, :name, :user_id, :legend, :public, :url, :width, :x_axis_auto, :x_axis_days, :y_axis_max, :y_axis_max_auto, :y_axis_min, :y_axis_min_auto, :initial_token
 
   belongs_to :user
 
@@ -35,7 +36,7 @@ class MonitorWindow < ActiveRecord::Base
 
   before_save do |monitor_window|
     monitor_window.monitor_type = :graph if monitor_type.blank?
-    monitor_window.background_color = "#ffffff" if background_color.blank?
+    monitor_window.background_color_auto = true if background_color.blank?
     monitor_window.legend = true if legend.nil?
     monitor_window.public = false if public.nil?
     monitor_window.width = :normal if width.blank?
@@ -65,6 +66,7 @@ class MonitorWindow < ActiveRecord::Base
     self.x_axis_auto = true if self.x_axis_auto.nil?
     self.y_axis_min_auto = true if self.y_axis_min_auto.nil?
     self.y_axis_max_auto = true if self.y_axis_max_auto.nil?
+    self.background_color_auto = true if self.background_color_auto.nil?
     if !self.initial_token
       begin
         self.initial_token = SecureRandom.urlsafe_base64

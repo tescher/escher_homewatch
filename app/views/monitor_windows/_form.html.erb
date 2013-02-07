@@ -53,8 +53,11 @@
           <div class="span3">
             <%= f.label :background_color, "Background:", class: "control-label" %>
           </div>
-          <div class="span3">
+          <div class="span1">
             <%= f.text_field :background_color, class: "color"  %>
+          </div>
+          <div class="span2">
+            <%= f.check_box :background_color_auto %> &nbsp; Auto
           </div>
           <div class="span3">
             <%= f.check_box :legend %> &nbsp; Legend
