@@ -60,8 +60,8 @@ function MonitorWindow(config, windowDiv) {
         yaxis: {
             color: "#909090",
             zoomAmount: 1.25,
-            min: ((!config.y_axis_auto && config.y_axis_min != "") ? config.y_axis_min : -10),
-            max: ((!config.y_axis_auto && config.y_axis_max != "") ? config.y_axis_max : 120)
+            min: ((!config.y_axis_min_auto && config.y_axis_min != "") ? config.y_axis_min : -10),
+            max: ((!config.y_axis_max_auto && config.y_axis_max != "") ? config.y_axis_max : 120)
         },
         xaxis: {
             mode: "time", timeformat: "%b %d",
