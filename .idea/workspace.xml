@@ -12,7 +12,7 @@
     <file path="/alert.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360249425069" ignored="false" />
     <file path="/application_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360248559032" ignored="false" />
     <file path="/development.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360252776771" ignored="false" />
-    <file path="/alert_email.text.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360256661118" ignored="false" />
+    <file path="/alert_email.text.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360256978135" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +90,7 @@
       <file leaf-file-name="alert_email.text.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/alert_mailer/alert_email.text.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="97" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0989011">
+            <state line="3" column="60" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0989011">
               <folding />
             </state>
           </provider>
@@ -1852,7 +1852,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/alert_mailer/alert_email.text.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="97" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0989011">
+        <state line="3" column="60" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0989011">
           <folding />
         </state>
       </provider>
