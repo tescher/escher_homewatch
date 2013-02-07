@@ -7,11 +7,8 @@ class AlertMailer < ActionMailer::Base
   #
   #   en.user_mailer.password_reset.subject
   #
-  def alert_email(subject, body, email_to)
-    puts "In mailer"
-    puts email_to
-    puts subject
-    puts body
+  def alert_email(subject, body, alert)
+    @alert = alert
     @body = body
     mail :to => email_to, :subject => subject
   end

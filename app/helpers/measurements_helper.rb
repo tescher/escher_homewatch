@@ -3,11 +3,12 @@ module MeasurementsHelper
     alert = Alert.new()
     alert.sensor_id = sensor.id
     alert.email = sensor.trigger_email
-    subject = "Homewatch Alert from sensor "+sensor.name
+    subject = "Homewatch: "
     if (value == "")
       alert.save
+      subject += sensor.name + " absence alert"
       if last_measurement
-        body = "No measurement since " + last_measurement.created_at.utc.strftime("%Y-%m-%d %H:%M:%S %z")
+        body = "No measurement since " + last_measurement.created_at.utc.strftime("%a %b %e, %Y, %i:%M %p")
       else
         body = "No measurement yet received."
       end
@@ -15,7 +16,17 @@ module MeasurementsHelper
       alert.value = value
       alert.limit = limit
       alert.save
-      body = "Limit reached by sensor: Value: " + value.to_s + " Limit: " + limit.to_s + " Time: " + Time.now.utc.strftime("%Y-%m-%d %H:%M:%S %z")
+      alert.reload
+      if (value > limit)
+        subject += (sensor.trigger_upper_name || sensor.name)
+        body = (sensor.trigger_upper_name || (sensor.name + " upper limit reached"))
+      else
+        subject += (sensor.trigger_lower_name || sensor.name)
+        body = (sensor.trigger_lower_name || (sensor.name + " lower limit reached"))
+      end
+      body += "\n Value: " + value.to_s
+      body += "\n Limit: " + limit.to_s
+      body += "\n Time: " + alert.created_at.utc.strftime("%a %b %e, %Y, %i:%M %p")
     end
     if alert.email != ""
       puts "Calling mailer"
