@@ -68,6 +68,7 @@ class MonitorWindowsController < ApplicationController
         render :json => {
             :monitor_windows=>monitor_windows.collect{|mw| {
                 :background_color => mw.background_color,
+                :background_color_auto => mw.background_color_auto,
                 :id => mw.id,
                 :monitor_type => mw.monitor_type,
                 :name => mw.name,
