@@ -57,7 +57,7 @@ class MonitorWindowsController < ApplicationController
 
   def index
     respond_to do |format|
-      format.html
+      format.html #TODO Add a public format also for the public URL
 
       format.js do
 
