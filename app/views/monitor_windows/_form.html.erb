@@ -54,13 +54,10 @@
             <%= f.label :background_color, "Background:", class: "control-label" %>
           </div>
           <div class="span1">
-            <%= f.text_field :background_color, class: "color"  %>
+            <input id="monitor_window_background_color" name="monitor_window[background_color]" type="color" value="<%= @monitor_window.background_color %>" class="my_color" />
           </div>
           <div class="span2">
             <%= f.check_box :background_color_auto %> &nbsp; Auto
-          </div>
-          <div class="span3">
-            <%= f.check_box :legend %> &nbsp; Legend
           </div>
         </div>
         <div class="row-fluid">
@@ -71,16 +68,19 @@
             <%= f.enum_select :width %>
           </div>
           <div class="span3">
-            <%= f.check_box :public %> &nbsp; Public
+            <%= f.check_box :legend %> &nbsp; Legend
           </div>
         </div>
         <div class="row-fluid">
           <div class="span3">
           </div>
-          <div class="span3">
+          <div class="span2">
+            <%= f.check_box :public %> &nbsp; Public
+          </div>
+          <div class="span1">
             <%= f.label :url, "URL:", class: "control-label" %>
           </div>
-          <div class="span3">
+          <div class="span6">
             <%= link_to "", "#", id: "linkMonitorWindowUrl" %>
           </div>
         </div>

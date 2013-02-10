@@ -92,8 +92,9 @@ function MonitorWindow(config, windowDiv) {
                 method: 'GET',
                 dataType: 'json',
                 success: function(data) {
+                    ++color_seq;
                     if (data.color_auto || (data.color == "")) {
-                        data.color = ++color_seq;
+                        data.color = color_seq;
                     }
                     series_all.push(data)
                 },
@@ -320,13 +321,20 @@ function loadDialog(type, editing, id) {
                 colModel : [
                     {display: 'Sensor', name : 'sensor', width : 100, sortable : true, align: 'left', process: procMS},
                     {display: 'Legend Name', name : 'legend', width : 100, sortable : true, align: 'left', process: procMS},
-                    {display: 'Color', name : 'trigger_enabled', width : 70, sortable : true, align: 'left', process: procMS}
+                    {display: 'Color', name : 'color', width : 70, sortable : true, align: 'left', process: procMS}
                 ],
                 sortname: "name",
                 sortorder: "asc",
                 usepager: false,
                 width: 'auto',
-                title: 'Sensors'
+                title: 'Sensors',
+                onSuccess : function () {
+                    $("#flexMonitorSensors tr").each ( function () {
+                        var cell = $('td[abbr="color"] >div', this);
+                        $(cell).css("background-color", (cell.text() ? cell.text() : "#FFFFFF"));
+                        $(cell).html("&nbsp;");
+                    })
+                }
             }
         );
 

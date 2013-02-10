@@ -230,6 +230,12 @@ input, textarea, select, .uneditable-input {
   @include box_sizing;
 }
 
+input.my_color {
+  cursor: pointer;
+  height: 23px !important;
+  padding: 0px;
+}
+
 .control-label {
   float: right !important;
 }

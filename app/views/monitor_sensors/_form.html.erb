@@ -21,7 +21,7 @@
             <%= f.label :color, "Color:", class: "control-label" %>
           </div>
           <div class="span1">
-            <%= f.text_field :color, class: "color"  %>
+            <input id="monitor_sensor_color" name="monitor_sensor[color]" type="color" value="<%= @monitor_sensor.color %>" class="my_color" />
           </div>
           <div class="span2">
             <%= f.check_box :color_auto %> &nbsp; Auto
