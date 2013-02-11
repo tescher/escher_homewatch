@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130207185236) do
+ActiveRecord::Schema.define(:version => 20130211221627) do
 
   create_table "alerts", :force => true do |t|
     t.integer  "sensor_id"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(:version => 20130207185236) do
     t.datetime "updated_at", :null => false
   end
 
+  add_index "measurements", ["sensor_id"], :name => "index_measurements_on_sensor_id"
+
   create_table "monitor_sensors", :force => true do |t|
     t.integer  "sensor_id"
     t.integer  "monitor_window_id"
@@ -39,6 +41,8 @@ ActiveRecord::Schema.define(:version => 20130207185236) do
     t.datetime "updated_at",           :null => false
     t.boolean  "color_auto"
   end
+
+  add_index "monitor_sensors", ["monitor_window_id"], :name => "index_monitor_sensors_on_monitor_window_id"
 
   create_table "monitor_windows", :force => true do |t|
     t.string   "monitor_type"
