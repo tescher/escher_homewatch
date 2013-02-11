@@ -83,23 +83,30 @@ function MonitorWindow(config, windowDiv) {
     };
     this.plot = function() {
         series_all = [];
-        var color_seq = 0;
-        blockScreen(this.windowDiv);
+        var color_count = 0;
+        var series_count = 0;
+        var class_save = this.windowDiv.parentNode.className;
+        $('<div class="screenblock"></div>').appendTo(this.windowDiv).show();
         for (var index in config.monitor_sensors) {
             var ms = config.monitor_sensors[index];
+            var that = this;
             $.ajax({
                 url: "/measurements?monitor_sensor_id="+ms.id+"&sensor_id="+ms.sensor_id,
                 method: 'GET',
                 dataType: 'json',
                 success: function(data) {
-                    ++color_seq;
+                    ++color_count;
                     if (data.color_auto || (data.color == "")) {
-                        data.color = color_seq;
+                        data.color = color_count;
                     }
                     series_all.push(data)
+                    ++series_count;
+                    if (series_count == (config.monitor_sensors.length * 2)) {
+                        finishPlot(that, series_all, class_save);
+                    }
                 },
                 cache: false,
-                async: false
+                async: true
             });
             $.ajax({
                 url: "/measurements?monitor_sensor_id="+ms.id+"&sensor_id="+ms.sensor_id+"&alerts=true",
@@ -107,27 +114,16 @@ function MonitorWindow(config, windowDiv) {
                 dataType: 'json',
                 success: function(data) {
                     series_all.push(data)
+                    ++series_count;
+                    if (series_count == (config.monitor_sensors.length * 2)) {
+                        finishPlot(that, series_all, class_save);
+                    }
                 },
                 cache: false,
-                async: false
+                async: true
             });
         }
-        var plot = $.plot(this.windowDiv, series_all, this.plotOptions);
-        $('<div class="monitor-config" id="cfg-'+config.id+'" style="right:20px;top:20px"><img src="/assets/config.png" alt="Config" /></div>').appendTo(this.windowDiv).click(function (e) {
-            e.preventDefault();
-            loadDialog("Window", true, this.id.split("-")[1]);
-            return false;
-        });
-        $('<div class="monitor-refresh" id="ref-'+config.id+'" style="right:40px;top:20px"><img src="/assets/refresh.png" alt="Config" /></div>').appendTo(this.windowDiv).click(function (e) {
-            e.preventDefault();
-            mw[this.id.split("-")[1]].plot();
-            return false;
-        });
-        $('<span class="monitor-title ui-corner-all" style="left:50px;top:20px">'+config.name+'</span>').appendTo(this.windowDiv);
-        $('div.legend').className = "legend ui-corner-all";
-        unblockScreen();
-
-    }
+     }
 
 }
 
@@ -215,6 +211,23 @@ $(function() {
     })
 
 });
+
+function finishPlot(that, series_all, class_save) {
+    var plot = $.plot(that.windowDiv, series_all, that.plotOptions);
+    $('<div class="monitor-config" id="cfg-'+that.config.id+'" style="right:20px;top:20px"><img src="/assets/config.png" alt="Config" /></div>').appendTo(that.windowDiv).click(function (e) {
+        e.preventDefault();
+        loadDialog("Window", true, this.id.split("-")[1]);
+        return false;
+    });
+    $('<div class="monitor-refresh" id="ref-'+that.config.id+'" style="right:40px;top:20px"><img src="/assets/refresh.png" alt="Config" /></div>').appendTo(that.windowDiv).click(function (e) {
+        e.preventDefault();
+        mw[this.id.split("-")[1]].plot();
+        return false;
+    });
+    $('<span class="monitor-title ui-corner-all" style="left:50px;top:20px">'+that.config.name+'</span>').appendTo(that.windowDiv);
+    $('div.legend').className = "legend ui-corner-all";
+    $(that.windowDiv).find(".screenblock").hide().remove();
+};
 
 function procMS(celDiv, id) {
     $(celDiv).click ( function()
@@ -390,17 +403,7 @@ function showTooltip(x, y, contents) {
      }).appendTo("body").fadeIn(200);
 }
 
-function blockScreen(placeholder) {
-//    if (hosted) {
-//        $(".screenblock").show();
-//    } else {
-        $('<div class="screenblock"></div>').appendTo(placeholder).show();
-//    }
-}
-
-function unblockScreen() {
-    $(".screenblock").hide();
-}
+// Auto-refresh
 
 var last_activity = (new Date()).getTime();
 var replot_interval = 600000;    // Milliseconds between automatic plots
