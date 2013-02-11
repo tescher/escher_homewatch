@@ -332,7 +332,7 @@ function loadDialog(type, editing, id) {
                     $("#flexMonitorSensors tr").each ( function () {
                         var cell = $('td[abbr="color"] >div', this);
                         $(cell).css("background-color", (cell.text() ? cell.text() : "#FFFFFF"));
-                        $(cell).html("&nbsp;");
+                        $(cell).html("&nbsp;");  //#TODO handle auto case
                     })
                 }
             }
@@ -401,6 +401,17 @@ function blockScreen(placeholder) {
 function unblockScreen() {
     $(".screenblock").hide();
 }
+
+var last_activity = (new Date()).getTime();
+var replot_interval = 600000;    // Milliseconds between automatic plots
+window.setInterval(function() {
+    if ((((new Date()).getTime()) - (last_activity)) > replot_interval) {
+        mw.forEach(function (placeholder) {
+           placeholder.plot();
+        });
+    }
+}, replot_interval);
+
 
 
 

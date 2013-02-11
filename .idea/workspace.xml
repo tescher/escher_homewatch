@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/monitor_sensors/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/monitor_sensors/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/monitor_windows/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/monitor_windows/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js" />
     </list>
     <ignored path="sample_app.iws" />
@@ -16,7 +13,7 @@
     <file path="/application_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360248559032" ignored="false" />
     <file path="/development.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360252776771" ignored="false" />
     <file path="/alert_email.text.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360256978135" ignored="false" />
-    <file path="/monitor_windows.js" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360456163273" ignored="false" />
+    <file path="/monitor_windows.js" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360551345081" ignored="false" />
     <file path="/monitor_windows_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360422710156" ignored="false" />
     <file path="/production.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360261824163" ignored="false" />
     <file path="/monitor_window.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360262287238" ignored="false" />
@@ -57,10 +54,10 @@
       <file leaf-file-name="monitor_windows.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="337" column="104" selection-start="12295" selection-end="12295" vertical-scroll-proportion="0.5395948">
+            <state line="335" column="50" selection-start="12289" selection-end="12289" vertical-scroll-proportion="0.36095765">
               <folding>
-                <marker date="1360456167419" expanded="false" signature="5287:5305" placeholder="..." />
-                <marker date="1360456167419" expanded="false" signature="7010:7036" placeholder="..." />
+                <marker date="1360551369307" expanded="false" signature="5287:5305" placeholder="..." />
+                <marker date="1360551369307" expanded="false" signature="7010:7036" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -176,8 +173,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="180" />
-    <option name="y" value="37" />
+    <option name="x" value="144" />
+    <option name="y" value="27" />
     <option name="width" value="1361" />
     <option name="height" value="792" />
   </component>
@@ -1669,7 +1666,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="180" y="37" width="1361" height="792" extended-state="0" />
+    <frame x="144" y="27" width="1361" height="792" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943755" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1810,13 +1807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/monitor_windows_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="100" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/assets/javascripts/spectrum.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1854,12 +1844,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/monitor_windows_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="100" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="337" column="104" selection-start="12295" selection-end="12295" vertical-scroll-proportion="0.5395948">
+        <state line="335" column="50" selection-start="12289" selection-end="12289" vertical-scroll-proportion="0.36095765">
           <folding>
-            <marker date="1360456167419" expanded="false" signature="5287:5305" placeholder="..." />
-            <marker date="1360456167419" expanded="false" signature="7010:7036" placeholder="..." />
+            <marker date="1360551369307" expanded="false" signature="5287:5305" placeholder="..." />
+            <marker date="1360551369307" expanded="false" signature="7010:7036" placeholder="..." />
           </folding>
         </state>
       </provider>
