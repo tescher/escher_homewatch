@@ -331,8 +331,8 @@ function loadDialog(type, editing, id) {
                 onSuccess : function () {
                     $("#flexMonitorSensors tr").each ( function () {
                         var cell = $('td[abbr="color"] >div', this);
-                        $(cell).css("background-color", (cell.text() ? cell.text() : "#FFFFFF"));
-                        $(cell).html("&nbsp;");  //#TODO handle auto case
+                        $(cell).css("background-color", (cell.text() && (cell.text != "auto") ? cell.text() : "#FFFFFF"));
+                        if (cell.text() != "auto") $(cell).html("&nbsp;");
                     })
                 }
             }

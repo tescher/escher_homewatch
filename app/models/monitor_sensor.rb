@@ -19,6 +19,9 @@ class MonitorSensor < ActiveRecord::Base
   belongs_to :monitor_window
   has_many :sensors
 
+  after_initialize :default_values
+  before_save :default_values
+
   def self.find_all_by_monitor_window(monitor_window_id, initial_token)
     if !monitor_window_id
       MonitorSensor.find_all_by_monitor_window_id(monitor_window_id)
@@ -27,4 +30,9 @@ class MonitorSensor < ActiveRecord::Base
     end
   end
 
+  private
+  def default_values
+    self.color_auto = true if self.color_auto.nil?
+    self.color = "#000000" if self.color.nil?
+  end
 end
