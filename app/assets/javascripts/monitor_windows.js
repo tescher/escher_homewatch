@@ -1,11 +1,11 @@
 var mw_id = null;
 var mw_token = null;
-var series_all = [];
 var mw = [];
 
 // Window object
 function MonitorWindow(config, windowDiv) {
     this.config = config;
+    this.series_all = [];
     this.windowDiv = windowDiv;
     this.plotOptions = {
         series: {
@@ -82,10 +82,9 @@ function MonitorWindow(config, windowDiv) {
         pan: { interactive: true }
     };
     this.plot = function() {
-        series_all = [];
+        this.series_all = [];
         var color_count = 0;
         var series_count = 0;
-        var class_save = this.windowDiv.parentNode.className;
         $('<div class="screenblock"></div>').appendTo(this.windowDiv).show();
         for (var index in config.monitor_sensors) {
             var ms = config.monitor_sensors[index];
@@ -99,10 +98,10 @@ function MonitorWindow(config, windowDiv) {
                     if (data.color_auto || (data.color == "")) {
                         data.color = color_count;
                     }
-                    series_all.push(data)
+                    that.series_all.push(data)
                     ++series_count;
                     if (series_count == (config.monitor_sensors.length * 2)) {
-                        finishPlot(that, series_all, class_save);
+                        finishPlot(that);
                     }
                 },
                 cache: false,
@@ -113,10 +112,10 @@ function MonitorWindow(config, windowDiv) {
                 method: 'GET',
                 dataType: 'json',
                 success: function(data) {
-                    series_all.push(data)
+                    that.series_all.push(data)
                     ++series_count;
                     if (series_count == (config.monitor_sensors.length * 2)) {
-                        finishPlot(that, series_all, class_save);
+                        finishPlot(that);
                     }
                 },
                 cache: false,
@@ -212,8 +211,8 @@ $(function() {
 
 });
 
-function finishPlot(that, series_all, class_save) {
-    var plot = $.plot(that.windowDiv, series_all, that.plotOptions);
+function finishPlot(that) {
+    var plot = $.plot(that.windowDiv, that.series_all, that.plotOptions);
     $('<div class="monitor-config" id="cfg-'+that.config.id+'" style="right:20px;top:20px"><img src="/assets/config.png" alt="Config" /></div>').appendTo(that.windowDiv).click(function (e) {
         e.preventDefault();
         loadDialog("Window", true, this.id.split("-")[1]);
