@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" name="Default" comment="" />
+    <list default="true" id="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sensors/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/sensors/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/sensors_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/sensors_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="sample_app.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360422636280" ignored="false" />
+    <file path="/Dummy.txt" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360947057723" ignored="false" />
     <file path="/alert_mailer.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360260077440" ignored="false" />
     <file path="/measurements_helper.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360260428328" ignored="false" />
     <file path="/alert.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360249425069" ignored="false" />
@@ -16,7 +20,7 @@
     <file path="/production.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360261824163" ignored="false" />
     <file path="/monitor_window.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360262287238" ignored="false" />
     <file path="/20130207183232_add_auto_color_to_monitor_windows.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360262052147" ignored="false" />
-    <file path="/_form.html.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360428829942" ignored="false" />
+    <file path="/_form.html.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360947140786" ignored="false" />
     <file path="/monitor_sensor.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360562799018" ignored="false" />
     <file path="/measurements_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360263926580" ignored="false" />
     <file path="/custom.css.scss" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360611388482" ignored="false" />
@@ -48,10 +52,7 @@
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="205" column="34" selection-start="7857" selection-end="7857" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1360612139717" expanded="false" signature="6572:6598" placeholder="..." />
-                <marker date="1360612139717" expanded="true" signature="8684:8702" placeholder="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,9 +61,7 @@
         <entry file="file://$PROJECT_DIR$/db/schema.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1360621060285" expanded="true" signature="1450:1669" placeholder="do ... end" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -76,37 +75,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20130211221627_add_index_to_monitor_sensors_monitor_window.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="20130211221627_add_index_to_monitor_sensors_monitor_window.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20130211221627_add_index_to_monitor_sensors_monitor_window.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="53" selection-start="144" selection-end="144" vertical-scroll-proportion="0.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_window_container.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/monitor_windows/_window_container.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="107" selection-end="107" vertical-scroll-proportion="-1.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="monitor_window.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/monitor_window.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="1" selection-start="1150" selection-end="1150" vertical-scroll-proportion="0.0">
+            <state line="5" column="53" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/monitor_sensors/_form.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/sensors/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="116" selection-start="852" selection-end="852" vertical-scroll-proportion="-12.5">
+            <state line="105" column="50" selection-start="3779" selection-end="3779" vertical-scroll-proportion="-16.875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="monitor_sensor.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/monitor_sensor.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="41" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="monitor_sensors_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/monitor_sensors_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="71" column="81" selection-start="1816" selection-end="1816" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -121,10 +120,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <file leaf-file-name="sensors_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/sensors_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="101" column="44" selection-start="2473" selection-end="2473" vertical-scroll-proportion="1.0">
               <folding />
             </state>
           </provider>
@@ -133,7 +132,7 @@
       <file leaf-file-name="custom.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="396" column="7" selection-start="5613" selection-end="5613" vertical-scroll-proportion="-17.67742">
+            <state line="396" column="7" selection-start="5613" selection-end="5613" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -157,8 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/helpers/measurements_helper.rb" />
-        <option value="$PROJECT_DIR$/app/views/alert_mailer/alert_email.text.erb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130207183232_add_auto_color_to_monitor_windows.rb" />
         <option value="$PROJECT_DIR$/app/models/monitor_window.rb" />
@@ -173,6 +170,8 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js" />
         <option value="$PROJECT_DIR$/db/migrate/20130211221501_add_index_to_measurements_sensor_id.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130211221627_add_index_to_monitor_sensors_monitor_window.rb" />
+        <option value="$PROJECT_DIR$/app/views/sensors/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/sensors_controller.rb" />
       </list>
     </option>
   </component>
@@ -184,10 +183,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="201" />
-    <option name="y" value="147" />
-    <option name="width" value="1144" />
-    <option name="height" value="643" />
+    <option name="x" value="-10" />
+    <option name="y" value="19" />
+    <option name="width" value="1940" />
+    <option name="height" value="1015" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -215,6 +214,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1151,7 +1151,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -1630,14 +1629,14 @@
       <method />
     </configuration>
     <list size="8">
-      <item index="0" class="java.lang.String" itemvalue="RSpec.All specs in: spec" />
-      <item index="1" class="java.lang.String" itemvalue="Rails.Rails Development" />
-      <item index="2" class="java.lang.String" itemvalue="Ruby.development" />
-      <item index="3" class="java.lang.String" itemvalue="RSpec.MonitorWindowPages index with non-admin user" />
-      <item index="4" class="java.lang.String" itemvalue="RSpec.MonitorWindowPages index with non-admin user should list this user's monitors and sensors" />
-      <item index="5" class="java.lang.String" itemvalue="RSpec.MeasurementPages get data should retrieve the value just entered" />
-      <item index="6" class="java.lang.String" itemvalue="RSpec.Measurement Saved value should take into account offset and scale" />
-      <item index="7" class="java.lang.String" itemvalue="Ruby.user_mailer" />
+      <item index="0" class="java.lang.String" itemvalue="RSpec.MonitorWindowPages index with non-admin user" />
+      <item index="1" class="java.lang.String" itemvalue="RSpec.MonitorWindowPages index with non-admin user should list this user's monitors and sensors" />
+      <item index="2" class="java.lang.String" itemvalue="RSpec.MeasurementPages get data should retrieve the value just entered" />
+      <item index="3" class="java.lang.String" itemvalue="RSpec.Measurement Saved value should take into account offset and scale" />
+      <item index="4" class="java.lang.String" itemvalue="Ruby.user_mailer" />
+      <item index="5" class="java.lang.String" itemvalue="RSpec.All specs in: spec" />
+      <item index="6" class="java.lang.String" itemvalue="Rails.Rails Development" />
+      <item index="7" class="java.lang.String" itemvalue="Ruby.development" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -1677,16 +1676,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="201" y="147" width="1144" height="643" extended-state="0" />
+    <frame x="-10" y="19" width="1940" height="1015" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943755" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.51171875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24143426" sideWeight="0.32395384" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26599634" sideWeight="0.48828125" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1593583" sideWeight="0.48828125" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.61444044" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24143426" sideWeight="0.32756132" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49701494" sideWeight="0.5067935" order="9" side_tool="true" content_ui="tabs" />
@@ -1695,6 +1693,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.51171875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1761,48 +1760,14 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/measurements_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="51" selection-start="863" selection-end="863" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/assets/javascripts/spectrum.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p286@rails3tutorial2ndEd/gems/actionpack-3.2.11/lib/action_view/helpers/form_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1069" column="95" selection-start="47549" selection-end="47549" vertical-scroll-proportion="2.1305182">
-          <folding />
-        </state>
+        <state line="1069" column="95" selection-start="47549" selection-end="47549" vertical-scroll-proportion="2.1305182" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/monitor_windows/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="1995" selection-end="2172" vertical-scroll-proportion="-3.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/monitor_sensors_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="81" selection-start="1816" selection-end="1816" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/monitor_sensor.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="41" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="57" column="0" selection-start="1995" selection-end="2172" vertical-scroll-proportion="-3.125" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
@@ -1814,7 +1779,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/monitor_sensors/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="116" selection-start="852" selection-end="852" vertical-scroll-proportion="-12.5">
+        <state line="20" column="116" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1828,21 +1793,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/monitor_windows/_window_container.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="107" selection-end="107" vertical-scroll-proportion="-1.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/monitor_windows_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="38" selection-start="3079" selection-end="3079" vertical-scroll-proportion="0.0">
+        <state line="2" column="0" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="396" column="7" selection-start="5613" selection-end="5613" vertical-scroll-proportion="-17.67742">
+        <state line="396" column="7" selection-start="5613" selection-end="5613" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1850,19 +1808,14 @@
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="205" column="34" selection-start="7857" selection-end="7857" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1360612139717" expanded="false" signature="6572:6598" placeholder="..." />
-            <marker date="1360612139717" expanded="true" signature="8684:8702" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1360621060285" expanded="true" signature="1450:1669" placeholder="do ... end" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1875,7 +1828,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130211221627_add_index_to_monitor_sensors_monitor_window.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="53" selection-start="144" selection-end="144" vertical-scroll-proportion="0.625">
+        <state line="5" column="53" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/sensors/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="50" selection-start="3779" selection-end="3779" vertical-scroll-proportion="-16.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/monitor_sensor.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="41" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/monitor_sensors_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="81" selection-start="1816" selection-end="1816" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/monitor_windows_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="38" selection-start="3079" selection-end="3079" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/sensors_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="44" selection-start="2473" selection-end="2473" vertical-scroll-proportion="1.0">
           <folding />
         </state>
       </provider>
