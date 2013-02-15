@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sensors/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/sensors/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/sensors_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/sensors_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/sensor.rb" afterPath="$PROJECT_DIR$/app/models/sensor.rb" />
     </list>
     <ignored path="sample_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -120,19 +118,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sensors_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sensors_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/sensors_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="44" selection-start="2473" selection-end="2473" vertical-scroll-proportion="1.0">
+            <state line="80" column="22" selection-start="1932" selection-end="1932" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
+      <file leaf-file-name="sensor.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/sensor.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="396" column="7" selection-start="5613" selection-end="5613" vertical-scroll-proportion="0.0">
+            <state line="48" column="60" selection-start="1612" selection-end="1612" vertical-scroll-proportion="0.47368422">
               <folding />
             </state>
           </provider>
@@ -156,7 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130207183232_add_auto_color_to_monitor_windows.rb" />
         <option value="$PROJECT_DIR$/app/models/monitor_window.rb" />
         <option value="$PROJECT_DIR$/app/controllers/measurements_controller.rb" />
@@ -172,6 +169,7 @@
         <option value="$PROJECT_DIR$/db/migrate/20130211221627_add_index_to_monitor_sensors_monitor_window.rb" />
         <option value="$PROJECT_DIR$/app/views/sensors/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/sensors_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/sensor.rb" />
       </list>
     </option>
   </component>
@@ -1760,11 +1758,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p286@rails3tutorial2ndEd/gems/actionpack-3.2.11/lib/action_view/helpers/form_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1069" column="95" selection-start="47549" selection-end="47549" vertical-scroll-proportion="2.1305182" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/monitor_windows/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="0" selection-start="1995" selection-end="2172" vertical-scroll-proportion="-3.125" />
@@ -1863,7 +1856,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/sensors_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="44" selection-start="2473" selection-end="2473" vertical-scroll-proportion="1.0">
+        <state line="80" column="22" selection-start="1932" selection-end="1932" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/sensor.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="60" selection-start="1612" selection-end="1612" vertical-scroll-proportion="0.47368422">
           <folding />
         </state>
       </provider>

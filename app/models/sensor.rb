@@ -39,7 +39,7 @@ class Sensor < ActiveRecord::Base
 
   before_save do |sensor|
     sensor.trigger_email = trigger_email.downcase if !trigger_email.blank?
-    sensor.interval ||= 30000
+    sensor.interval ||= 60
     sensor.trigger_delay ||= 600
   end
 
@@ -61,7 +61,7 @@ class Sensor < ActiveRecord::Base
 
   private
   def default_values
-    self.interval ||= 30000
+    self.interval ||= 60
     self.offset ||= 0.0
     self.scale ||= 1.0
     self.trigger_delay ||= 600
