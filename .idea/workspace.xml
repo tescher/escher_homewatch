@@ -74,10 +74,10 @@
       <file leaf-file-name="monitor_windows.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="38" selection-start="1358" selection-end="1358" vertical-scroll-proportion="1.59375">
+            <state line="26" column="37" selection-start="976" selection-end="976" vertical-scroll-proportion="1.21875">
               <folding>
-                <marker date="1361490378306" expanded="false" signature="6708:6734" placeholder="..." />
-                <marker date="1361490378306" expanded="false" signature="8820:8838" placeholder="..." />
+                <marker date="1361490927054" expanded="false" signature="6704:6730" placeholder="..." />
+                <marker date="1361490927054" expanded="false" signature="8816:8834" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1825,10 +1825,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="38" selection-start="1358" selection-end="1358" vertical-scroll-proportion="1.59375">
+        <state line="26" column="37" selection-start="976" selection-end="976" vertical-scroll-proportion="1.21875">
           <folding>
-            <marker date="1361490378306" expanded="false" signature="6708:6734" placeholder="..." />
-            <marker date="1361490378306" expanded="false" signature="8820:8838" placeholder="..." />
+            <marker date="1361490927054" expanded="false" signature="6704:6730" placeholder="..." />
+            <marker date="1361490927054" expanded="false" signature="8816:8834" placeholder="..." />
           </folding>
         </state>
       </provider>

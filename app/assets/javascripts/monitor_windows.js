@@ -32,7 +32,7 @@ function MonitorWindow(config, windowDiv) {
                 var formatted = '<span id="legend">' + label + " (";
                 var last = series['data'].length - 1;
                 if (last >= 0) {
-                    if ((now_utc.valueOf() - series['data'][last][0]) > 60*60*1000) {  //If data more than an hour old, signify
+                    if ((now.valueOf() - series['data'][last][0]) > 60*60*1000) {  //If data more than an hour old, signify
                         old = true;
                     }
                     last_value = parseFloat(series['data'][last][1]).toFixed(1).toString();
