@@ -14,25 +14,30 @@
 #  password_reset_sent_at :datetime
 #  state                  :string(255)
 #  confirmation_token     :string(255)
+#  time_zone              :string(255)
 #
 
 require 'state_machine'
 
 class User < ActiveRecord::Base
-  attr_accessible :name, :email, :password, :password_confirmation
+  attr_accessible :name, :email, :password, :password_confirmation, :time_zone
   has_secure_password
   has_many :sensors
   has_many :monitor_windows
 
   before_create {
     generate_token(:remember_token)
+    self.time_zone = DEFAULT_TIME_ZONE
   }
   before_save do |user|
                   user.email = email.downcase
                   if (!user.password.blank?)     # Password reset, get rid of the token
                     user.password_reset_token = ""
                   end
-               end
+                  if (user.time_zone.blank?)     # Default time_zone
+                    user.time_zone = DEFAULT_TIME_ZONE
+                  end
+  end
 
 
   validates :name, presence: true, length: { maximum: 50 }

@@ -16,7 +16,7 @@
               <%= f.enum_select :monitor_type %>
             </div>
           </div>
-        <div class="row-fluid">
+        <div class="row-fluid graph-only">
           <div class="span3">
             <%= f.label :y_axis_min, "Y Axis Min:", class: "control-label" %>
           </div>
@@ -27,7 +27,7 @@
             <%= f.check_box :y_axis_min_auto %> &nbsp; Auto
           </div>
         </div>
-        <div class="row-fluid">
+        <div class="row-fluid graph-only">
           <div class="span3">
             <%= f.label :y_axis_max, "Y Axis Max:", class: "control-label" %>
           </div>
@@ -40,7 +40,7 @@
         </div>
         <div class="row-fluid">
           <div class="span3">
-            <%= f.label :x_axis_days, "X Axis Days:", class: "control-label" %>
+            <%= f.label :x_axis_days, "Days back:", class: "control-label" %>
           </div>
           <div class="span1">
             <%= f.text_field :x_axis_days %>
@@ -67,7 +67,7 @@
           <div class="span3">
             <%= f.enum_select :width %>
           </div>
-          <div class="span3">
+          <div class="span3 graph-only">
             <%= f.check_box :legend %> &nbsp; Legend
           </div>
         </div>

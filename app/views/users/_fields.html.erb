@@ -12,3 +12,7 @@
 <%= f.label :password_confirmation, "Confirm Password" %>
 <%= f.password_field :password_confirmation %>
 
+<%= f.label :time_zone, "Time zone" %>
+<%= f.collection_select :time_zone, ActiveSupport::TimeZone.us_zones, :name, :to_s %>
+
+

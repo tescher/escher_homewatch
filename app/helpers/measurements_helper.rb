@@ -8,7 +8,7 @@ module MeasurementsHelper
       alert.save
       subject += sensor.name + " absence alert"
       if last_measurement
-        body = "No measurement since " + last_measurement.created_at.utc.strftime("%a %b %e, %Y, %i:%M %p")
+        body = "No measurement since " + last_measurement.created_at.in_time_zone(User.find(sensor.user_id).time_zone).strftime("%a %b %e, %Y, %l:%M %p")
       else
         body = "No measurement yet received."
       end
@@ -26,7 +26,7 @@ module MeasurementsHelper
       end
       body += "\nValue: " + value.to_s
       body += "\nLimit: " + limit.to_s
-      body += "\nTime: " + alert.created_at.utc.strftime("%a %b %e, %Y, %l:%M %p")
+      body += "\nTime: " + alert.created_at.in_time_zone(User.find(sensor.user_id).time_zone).strftime("%a %b %e, %Y, %l:%M %p")
     end
     if alert.email != ""
       puts "Calling mailer"

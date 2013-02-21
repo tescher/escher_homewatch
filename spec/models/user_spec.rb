@@ -14,7 +14,7 @@
 #  password_reset_sent_at :datetime
 #  state                  :string(255)
 #  confirmation_token     :string(255)
-#
+#  time_zone              :string(255)
 
 require 'spec_helper'
 
@@ -44,6 +44,7 @@ describe User do
   it { should respond_to(:activate) }
   it { should respond_to(:state) }
   it { should respond_to(:confirmation_token) }
+  it { should respond_to(:time_zone) }
 
   it { should be_valid }
   it { should_not be_admin }
@@ -55,6 +56,12 @@ describe User do
     end
 
     it { should be_admin }
+  end
+
+  describe "time zone" do
+    it "should be defaulted" do
+      @user.time_zone.should == DEFAULT_TIME_ZONE
+    end
   end
 
   describe "Pended upon creation" do

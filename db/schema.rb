@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130211221627) do
+ActiveRecord::Schema.define(:version => 20130221224412) do
 
   create_table "alerts", :force => true do |t|
     t.integer  "sensor_id"
@@ -99,8 +99,8 @@ ActiveRecord::Schema.define(:version => 20130211221627) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at",                                :null => false
-    t.datetime "updated_at",                                :null => false
+    t.datetime "created_at",                                                       :null => false
+    t.datetime "updated_at",                                                       :null => false
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin",                  :default => false
@@ -108,6 +108,7 @@ ActiveRecord::Schema.define(:version => 20130211221627) do
     t.datetime "password_reset_sent_at"
     t.string   "state"
     t.string   "confirmation_token"
+    t.string   "time_zone",              :default => "Central Time (US & Canada)"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

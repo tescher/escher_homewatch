@@ -8,7 +8,10 @@
         <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
     <% end %>
 
+  </div>
+  <div class="row">
     <%= gravatar_for @user %>
     <%= link_to 'change', 'http://gravatar.com/emails', :target => '_blank' %>
   </div>
 </div>
+
