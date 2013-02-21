@@ -4,6 +4,8 @@ var mw = [];
 
 // Window object
 function MonitorWindow(config, windowDiv) {
+    var now = new Date();
+    var now_utc = new Date(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(),  now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds());
     this.config = config;
     this.series_all = [];
     this.windowDiv = windowDiv;
@@ -22,7 +24,6 @@ function MonitorWindow(config, windowDiv) {
             position: "sw",
             labelFormatter: function(label, series) {
                 // series is the series object for the label
-                var now = new Date();
                 // console.log(getSQLts(now));
                 var old = false;
                 // console.log(legend_data[0][sensor_id]['ts']);
@@ -31,7 +32,7 @@ function MonitorWindow(config, windowDiv) {
                 var formatted = '<span id="legend">' + label + " (";
                 var last = series['data'].length - 1;
                 if (last >= 0) {
-                    if ((now - Date.parse(series['data'][last][0])) > 60*60*1000) {  //If data more than an hour old, signify
+                    if ((now_utc - Date.parse(series['data'][last][0])) > 60*60*1000) {  //If data more than an hour old, signify
                         old = true;
                     }
                     last_value = parseFloat(series['data'][last][1]).toFixed(1).toString();
@@ -65,7 +66,7 @@ function MonitorWindow(config, windowDiv) {
         },
         xaxis: {
             mode: "time", timeformat: "%b %d",
-            min: ((!config.x_axis_auto && config.x_axis_days != "") ? Date.now() - 1000*60*60*24*config.x_axis_days : null),
+            min: ((!config.x_axis_auto && config.x_axis_days != "") ? now_utc - 1000*60*60*24*config.x_axis_days : null),
             minTickSize: [1, "day"],
             monthNames: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
             zoomAmount: 1.25,
