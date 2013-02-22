@@ -70,6 +70,7 @@ function MonitorWindow(config, windowDiv) {
             minTickSize: [1, "day"],
             monthNames: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
             zoomAmount: 1.25,
+            timezone: "browser",
             color: "#909090"
         },
         grid: {
