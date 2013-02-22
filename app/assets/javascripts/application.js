@@ -16,7 +16,8 @@
 //= require jquery.ui.dialog
 //= require jquery.ui.datepicker
 //= require jquery.flot
-//= require jquery.flot.navigate.min
+//= require jquery.flot.navigate
+//= require jquery.flot.time
 //= require flexigrid
 //= require spectrum
 //= require bootstrap
