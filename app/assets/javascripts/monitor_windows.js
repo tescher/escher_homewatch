@@ -115,6 +115,7 @@ function MonitorWindow(config, windowDiv) {
                         } else {
                             if (!that.series_all["rows"]) {
                                 that.series_all["rows"] = [];
+                                that.series_all["total"] = 0;
                             }
                             that.series_all["rows"] = that.series_all["rows"].concat(data.rows);
                             that.series_all["total"] += data.total;
@@ -138,6 +139,7 @@ function MonitorWindow(config, windowDiv) {
                     } else {
                         if (!that.series_all["rows"]) {
                             that.series_all["rows"] = [];
+                            that.series_all["total"] = 0;
                         }
                         that.series_all["rows"] = that.series_all["rows"].concat(data.rows);
                         that.series_all["total"] += data.total;
