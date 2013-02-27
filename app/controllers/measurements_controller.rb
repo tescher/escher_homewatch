@@ -26,7 +26,7 @@ class MeasurementsController < ApplicationController
             :rows => data.collect{|m| { :id => m.id, :cell => [
                 m.created_at.to_i*1000,
                 (ms.nil? || ms.legend.empty? ? sensor.name : ms.legend) + " ALERT",
-                m.value]
+                (m.value.empty? ? "Absence" : m.value)]
             }}
         }.to_json
       else
@@ -47,7 +47,7 @@ class MeasurementsController < ApplicationController
             :rows => data.collect{|m| { :id => m.id, :cell => [
                 m.created_at.to_i*1000,
                 (ms.nil? || ms.legend.empty? ? sensor.name : ms.legend),
-                (m.value.empty? ? "Absence" : m.value)]
+                m.value]
             }}
         }.to_json
       else
