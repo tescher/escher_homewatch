@@ -254,7 +254,7 @@ function finishPlot(that) {
             {
                 dataType: 'json',
                 colModel : [
-                    {display: 'Time', name : 'time', width : 150, sortable : false, align: 'left'},
+                    {display: 'Time', name : 'time', width : 150, sortable : true, align: 'left'},
                     {display: 'Sensor', name : 'sensor', width : 150, sortable : false, align: 'left'},
                     {display: 'Value', name : 'value', width : 70, sortable : false, align: 'left'}
                 ],
