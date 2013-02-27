@@ -254,15 +254,24 @@ function finishPlot(that) {
             {
                 dataType: 'json',
                 colModel : [
-                    {display: 'Time', name : 'sensor', width : 100, sortable : true, align: 'left'},
-                    {display: 'Sensor', name : 'legend', width : 100, sortable : true, align: 'left'},
-                    {display: 'Value', name : 'color', width : 70, sortable : true, align: 'left'}
+                    {display: 'Time', name : 'time', width : 100, sortable : true, align: 'left'},
+                    {display: 'Sensor', name : 'sensor', width : 100, sortable : true, align: 'left'},
+                    {display: 'Value', name : 'value', width : 70, sortable : true, align: 'left'}
                 ],
                 sortname: "name",
                 sortorder: "asc",
                 usepager: false,
                 width: 'auto',
-                title: that.config.name
+                title: that.config.name,
+                onSuccess : function () {
+                    $("#flexMonitor_"+that.config.id+" tr").each ( function () {
+                        var cell = $('td[abbr="time"] >div', this);
+                        // $(cell).css("background-color", (cell.text() && (cell.text != "auto") ? cell.text() : "#FFFFFF"));
+                        var d = new Date(cell.text());
+                        $(cell).html($.datepicker.formatDate('DD, M d, yy', d) + ", " + niceTime(d));
+                    })
+                }
+
             }
         );
         $(flex).flexAddData({ total: that.series_all["total"], rows: that.series_all["rows"]});
