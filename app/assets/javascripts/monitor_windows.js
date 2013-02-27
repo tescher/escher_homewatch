@@ -124,7 +124,7 @@ function MonitorWindow(config, windowDiv) {
                 async: true
             });
         }
-     }
+    }
 
 }
 
@@ -369,6 +369,11 @@ function loadDialog(type, editing, id) {
             return false;
         });
 
+        $("#monitor_window_monitor_type").change(function(evt) {
+            swapWindowTypeForm(this);
+         });
+
+        swapWindowTypeForm($("#monitor_window_monitor_type"));
 
 
 
@@ -391,6 +396,14 @@ function setupDialog(element, data) {
     if (mw_id == null) mw_id = $("input#monitor_window_id").val();
     if (mw_token == null) mw_token = $("input#monitor_window_initial_token").val();
 
+}
+
+function swapWindowTypeForm(select) {
+    if ($(select).val() == "graph") {
+        $(".graph-only").show();
+    } else {
+        $(".graph-only").hide();
+    }
 }
 
 // Set up the tooltips for the data points
