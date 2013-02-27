@@ -267,7 +267,7 @@ function finishPlot(that) {
                     $("#flexMonitor_"+that.config.id+" tr").each ( function () {
                         var cell = $('td[abbr="time"] >div', this);
                         // $(cell).css("background-color", (cell.text() && (cell.text != "auto") ? cell.text() : "#FFFFFF"));
-                        var d = new Date(cell.text());
+                        var d = new Date(parseInt(cell.text()));
                         $(cell).html($.datepicker.formatDate('DD, M d, yy', d) + ", " + niceTime(d));
                     })
                 }
