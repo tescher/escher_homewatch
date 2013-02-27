@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/monitor_windows/_window_container.html.erb" afterPath="$PROJECT_DIR$/app/views/monitor_windows/_window_container.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js" />
     </list>
     <ignored path="sample_app.iws" />
@@ -14,7 +13,7 @@
     <file path="/application_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360248559032" ignored="false" />
     <file path="/development.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360252776771" ignored="false" />
     <file path="/alert_email.text.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360256978135" ignored="false" />
-    <file path="/monitor_windows.js" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1361997395952" ignored="false" />
+    <file path="/monitor_windows.js" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1361999272256" ignored="false" />
     <file path="/monitor_windows_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1361990862029" ignored="false" />
     <file path="/production.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360261824163" ignored="false" />
     <file path="/monitor_window.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360262287238" ignored="false" />
@@ -62,11 +61,20 @@
           <file leaf-file-name="monitor_windows.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="251" column="25" selection-start="9825" selection-end="9825" vertical-scroll-proportion="1.374502">
+                <state line="265" column="36" selection-start="10478" selection-end="10478" vertical-scroll-proportion="2.5221238">
                   <folding>
-                    <marker date="1361997655467" expanded="false" signature="8153:8179" placeholder="..." />
-                    <marker date="1361997655467" expanded="true" signature="9651:9669" placeholder="..." />
+                    <marker date="1361999556715" expanded="false" signature="8153:8179" placeholder="..." />
+                    <marker date="1361999556715" expanded="true" signature="9651:9669" placeholder="..." />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="custom.css.scss" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="323" column="1" selection-start="4444" selection-end="4444" vertical-scroll-proportion="0.0">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -217,7 +225,6 @@
         <option value="$PROJECT_DIR$/vendor/assets/javascripts/jquery.flot.js" />
         <option value="$PROJECT_DIR$/vendor/assets/javascripts/jquery.flot.time.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
         <option value="$PROJECT_DIR$/spec/models/monitor_sensors_spec.rb" />
         <option value="$PROJECT_DIR$/app/models/monitor_sensor.rb" />
         <option value="$PROJECT_DIR$/app/controllers/monitor_sensors_controller.rb" />
@@ -227,6 +234,7 @@
         <option value="$PROJECT_DIR$/app/controllers/measurements_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/monitor_windows_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/monitor_windows/_window_container.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js" />
       </list>
     </option>
@@ -1760,13 +1768,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/users/_user.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/_fields.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1865,12 +1866,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="323" column="1" selection-start="4444" selection-end="4444" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="251" column="25" selection-start="9825" selection-end="9825" vertical-scroll-proportion="1.374502">
+        <state line="265" column="36" selection-start="10478" selection-end="10478" vertical-scroll-proportion="2.5221238">
           <folding>
-            <marker date="1361997655467" expanded="false" signature="8153:8179" placeholder="..." />
-            <marker date="1361997655467" expanded="true" signature="9651:9669" placeholder="..." />
+            <marker date="1361999556715" expanded="false" signature="8153:8179" placeholder="..." />
+            <marker date="1361999556715" expanded="true" signature="9651:9669" placeholder="..." />
           </folding>
         </state>
       </provider>

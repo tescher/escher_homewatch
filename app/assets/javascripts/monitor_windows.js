@@ -266,6 +266,8 @@ function finishPlot(that) {
             }
         );
         $(flex).flexAddData({ total: that.series_all["total"], rows: that.series_all["rows"]});
+        $(flex).addClass("mw-"+that.config.width);
+
         //$(flex).flexReload();
 
     }
