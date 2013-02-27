@@ -239,12 +239,17 @@ $(function() {
         async: false
     })
 
+
 });
 
 function finishPlot(that) {
+    var mwControlTop = "20px";
     if (that.config.monitor_type == "graph") {
         var plot = $.plot(that.windowDiv, that.series_all, that.plotOptions);
+        $('<span class="monitor-title ui-corner-all" style="left:50px;top:20px">'+that.config.name+'</span>').appendTo(that.windowDiv);
+        $('div.legend').className = "legend ui-corner-all";
     } else {
+        mwControlTop = "8px";
         var flex = $("#flexMonitor_"+that.config.id).flexigrid(
             {
                 dataType: 'json',
@@ -261,21 +266,21 @@ function finishPlot(that) {
             }
         );
         $(flex).flexAddData({ total: that.series_all["total"], rows: that.series_all["rows"]});
+        //$(flex).flexReload();
 
     }
 
-    $('<div class="monitor-config" id="cfg-'+that.config.id+'" style="right:20px;top:20px"><img src="/assets/config.png" alt="Config" /></div>').appendTo(that.windowDiv).click(function (e) {
+    $('<div class="monitor-config" id="cfg-'+that.config.id+'" style="right:20px;top:'+mwControlTop+'"><img src="/assets/config.png" alt="Config" /></div>').appendTo(that.windowDiv).click(function (e) {
         e.preventDefault();
         loadDialog("Window", true, this.id.split("-")[1]);
         return false;
     });
-    $('<div class="monitor-refresh" id="ref-'+that.config.id+'" style="right:40px;top:20px"><img src="/assets/refresh.png" alt="Config" /></div>').appendTo(that.windowDiv).click(function (e) {
+    $('<div class="monitor-refresh" id="ref-'+that.config.id+'" style="right:40px;top:'+mwControlTop+'"><img src="/assets/refresh.png" alt="Config" /></div>').appendTo(that.windowDiv).click(function (e) {
         e.preventDefault();
         mw[this.id.split("-")[1]].display();
         return false;
     });
-    $('<span class="monitor-title ui-corner-all" style="left:50px;top:20px">'+that.config.name+'</span>').appendTo(that.windowDiv);
-    $('div.legend').className = "legend ui-corner-all";
+
     $(that.windowDiv).find(".screenblock").hide().remove();
 };
 
