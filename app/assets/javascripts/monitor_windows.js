@@ -254,14 +254,15 @@ function finishPlot(that) {
             {
                 dataType: 'json',
                 colModel : [
-                    {display: 'Time', name : 'time', width : 100, sortable : true, align: 'left'},
-                    {display: 'Sensor', name : 'sensor', width : 100, sortable : true, align: 'left'},
-                    {display: 'Value', name : 'value', width : 70, sortable : true, align: 'left'}
+                    {display: 'Time', name : 'time', width : 150, sortable : false, align: 'left'},
+                    {display: 'Sensor', name : 'sensor', width : 150, sortable : false, align: 'left'},
+                    {display: 'Value', name : 'value', width : 70, sortable : false, align: 'left'}
                 ],
                 sortname: "name",
                 sortorder: "asc",
                 usepager: false,
                 width: 'auto',
+                height: '100%',
                 title: that.config.name,
                 onSuccess : function () {
                     $("#flexMonitor_"+that.config.id+" tr").each ( function () {
