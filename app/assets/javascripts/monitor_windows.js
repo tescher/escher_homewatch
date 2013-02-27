@@ -85,6 +85,7 @@ function MonitorWindow(config, windowDiv) {
     };
     this.display = function() {
         this.series_all = [];
+        this.config = config;
         var color_count = 0;
         var series_count = 0;
         var series_total = 0;
@@ -101,15 +102,23 @@ function MonitorWindow(config, windowDiv) {
             var that = this;
             if (!ms.alerts_only) {
                 $.ajax({
-                    url: "/measurements?monitor_sensor_id="+ms.id+"&sensor_id="+ms.sensor_id,
+                    url: "/measurements?type="+config.monitor_type+"&monitor_sensor_id="+ms.id+"&sensor_id="+ms.sensor_id,
                     method: 'GET',
                     dataType: 'json',
                     success: function(data) {
-                        ++color_count;
-                        if (data.color_auto || (data.color == "")) {
-                            data.color = color_count;
+                        if (that.config.monitor_type == "graph") {
+                            ++color_count;
+                            if (data.color_auto || (data.color == "")) {
+                                data.color = color_count;
+                            }
+                            that.series_all.push(data)
+                        } else {
+                            if (!that.series_all["rows"]) {
+                                that.series_all["rows"] = [];
+                            }
+                            that.series_all["rows"].push(data.rows);
+                            that.series_all["total"] += data.total;
                         }
-                        that.series_all.push(data)
                         ++series_count;
                         if (series_count == series_total) {
                             finishPlot(that);
@@ -120,11 +129,19 @@ function MonitorWindow(config, windowDiv) {
                 });
             }
             $.ajax({
-                url: "/measurements?monitor_sensor_id="+ms.id+"&sensor_id="+ms.sensor_id+"&alerts=true",
+                url: "/measurements?type="+config.monitor_type+"&monitor_sensor_id="+ms.id+"&sensor_id="+ms.sensor_id+"&alerts=true",
                 method: 'GET',
                 dataType: 'json',
                 success: function(data) {
-                    that.series_all.push(data)
+                    if (that.config.monitor_type == "graph") {
+                        that.series_all.push(data)
+                    } else {
+                        if (!that.series_all["rows"]) {
+                            that.series_all["rows"] = [];
+                        }
+                        that.series_all["rows"].push(data.rows);
+                        that.series_all["total"] += data.total;
+                    }
                     ++series_count;
                     if (series_count == series_total) {
                         finishPlot(that);
@@ -207,7 +224,6 @@ $(function() {
             var container_div = document.getElementById("monitors-container");
             for (var index in data.monitor_windows) {
                 var config = data.monitor_windows[index];
-                // var parser = new DOMParser(), doc = parser.parseFromString(config.html,"text/xml");
                 var mw_container_div = document.createElement("div");
                 mw_container_div.className = "monitor-container-parent mw-parent-" + config.width;
                 mw_container_div.innerHTML = config.html;
@@ -224,7 +240,28 @@ $(function() {
 });
 
 function finishPlot(that) {
-    var plot = $.plot(that.windowDiv, that.series_all, that.plotOptions);
+    if (that.config.monitor_type == "graph") {
+        var plot = $.plot(that.windowDiv, that.series_all, that.plotOptions);
+    } else {
+        var flex = $("#flexMonitor_"+that.config.id).flexigrid(
+            {
+                dataType: 'json',
+                colModel : [
+                    {display: 'Time', name : 'sensor', width : 100, sortable : true, align: 'left'},
+                    {display: 'Sensor', name : 'legend', width : 100, sortable : true, align: 'left'},
+                    {display: 'Value', name : 'color', width : 70, sortable : true, align: 'left'}
+                ],
+                sortname: "name",
+                sortorder: "asc",
+                usepager: false,
+                width: 'auto',
+                title: that.config.name
+            }
+        );
+        $(flex).flexAddData({ total: that.series_all["total"], rows: that.series_all["rows"]});
+
+    }
+
     $('<div class="monitor-config" id="cfg-'+that.config.id+'" style="right:20px;top:20px"><img src="/assets/config.png" alt="Config" /></div>').appendTo(that.windowDiv).click(function (e) {
         e.preventDefault();
         loadDialog("Window", true, this.id.split("-")[1]);

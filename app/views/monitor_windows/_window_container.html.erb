@@ -1,4 +1,8 @@
 <div class="monitor-container mw-<%= mw_width %>" id="mwc_<%= mw_id %>">
   <div class="screenblock"></div>
-  <div class="monitor-window mw-<%= mw_width %>" id="mw-<%= mw_id %>"></div>
+  <div class="monitor-window mw-<%= mw_width %>" id="mw-<%= mw_id %>">
+    <% if mw_type == "table" %>
+      <table id="flexMonitor_"<%= mw_id %> class="measurements"></table>
+    <% end %>
+   </div>
 </div>

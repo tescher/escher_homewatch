@@ -16,24 +16,50 @@ class MeasurementsController < ApplicationController
     params[:end] = (Time.now + 3600).utc.strftime("%Y-%m-%d %H:%M:%S %z") if !params[:end]
     puts params[:start]
     puts params[:end]
+    ms = (params[:monitor_sensor_id].nil? ? nil : MonitorSensor.find(params[:monitor_sensor_id]))
+    sensor = Sensor.find(params[:sensor_id])
     if params[:alerts]
-      render :json =>  {
-          :id=>"",
-          :color=> "red",
-          :lines=> {show: false},
-          :points=> {show: true},
-          :data=> Alert.where("sensor_id = ? and created_at >= ? and created_at <= ?", params[:sensor_id].to_i, params[:start], params[:end]).collect{|m| [m.created_at.to_i*1000, m.value ]}}.to_json
+      data = Alert.where("sensor_id = ? and created_at >= ? and created_at <= ?", params[:sensor_id].to_i, params[:start], params[:end])
+      if params[:type] == "table"
+        render :json => {
+            :total => data.size,
+            :rows => data.collect{|m| { :id => m.id, :cell => [
+                m.created_at.to_i*1000,
+                (ms.nil? || ms.legend.empty? ? sensor.name : ms.legend) + " ALERT",
+                m.value]
+            }}
+        }.to_json
+      else
+        render :json =>  {
+              :id=>"",
+              :color=> "red",
+              :lines=> {show: false},
+              :points=> {show: true},
+              :data=> data.collect{|m| [m.created_at.to_i*1000, m.value ]}}.to_json
+      end
     else
       ms = (params[:monitor_sensor_id].nil? ? nil : MonitorSensor.find(params[:monitor_sensor_id]))
       sensor = Sensor.find(params[:sensor_id])
-      render :json =>  {
+      data = Measurement.where("sensor_id = ? and created_at >= ? and created_at <= ?", params[:sensor_id].to_i, params[:start], params[:end])
+      if params[:type] == "table"
+        render :json => {
+            :total => data.size,
+            :rows => data.collect{|m| { :id => m.id, :cell => [
+                m.created_at.to_i*1000,
+                (ms.nil? || ms.legend.empty? ? sensor.name : ms.legend),
+                m.value]
+            }}
+        }.to_json
+      else
+        render :json =>  {
           :id=>params[:sensor_id],
           :label=> (ms.nil? || ms.legend.empty? ? sensor.name : ms.legend),
           :color=> (ms.nil? || ms.color.empty? ? "" : ms.color),
           :color_auto=> (ms.nil? ? true : ms.color_auto),
           :trigger_upper_limit => sensor.trigger_upper_limit,
           :trigger_lower_limit => sensor.trigger_lower_limit,
-          :data=> Measurement.where("sensor_id = ? and created_at >= ? and created_at <= ?", params[:sensor_id].to_i, params[:start], params[:end]).collect{|m| [m.created_at.to_i*1000, m.value ]}}.to_json
+          :data=> data.collect{|m| [m.created_at.to_i*1000, m.value ]}}.to_json
+      end
     end
 
 

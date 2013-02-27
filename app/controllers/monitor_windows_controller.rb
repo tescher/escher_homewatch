@@ -94,7 +94,7 @@ class MonitorWindowsController < ApplicationController
                       :alerts_only => ms.alerts_only
                     }
                 },
-                :html => render_to_string(partial: 'window_container', locals: { mw_width: mw.width, mw_id: mw.id, mw_name: mw.name })
+                :html => render_to_string(partial: 'window_container', locals: { mw_width: mw.width, mw_id: mw.id, mw_name: mw.name, mw_type: mw.monitor_type})
             }}
         }.to_json
 
