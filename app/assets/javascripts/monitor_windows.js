@@ -435,7 +435,7 @@ var replot_interval = 600000;    // Milliseconds between automatic plots
 window.setInterval(function() {
     if ((((new Date()).getTime()) - (last_activity)) > replot_interval) {
         mw.forEach(function (placeholder) {
-           placeholder.plot();
+           placeholder.display();
         });
     }
 }, replot_interval);
