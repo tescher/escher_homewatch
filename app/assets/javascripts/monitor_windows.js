@@ -258,8 +258,6 @@ function finishPlot(that) {
                     {display: 'Sensor', name : 'sensor', width : 150, sortable : false, align: 'left'},
                     {display: 'Value', name : 'value', width : 70, sortable : false, align: 'left'}
                 ],
-                sortname: "name",
-                sortorder: "asc",
                 usepager: false,
                 width: 'auto',
                 height: 500,
