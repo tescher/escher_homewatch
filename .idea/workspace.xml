@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/measurements_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/measurements_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js" />
     </list>
     <ignored path="sample_app.iws" />
@@ -20,7 +21,7 @@
     <file path="/20130207183232_add_auto_color_to_monitor_windows.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360262052147" ignored="false" />
     <file path="/_form.html.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1361973587239" ignored="false" />
     <file path="/monitor_sensor.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1361973649828" ignored="false" />
-    <file path="/measurements_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1361999800999" ignored="false" />
+    <file path="/measurements_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1362002037987" ignored="false" />
     <file path="/custom.css.scss" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1361493321011" ignored="false" />
     <file path="/monitor_sensors_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1361973960072" ignored="false" />
     <file path="/a.dummy" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1361976178401" ignored="false" />
@@ -61,10 +62,10 @@
           <file leaf-file-name="monitor_windows.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="255" column="24" selection-start="9966" selection-end="9966" vertical-scroll-proportion="1.3043479">
+                <state line="264" column="25" selection-start="10451" selection-end="10451" vertical-scroll-proportion="1.7934783">
                   <folding>
-                    <marker date="1362001943607" expanded="false" signature="8153:8179" placeholder="..." />
-                    <marker date="1362001943607" expanded="true" signature="9651:9669" placeholder="..." />
+                    <marker date="1362002063659" expanded="false" signature="8153:8179" placeholder="..." />
+                    <marker date="1362002063659" expanded="true" signature="9651:9669" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -158,7 +159,7 @@
           <file leaf-file-name="measurements_controller.rb" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/controllers/measurements_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="41" column="40" selection-start="1789" selection-end="1789" vertical-scroll-proportion="1.6356384">
+                <state line="46" column="33" selection-start="2065" selection-end="2065" vertical-scroll-proportion="1.8351064">
                   <folding />
                 </state>
               </provider>
@@ -1843,13 +1844,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/measurements_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="40" selection-start="1789" selection-end="1789" vertical-scroll-proportion="1.6356384">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="323" column="1" selection-start="4444" selection-end="4444" vertical-scroll-proportion="0.0">
@@ -1864,12 +1858,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/measurements_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="33" selection-start="2065" selection-end="2065" vertical-scroll-proportion="1.8351064">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="255" column="24" selection-start="9966" selection-end="9966" vertical-scroll-proportion="1.3043479">
+        <state line="264" column="25" selection-start="10451" selection-end="10451" vertical-scroll-proportion="1.7934783">
           <folding>
-            <marker date="1362001943607" expanded="false" signature="8153:8179" placeholder="..." />
-            <marker date="1362001943607" expanded="true" signature="9651:9669" placeholder="..." />
+            <marker date="1362002063659" expanded="false" signature="8153:8179" placeholder="..." />
+            <marker date="1362002063659" expanded="true" signature="9651:9669" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -262,7 +262,7 @@ function finishPlot(that) {
                 sortorder: "asc",
                 usepager: false,
                 width: 'auto',
-                height: 600,
+                height: 500,
                 title: that.config.name,
                 onSuccess : function () {
                     $("#flexMonitor_"+that.config.id+" tr").each ( function () {
