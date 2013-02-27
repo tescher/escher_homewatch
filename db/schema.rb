@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130221224412) do
+ActiveRecord::Schema.define(:version => 20130227135631) do
 
   create_table "alerts", :force => true do |t|
     t.integer  "sensor_id"
@@ -37,9 +37,10 @@ ActiveRecord::Schema.define(:version => 20130221224412) do
     t.string   "legend"
     t.string   "color"
     t.string   "initial_window_token"
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
+    t.datetime "created_at",                              :null => false
+    t.datetime "updated_at",                              :null => false
     t.boolean  "color_auto"
+    t.boolean  "alerts_only",          :default => false
   end
 
   add_index "monitor_sensors", ["monitor_window_id"], :name => "index_monitor_sensors_on_monitor_window_id"

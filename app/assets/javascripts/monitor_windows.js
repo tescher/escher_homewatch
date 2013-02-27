@@ -83,32 +83,42 @@ function MonitorWindow(config, windowDiv) {
         zoom: { interactive: true },
         pan: { interactive: true }
     };
-    this.plot = function() {
+    this.display = function() {
         this.series_all = [];
         var color_count = 0;
         var series_count = 0;
+        var series_total = 0;
         $('<div class="screenblock"></div>').appendTo(this.windowDiv).show();
+        for (var index in config.monitor_sensors) {
+            if (config.monitor_sensors[index].alerts_only) {
+                series_total++
+            } else {
+                series_total += 2
+            }
+        }
         for (var index in config.monitor_sensors) {
             var ms = config.monitor_sensors[index];
             var that = this;
-            $.ajax({
-                url: "/measurements?monitor_sensor_id="+ms.id+"&sensor_id="+ms.sensor_id,
-                method: 'GET',
-                dataType: 'json',
-                success: function(data) {
-                    ++color_count;
-                    if (data.color_auto || (data.color == "")) {
-                        data.color = color_count;
-                    }
-                    that.series_all.push(data)
-                    ++series_count;
-                    if (series_count == (config.monitor_sensors.length * 2)) {
-                        finishPlot(that);
-                    }
-                },
-                cache: false,
-                async: true
-            });
+            if (!ms.alerts_only) {
+                $.ajax({
+                    url: "/measurements?monitor_sensor_id="+ms.id+"&sensor_id="+ms.sensor_id,
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                        ++color_count;
+                        if (data.color_auto || (data.color == "")) {
+                            data.color = color_count;
+                        }
+                        that.series_all.push(data)
+                        ++series_count;
+                        if (series_count == series_total) {
+                            finishPlot(that);
+                        }
+                    },
+                    cache: false,
+                    async: true
+                });
+            }
             $.ajax({
                 url: "/measurements?monitor_sensor_id="+ms.id+"&sensor_id="+ms.sensor_id+"&alerts=true",
                 method: 'GET',
@@ -116,7 +126,7 @@ function MonitorWindow(config, windowDiv) {
                 success: function(data) {
                     that.series_all.push(data)
                     ++series_count;
-                    if (series_count == (config.monitor_sensors.length * 2)) {
+                    if (series_count == series_total) {
                         finishPlot(that);
                     }
                 },
@@ -204,7 +214,7 @@ $(function() {
                 container_div.appendChild(mw_container_div);
                 var placeholder = document.getElementById("mw-"+config.id);
                 mw[config.id] = new MonitorWindow(config, placeholder);
-                mw[config.id].plot();
+                mw[config.id].display();
              }
         },
         cache: false,
@@ -222,7 +232,7 @@ function finishPlot(that) {
     });
     $('<div class="monitor-refresh" id="ref-'+that.config.id+'" style="right:40px;top:20px"><img src="/assets/refresh.png" alt="Config" /></div>').appendTo(that.windowDiv).click(function (e) {
         e.preventDefault();
-        mw[this.id.split("-")[1]].plot();
+        mw[this.id.split("-")[1]].display();
         return false;
     });
     $('<span class="monitor-title ui-corner-all" style="left:50px;top:20px">'+that.config.name+'</span>').appendTo(that.windowDiv);
@@ -335,7 +345,8 @@ function loadDialog(type, editing, id) {
                 colModel : [
                     {display: 'Sensor', name : 'sensor', width : 100, sortable : true, align: 'left', process: procMS},
                     {display: 'Legend Name', name : 'legend', width : 100, sortable : true, align: 'left', process: procMS},
-                    {display: 'Color', name : 'color', width : 70, sortable : true, align: 'left', process: procMS}
+                    {display: 'Color', name : 'color', width : 70, sortable : true, align: 'left', process: procMS},
+                    {display: 'Alerts Only', name : 'alerts_only', width : 70, sortable : true, align: 'left', process: procMS}
                 ],
                 sortname: "name",
                 sortorder: "asc",

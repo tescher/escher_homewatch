@@ -8,6 +8,7 @@
 #  initial_window_token :string(255)
 #  legend            :string(255)
 #  color             :string(255)
+#  alerts_only       :boolean
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
 #

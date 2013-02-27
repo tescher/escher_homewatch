@@ -9,12 +9,13 @@
 #  color                :string(255)
 #  color_auto           :boolean
 #  initial_window_token :string(255)
+#  alerts_only          :boolean
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
 #
 
 class MonitorSensor < ActiveRecord::Base
-  attr_accessible :color, :color_auto, :legend, :monitor_window_id, :sensor_id, :initial_window_token
+  attr_accessible :color, :color_auto, :legend, :monitor_window_id, :sensor_id, :initial_window_token, :alerts_only
 
   belongs_to :monitor_window
   has_many :sensors
@@ -34,5 +35,6 @@ class MonitorSensor < ActiveRecord::Base
   def default_values
     self.color_auto = true if self.color_auto.nil?
     self.color = "#000000" if self.color.nil?
+    self.alerts_only = false if self.alerts_only.nil?
   end
 end

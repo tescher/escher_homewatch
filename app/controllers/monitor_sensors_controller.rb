@@ -71,7 +71,8 @@ class MonitorSensorsController < ApplicationController
               :rows=>monitor_sensors.collect{|ms| { :id => ms.id, :cell => [
                   Sensor.find(ms.sensor_id).name,
                   ms.legend,
-                  (ms.color_auto == true ? "auto" : ms.color)]
+                  (ms.color_auto == true ? "auto" : ms.color),
+                  ms.alerts_only]
               }}
           }.to_json
         else

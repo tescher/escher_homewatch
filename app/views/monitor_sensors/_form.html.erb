@@ -23,8 +23,11 @@
           <div class="span1">
             <input id="monitor_sensor_color" name="monitor_sensor[color]" type="color" value="<%= @monitor_sensor.color %>" class="my_color" />
           </div>
-          <div class="span2">
+          <div class="span3">
             <%= f.check_box :color_auto %> &nbsp; Auto
+          </div>
+          <div class="span4">
+            <%= f.check_box :alerts_only %> &nbsp; Only show alerts
           </div>
           <%=  f.hidden_field :monitor_window_id %>
           <%=  f.hidden_field :initial_window_token %>
