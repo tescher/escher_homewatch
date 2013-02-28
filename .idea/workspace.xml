@@ -59,11 +59,11 @@
       <file leaf-file-name="monitor_windows.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="50" selection-start="1163" selection-end="1163" vertical-scroll-proportion="0.91314554">
+            <state line="36" column="28" selection-start="1454" selection-end="1454" vertical-scroll-proportion="0.62441313">
               <folding>
-                <marker date="1362080239104" expanded="false" signature="8267:8293" placeholder="..." />
-                <marker date="1362080239104" expanded="true" signature="11978:12005" placeholder="..." />
-                <marker date="1362080239104" expanded="true" signature="11978:11983" placeholder="..." />
+                <marker date="1362080738380" expanded="false" signature="8259:8285" placeholder="..." />
+                <marker date="1362080738380" expanded="true" signature="11970:11997" placeholder="..." />
+                <marker date="1362080738380" expanded="true" signature="11970:11975" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1769,11 +1769,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="50" selection-start="1163" selection-end="1163" vertical-scroll-proportion="0.91314554">
+        <state line="36" column="28" selection-start="1454" selection-end="1454" vertical-scroll-proportion="0.62441313">
           <folding>
-            <marker date="1362080239104" expanded="false" signature="8267:8293" placeholder="..." />
-            <marker date="1362080239104" expanded="true" signature="11978:12005" placeholder="..." />
-            <marker date="1362080239104" expanded="true" signature="11978:11983" placeholder="..." />
+            <marker date="1362080738380" expanded="false" signature="8259:8285" placeholder="..." />
+            <marker date="1362080738380" expanded="true" signature="11970:11997" placeholder="..." />
+            <marker date="1362080738380" expanded="true" signature="11970:11975" placeholder="..." />
           </folding>
         </state>
       </provider>
