@@ -244,12 +244,13 @@ $(function() {
 
 function finishPlot(that) {
     var mwControlTop = "20px";
+    var mwControlLeft = "50px";
     if (that.config.monitor_type == "graph") {
         var plot = $.plot(that.windowDiv, that.series_all, that.plotOptions);
-        $('<span class="monitor-title ui-corner-all" style="left:50px;top:20px">'+that.config.name+'</span>').appendTo(that.windowDiv);
         $('div.legend').className = "legend ui-corner-all";
     } else {
         mwControlTop = "8px";
+        mwControlLeft = "15px";
         var flex = $("#flexMonitor_"+that.config.id).flexigrid(
             {
                 dataType: 'json',
@@ -261,7 +262,7 @@ function finishPlot(that) {
                 usepager: false,
                 width: 'auto',
                 height: 500,
-                title: that.config.name,
+                title: "&nbsp;&nbsp;&nbsp;.",
                 onSuccess : function () {
                     $("#flexMonitor_"+that.config.id+" tr").each ( function () {
                         var cell = $('td[abbr="time"] >div', this);
@@ -290,6 +291,8 @@ function finishPlot(that) {
         mw[this.id.split("-")[1]].display();
         return false;
     });
+    $('<span class="monitor-title ui-corner-all" style="left:'+mwControlLeft+';top:'+mwControlTop+'">'+that.config.name+'</span>').appendTo(that.windowDiv);
+
 
     $(that.windowDiv).find(".screenblock").hide().remove();
 };

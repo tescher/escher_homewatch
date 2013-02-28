@@ -62,7 +62,7 @@ class MonitorSensorsController < ApplicationController
       format.js do
 
         # Get sensors for this window
-        monitor_sensors = MonitorSensor.find_all_by_monitor_window(params[:monitor_window_id], params[:initial_window_token])
+        monitor_sensors = MonitorSensor.order("id asc").find_all_by_monitor_window(params[:monitor_window_id], params[:initial_window_token])
 
         # Rendering
         if monitor_sensors
