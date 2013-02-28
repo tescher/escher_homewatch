@@ -33,11 +33,11 @@ function MonitorWindow(config, windowDiv) {
                 var last = series['data'].length - 1;
                 if (last >= 0) {
                     console.log(now.valueOf());
-                    console.log(series['data'][last][0]);
-                    if ((now.valueOf() - series['data'][last][0]) > 60*60*1000) {  //If data more than an hour old, signify
+                    console.log(series['data'][0][0]);
+                    if ((now.valueOf() - series['data'][0][0]) > 60*60*1000) {  //If data more than an hour old, signify
                         old = true;
                     }
-                    last_value = parseFloat(series['data'][last][1]).toFixed(1).toString();
+                    last_value = parseFloat(series['data'][0][1]).toFixed(1).toString();
                 } else {
                     last_value = "No Data";
                 }
