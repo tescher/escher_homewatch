@@ -249,7 +249,7 @@ function finishPlot(that) {
         var plot = $.plot(that.windowDiv, that.series_all, that.plotOptions);
         $('div.legend').className = "legend ui-corner-all";
     } else {
-        that.series_all.rows.sort(function(a,b) {a.cell[0] - b.cell[0]});
+        that.series_all.rows.sort(function(a,b) {b.cell[0] - a.cell[0]});
         mwControlTop = "8px";
         mwControlLeft = "15px";
         var flex = $("#flexMonitor_"+that.config.id).flexigrid(
