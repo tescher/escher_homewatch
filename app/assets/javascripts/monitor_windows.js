@@ -416,6 +416,7 @@ function loadDialog(type, editing, id) {
                 sortorder: "asc",
                 usepager: false,
                 width: 'auto',
+                height: 'auto',
                 title: 'Sensors',
                 onSuccess : function () {
                     $("#flexMonitorSensors tr").each ( function () {

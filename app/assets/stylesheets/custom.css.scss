@@ -221,12 +221,21 @@ select {
   padding: 0 !important;
 }
 
-input, textarea, select, .uneditable-input {
+input, textarea, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   float: left;
   height: auto !important;
   margin-bottom: 15px;
+  @include box_sizing;
+}
+
+select {
+  border: 1px solid #bbb;
+  width: 100%;
+  float: left;
+  margin-bottom: 15px;
+  padding: 0 !important;
   @include box_sizing;
 }
 
@@ -238,7 +247,28 @@ input.my_color {
 
 .control-label {
   float: right !important;
+  font-size: 0.8em;
 }
+
+.check-label, .link-label {
+  float: left;
+  display: inline;
+  font-size: 0.8em;
+  overflow: hidden;
+}
+
+.check-label {
+  line-height: 18px;
+}
+
+.link-label {
+  line-height: 23px;
+}
+
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+  font-size: 0.8em !important;
+}
+
 
 .row-fluid {
   padding-bottom: 10px;
