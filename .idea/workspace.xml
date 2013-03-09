@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/monitor_windows/public.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/monitor_windows/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/monitor_windows/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/requests/monitor_window_pages_spec.rb" afterPath="$PROJECT_DIR$/spec/requests/monitor_window_pages_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/monitor_sensors_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/monitor_sensors_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/monitor_windows_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/monitor_windows_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sample_app.iws" />
@@ -70,10 +66,10 @@
           <file leaf-file-name="monitor_windows.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="281" column="31" selection-start="11253" selection-end="11253" vertical-scroll-proportion="0.4423963">
+                <state line="284" column="31" selection-start="11293" selection-end="11293" vertical-scroll-proportion="1.8525345">
                   <folding>
-                    <marker date="1362797344860" expanded="false" signature="8153:8179" placeholder="..." />
-                    <marker date="1362797344860" expanded="false" signature="9779:9797" placeholder="..." />
+                    <marker date="1362797473388" expanded="true" signature="8147:8173" placeholder="..." />
+                    <marker date="1362797473388" expanded="true" signature="12058:12063" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -100,7 +96,7 @@
           <file leaf-file-name="monitor_sensors_controller.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/controllers/monitor_sensors_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="61" column="18" selection-start="1402" selection-end="1402" vertical-scroll-proportion="0.0">
+                <state line="62" column="18" selection-start="1403" selection-end="1403" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -1884,7 +1880,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/monitor_sensors_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="18" selection-start="1402" selection-end="1402" vertical-scroll-proportion="0.0">
+        <state line="62" column="18" selection-start="1403" selection-end="1403" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1940,10 +1936,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="281" column="31" selection-start="11253" selection-end="11253" vertical-scroll-proportion="0.4423963">
+        <state line="284" column="31" selection-start="11293" selection-end="11293" vertical-scroll-proportion="1.8525345">
           <folding>
-            <marker date="1362797344860" expanded="false" signature="8153:8179" placeholder="..." />
-            <marker date="1362797344860" expanded="false" signature="9779:9797" placeholder="..." />
+            <marker date="1362797473388" expanded="true" signature="8147:8173" placeholder="..." />
+            <marker date="1362797473388" expanded="true" signature="12058:12063" placeholder="..." />
           </folding>
         </state>
       </provider>
