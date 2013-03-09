@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
         redirect_to new_user_confirmation_path email: user.email
       else
         sign_in user
-        redirect_back_or user
+        redirect_back_or monitor_windows_url
       end
     else
       flash.now[:error] = 'Invalid email/password combination'
