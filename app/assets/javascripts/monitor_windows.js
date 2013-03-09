@@ -218,8 +218,12 @@ $(function() {
 
     // Get all the windows and display them
 
+    var url = "/monitor_windows.js"
+    if (typeof public_token != 'undefined') {
+      url = "/monitor_windows/"+public_token+"/public.js"
+    }
     $.ajax({
-        url: "/monitor_windows.js",
+        url: url,
         method: "GET",
         dataType: "json",
         success: function(data) {
@@ -280,11 +284,13 @@ function finishPlot(that) {
 
     }
 
-    $('<div class="monitor-config" id="cfg-'+that.config.id+'" style="right:20px;top:'+mwControlTop+'"><img src="/assets/config.png" alt="Config" /></div>').appendTo(that.windowDiv).click(function (e) {
-        e.preventDefault();
-        loadDialog("Window", true, this.id.split("-")[1]);
-        return false;
-    });
+    if (typeof public_token == 'undefined') {
+        $('<div class="monitor-config" id="cfg-'+that.config.id+'" style="right:20px;top:'+mwControlTop+'"><img src="/assets/config.png" alt="Config" /></div>').appendTo(that.windowDiv).click(function (e) {
+            e.preventDefault();
+            loadDialog("Window", true, this.id.split("-")[1]);
+            return false;
+        });
+    }
     $('<div class="monitor-refresh" id="ref-'+that.config.id+'" style="right:40px;top:'+mwControlTop+'"><img src="/assets/refresh.png" alt="Config" /></div>').appendTo(that.windowDiv).click(function (e) {
         e.preventDefault();
         mw[this.id.split("-")[1]].display();
@@ -440,6 +446,12 @@ function loadDialog(type, editing, id) {
 
         swapWindowTypeForm($("#monitor_window_monitor_type"));
 
+        $("#monitor_window_public").change(function(evt) {
+            showHidePublicUrl(this);
+        });
+
+        showHidePublicUrl($("#monitor_window_public"));
+
 
 
     }
@@ -468,6 +480,16 @@ function swapWindowTypeForm(select) {
         $(".graph-only").show();
     } else {
         $(".graph-only").hide();
+    }
+}
+
+function showHidePublicUrl(select) {
+    if ($(select).is(':checked')) {
+        $("a#linkMonitorWindowUrl").attr("href", "/monitor_windows/" + mw_token + "/public");
+        $("a#linkMonitorWindowUrl").text(window.location + "/" + mw_token + "/public");
+        $("#linkMonitorWindowUrl").show();
+    } else {
+        $("#linkMonitorWindowUrl").hide();
     }
 }
 

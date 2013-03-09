@@ -5,10 +5,8 @@ class MonitorWindowsController < ApplicationController
 
 
   def new
-    puts "In new"
     if request.xhr?
       @monitor_window = MonitorWindow.new
-      puts "New Window"
       puts @monitor_window
       render partial: 'form'
     else
@@ -23,7 +21,6 @@ class MonitorWindowsController < ApplicationController
       if @monitor_window.save
         render nothing: true
       else
-        puts "Save failed"
         render partial: 'form'
       end
     else
@@ -65,42 +62,29 @@ class MonitorWindowsController < ApplicationController
         monitor_windows = MonitorWindow.find_all_by_user_id(current_user.id, :order => "id")
 
         # Rendering
-        render :json => {
-            :monitor_windows=>monitor_windows.collect{|mw| {
-                :background_color => mw.background_color,
-                :background_color_auto => mw.background_color_auto,
-                :id => mw.id,
-                :monitor_type => mw.monitor_type,
-                :name => mw.name,
-                :legend => mw.legend,
-                :public => mw.public,
-                :url => mw.url,
-                :width => mw.width,
-                :x_axis_auto => mw.x_axis_auto,
-                :x_axis_days => mw.x_axis_days,
-                :y_axis_max => mw.y_axis_max,
-                :y_axis_max_auto => mw.y_axis_max_auto,
-                :y_axis_min => mw.y_axis_min,
-                :y_axis_min_auto => mw.y_axis_min_auto,
-                :monitor_sensors => MonitorSensor.find_all_by_monitor_window(mw.id, mw.initial_token).collect{|ms|
-                    sensor_name =  Sensor.find(ms.sensor_id).name
-                    {
-                      :sensor_id => ms.sensor_id,
-                      :id => ms.id,
-                      :sensor_name => sensor_name,
-                      :legend => (ms.legend.empty?) ? sensor_name : ms.legend,
-                      :color => ms.color,
-                      :color_auto => ms.color_auto,
-                      :alerts_only => ms.alerts_only
-                    }
-                },
-                :html => render_to_string(partial: 'window_container', locals: { mw_width: mw.width, mw_id: mw.id, mw_name: mw.name, mw_type: mw.monitor_type})
-            }}
-        }.to_json
+        render_window_info(monitor_windows)
 
       end #format.js
 
     end #respond_to  end
+  end
+
+  def public
+    respond_to do |format|
+      format.html do
+        @monitor_window = MonitorWindow.find_by_initial_token(params[:id])
+        if @monitor_window && @monitor_window.public
+          render 'public'
+        else
+          redirect_to root_url
+        end
+      end
+
+      format.js do
+        monitor_windows = MonitorWindow.find_all_by_initial_token(params[:id])
+        render_window_info(monitor_windows)
+      end
+    end
   end
 
   def destroy
@@ -131,6 +115,43 @@ class MonitorWindowsController < ApplicationController
     else
       redirect_to signin_url, notice: "Please sign in."
     end
+  end
+
+  def render_window_info(monitor_windows)
+    # Rendering
+    render :json => {
+        :monitor_windows=>monitor_windows.collect{|mw| {
+            :background_color => mw.background_color,
+            :background_color_auto => mw.background_color_auto,
+            :id => mw.id,
+            :monitor_type => mw.monitor_type,
+            :name => mw.name,
+            :legend => mw.legend,
+            :public => mw.public,
+            :url => mw.url,
+            :width => mw.width,
+            :x_axis_auto => mw.x_axis_auto,
+            :x_axis_days => mw.x_axis_days,
+            :y_axis_max => mw.y_axis_max,
+            :y_axis_max_auto => mw.y_axis_max_auto,
+            :y_axis_min => mw.y_axis_min,
+            :y_axis_min_auto => mw.y_axis_min_auto,
+            :monitor_sensors => MonitorSensor.find_all_by_monitor_window(mw.id, mw.initial_token).collect{|ms|
+              sensor_name =  Sensor.find(ms.sensor_id).name
+              {
+                  :sensor_id => ms.sensor_id,
+                  :id => ms.id,
+                  :sensor_name => sensor_name,
+                  :legend => (ms.legend.empty?) ? sensor_name : ms.legend,
+                  :color => ms.color,
+                  :color_auto => ms.color_auto,
+                  :alerts_only => ms.alerts_only
+              }
+            },
+            :html => render_to_string(partial: 'window_container', locals: { mw_width: mw.width, mw_id: mw.id, mw_name: mw.name, mw_type: mw.monitor_type})
+        }}
+    }.to_json
+
   end
 
 end

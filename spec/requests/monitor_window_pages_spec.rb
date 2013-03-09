@@ -29,7 +29,7 @@ describe "MonitorWindowPages" do
         monitor_window = FactoryGirl.create(:monitor_window, user_id: user.id, name: "Window 1")
         2.times {
           sensor = FactoryGirl.create(:sensor, user_id: user.id, controller: "BasementArduino")
-          monitor_sensor = FactoryGirl.create(:monitor_sensor, monitor_window_id: monitor_window.id, sensor_id: sensor.id)
+          monitor_sensor = FactoryGirl.create(:monitor_sensor, monitor_window_id: monitor_window.id, initial_window_token: monitor_window.initial_token, sensor_id: sensor.id)
         }
         valid_signin(user)
       end
@@ -109,6 +109,23 @@ describe "MonitorWindowPages" do
       it "Should redirect get of sensors to signin page" do
         get monitor_sensors_path
         response.should redirect_to(signin_path)
+      end
+
+      it "Should show a public window with initial_token as a parameter" do
+        mw = MonitorWindow.first
+        mw.public = true
+        mw.save!
+        visit public_monitor_window_path(mw.initial_token)
+        pp page.body
+        page.should have_xpath ("//div[@id='monitors-container']")
+      end
+
+      it "Should not show a non-public window with initial_token as a parameter" do
+        mw = MonitorWindow.first
+        mw.public = false
+        mw.save!
+        visit public_monitor_window_path(mw.initial_token)
+        page.should have_valid_header_and_title('Homewatch', '')
       end
     end
 

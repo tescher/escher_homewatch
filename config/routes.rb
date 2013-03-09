@@ -12,7 +12,9 @@ EscherHomewatch::Application.routes.draw do
   resources :sensors, only: [:new, :create, :update, :edit, :index, :destroy] do
     get 'getconfig', on: :collection
   end
-  resources :monitor_windows, only: [:new, :create, :update, :edit, :index, :destroy]
+  resources :monitor_windows, only: [:new, :create, :update, :edit, :index, :destroy] do
+    get 'public', on: :member
+  end
   resources :monitor_sensors, only: [:new, :create, :update, :edit, :index, :destroy]
   resources :measurements, only: [:index, :create]
 
