@@ -103,7 +103,8 @@ class SensorsController < ApplicationController
               :id => s.id,
               :addressH => s.addressH,
               :addressL => s.addressL,
-              :interval => (s.interval.to_s + 's')}}
+              :interval => (s.interval.to_s + 's'),
+              :type => SensorType.find(s.sensor_type_id).name}}
     else
       render nothing: true
     end
