@@ -66,7 +66,7 @@ function MonitorWindow(config, windowDiv) {
         },
         xaxis: {
             mode: "time", timeformat: "%b %d",
-            min: ((!config.x_axis_auto && config.x_axis_days != "") ? now_utc - 1000*60*60*24*config.x_axis_days : null),
+            min: ((!config.x_axis_auto && config.x_axis_days != "") ? now_utc.getTime() - 1000*60*60*24*config.x_axis_days : null),
             minTickSize: [1, "day"],
             monthNames: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
             zoomAmount: 1.25,
@@ -100,9 +100,10 @@ function MonitorWindow(config, windowDiv) {
         for (var index in config.monitor_sensors) {
             var ms = config.monitor_sensors[index];
             var that = this;
+            start_date = ((!config.x_axis_auto && config.x_axis_days != "") ? new Date(now_utc.getTime() - 1000*60*60*24*config.x_axis_days) : null);
             if (!ms.alerts_only) {
                 $.ajax({
-                    url: "/measurements?type="+config.monitor_type+"&monitor_sensor_id="+ms.id+"&sensor_id="+ms.sensor_id,
+                    url: "/measurements?type="+config.monitor_type+"&monitor_sensor_id="+ms.id+"&sensor_id="+ms.sensor_id+(start_date ? "+&start="+$.datepicker.formatDate("yy-mm-dd", start_date) : ""),
                     method: 'GET',
                     dataType: 'json',
                     success: function(data) {
