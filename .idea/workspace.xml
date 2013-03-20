@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/measurements_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/measurements_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/utilities.rb" afterPath="$PROJECT_DIR$/lib/utilities.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sample_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,10 +25,10 @@
     <file path="/20130207183232_add_auto_color_to_monitor_windows.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360262052147" ignored="false" />
     <file path="/_form.html.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1362868271663" ignored="false" />
     <file path="/monitor_sensor.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1361973649828" ignored="false" />
-    <file path="/measurements_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1362003427772" ignored="false" />
+    <file path="/measurements_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363800808293" ignored="false" />
     <file path="/custom.css.scss" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1362868100320" ignored="false" />
     <file path="/monitor_sensors_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1361973960072" ignored="false" />
-    <file path="/a.dummy" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1362003264492" ignored="false" />
+    <file path="/a.dummy" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363795553561" ignored="false" />
     <file path="/20130211221501_add_index_to_measurements_sensor_id.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360620936597" ignored="false" />
     <file path="/20130211221627_add_index_to_monitor_sensors_monitor_window.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360621010120" ignored="false" />
     <file path="/sensors_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363172661226" ignored="false" />
@@ -41,6 +46,7 @@
     <file path="/public.html.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1362793056196" ignored="false" />
     <file path="/sessions_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1362871446428" ignored="false" />
     <file path="/sensor.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363535306961" ignored="false" />
+    <file path="/utilities.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363802082247" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,10 +69,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.6764706">
       <split-first>
         <leaf>
-          <file leaf-file-name="monitor_windows.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="monitor_windows.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="127" column="202" selection-start="5678" selection-end="5678" vertical-scroll-proportion="1.0749185">
+                <state line="127" column="202" selection-start="5678" selection-end="5678" vertical-scroll-proportion="-10.645162">
                   <folding>
                     <marker date="1363794168096" expanded="false" signature="8465:8491" placeholder="..." />
                     <marker date="1363794168096" expanded="false" signature="12376:12381" placeholder="..." />
@@ -75,19 +81,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="public.html.erb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/views/monitor_windows/public.html.erb">
+          <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Gemfile">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="3" column="14" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="monitor_sensors_controller.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/controllers/monitor_sensors_controller.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="62" column="18" selection-start="1403" selection-end="1403" vertical-scroll-proportion="0.0">
+                <state line="7" column="11" selection-start="143" selection-end="143" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -96,34 +93,52 @@
           <file leaf-file-name="measurements_controller.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/controllers/measurements_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="14" column="61" selection-start="557" selection-end="580" vertical-scroll-proportion="0.0">
+                <state line="96" column="1" selection-start="3902" selection-end="3902" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="monitor_window_pages_spec.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/spec/requests/monitor_window_pages_spec.rb">
+          <file leaf-file-name="measurement.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/models/measurement.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="132" column="32" selection-start="4421" selection-end="4421" vertical-scroll-proportion="0.0">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/views/monitor_windows/_form.html.erb">
+          <file leaf-file-name="20130320160950_create_delayed_jobs.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/db/migrate/20130320160950_create_delayed_jobs.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="71" column="27" selection-start="2908" selection-end="2908" vertical-scroll-proportion="0.0">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="custom.css.scss" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
+          <file leaf-file-name="20121211143035_create_measurements.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/db/migrate/20121211143035_create_measurements.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="238" column="0" selection-start="3431" selection-end="3431" vertical-scroll-proportion="0.0">
+                <state line="3" column="12" selection-start="0" selection-end="188" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="config_key.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/models/config_key.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="utilities.rb" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/lib/utilities.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="45" column="31" selection-start="1439" selection-end="1439" vertical-scroll-proportion="0.51684535">
                   <folding />
                 </state>
               </provider>
@@ -147,32 +162,23 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="jquery.ui.theme.css.erb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p286@rails3tutorial2ndEd/gems/jquery-ui-rails-2.0.2/vendor/assets/stylesheets/jquery.ui.theme.css.erb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="20" column="10" selection-start="552" selection-end="702" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="monitor_windows_controller.rb" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="monitor_windows_controller.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/controllers/monitor_windows_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="62" column="49" selection-start="1475" selection-end="1475" vertical-scroll-proportion="-0.58402205">
+                <state line="62" column="49" selection-start="1475" selection-end="1475" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="sensors_controller.rb" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="sensors_controller.rb" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/controllers/sensors_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="92" column="41" selection-start="2231" selection-end="2231" vertical-scroll-proportion="0.0">
+                <state line="92" column="41" selection-start="2231" selection-end="2231" vertical-scroll-proportion="0.4208224">
                   <folding />
                 </state>
               </provider>
@@ -270,9 +276,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20130227135631_add_alerts_only_to_monitor_sensor.rb" />
-        <option value="$PROJECT_DIR$/app/views/monitor_windows/_window_container.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/measurements_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/monitor_windows/public.html.erb" />
         <option value="$PROJECT_DIR$/spec/requests/monitor_window_pages_spec.rb" />
@@ -286,6 +289,9 @@
         <option value="$PROJECT_DIR$/app/models/sensor.rb" />
         <option value="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/controllers/measurements_controller.rb" />
+        <option value="$PROJECT_DIR$/lib/utilities.rb" />
       </list>
     </option>
   </component>
@@ -1261,42 +1267,7 @@
       <recent name="$PROJECT_DIR$/app/controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="Rails.Rails Development">
-    <configuration default="false" name="user_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
-      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
-      <module name="escher_homewatch" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/models/user_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Ruby.utilities">
     <configuration default="false" name="monitor_window_pages_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="escher_homewatch" />
@@ -1433,6 +1404,28 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="utilities" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
+      <module name="escher_homewatch" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$PROJECT_DIR$/lib" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$PROJECT_DIR$/lib/utilities.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
@@ -1717,19 +1710,19 @@
       <item index="0" class="java.lang.String" itemvalue="RSpec.All specs in: spec" />
       <item index="1" class="java.lang.String" itemvalue="Rails.Rails Development" />
       <item index="2" class="java.lang.String" itemvalue="Ruby.development" />
-      <item index="3" class="java.lang.String" itemvalue="RSpec.user_spec" />
-      <item index="4" class="java.lang.String" itemvalue="RSpec.monitor_window_pages_spec" />
-      <item index="5" class="java.lang.String" itemvalue="RSpec.MonitorWindowPages index with non-admin user should list this user's monitors and sensors" />
-      <item index="6" class="java.lang.String" itemvalue="RSpec.MonitorWindowPages with direct accesses with logged out user Should show a public window with initial_token as a parameter" />
-      <item index="7" class="java.lang.String" itemvalue="RSpec.MonitorWindowPages with direct accesses with logged out user Should not show a non-public window with initial_token as a parameter" />
+      <item index="3" class="java.lang.String" itemvalue="RSpec.monitor_window_pages_spec" />
+      <item index="4" class="java.lang.String" itemvalue="RSpec.MonitorWindowPages index with non-admin user should list this user's monitors and sensors" />
+      <item index="5" class="java.lang.String" itemvalue="RSpec.MonitorWindowPages with direct accesses with logged out user Should show a public window with initial_token as a parameter" />
+      <item index="6" class="java.lang.String" itemvalue="RSpec.MonitorWindowPages with direct accesses with logged out user Should not show a non-public window with initial_token as a parameter" />
+      <item index="7" class="java.lang.String" itemvalue="Ruby.utilities" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="RSpec.monitor_window_pages_spec" />
-        <item index="1" class="java.lang.String" itemvalue="RSpec.MonitorWindowPages with direct accesses with logged out user Should not show a non-public window with initial_token as a parameter" />
-        <item index="2" class="java.lang.String" itemvalue="RSpec.MonitorWindowPages with direct accesses with logged out user Should show a public window with initial_token as a parameter" />
-        <item index="3" class="java.lang.String" itemvalue="RSpec.MonitorWindowPages index with non-admin user should list this user's monitors and sensors" />
-        <item index="4" class="java.lang.String" itemvalue="RSpec.user_spec" />
+        <item index="0" class="java.lang.String" itemvalue="Ruby.utilities" />
+        <item index="1" class="java.lang.String" itemvalue="RSpec.monitor_window_pages_spec" />
+        <item index="2" class="java.lang.String" itemvalue="RSpec.MonitorWindowPages with direct accesses with logged out user Should not show a non-public window with initial_token as a parameter" />
+        <item index="3" class="java.lang.String" itemvalue="RSpec.MonitorWindowPages with direct accesses with logged out user Should show a public window with initial_token as a parameter" />
+        <item index="4" class="java.lang.String" itemvalue="RSpec.MonitorWindowPages index with non-admin user should list this user's monitors and sensors" />
       </list>
     </recent_temporary>
   </component>
@@ -1766,19 +1759,19 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943755" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.66883117" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24143426" sideWeight="0.32395384" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.49348232" sideWeight="0.4563253" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="1.0" sideWeight="0.4570783" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52958155" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24143426" sideWeight="0.32756132" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4963925" sideWeight="0.5067935" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5436747" sideWeight="0.4884511" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.54292166" sideWeight="0.4884511" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.66883117" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1852,16 +1845,11 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
+    <entry file="file://$PROJECT_DIR$/spec/requests/monitor_window_pages_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="38" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
+        <state line="132" column="32" selection-start="4421" selection-end="4421" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/monitor_windows/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="6" selection-start="0" selection-end="33" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/monitor_sensors_controller.rb">
@@ -1871,27 +1859,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/measurement.rb">
+    <entry file="file://$PROJECT_DIR$/script/delayed_job">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/alert.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/monitor_windows/_window_container.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="127" column="202" selection-start="5678" selection-end="5678" vertical-scroll-proportion="-10.645162">
+          <folding>
+            <marker date="1363794168096" expanded="false" signature="8465:8491" placeholder="..." />
+            <marker date="1363794168096" expanded="false" signature="12376:12381" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1902,62 +1883,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/sensors_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/monitor_windows/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="41" selection-start="2231" selection-end="2231" vertical-scroll-proportion="0.0">
+        <state line="71" column="27" selection-start="2908" selection-end="2908" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/sensor.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="78" selection-start="1576" selection-end="1576" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130320160950_create_delayed_jobs.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sessions/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="43" selection-start="264" selection-end="264" vertical-scroll-proportion="-5.0">
+        <state line="238" column="0" selection-start="3431" selection-end="3431" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/monitor_windows_controller.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20121211143035_create_measurements.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="49" selection-start="1475" selection-end="1475" vertical-scroll-proportion="-0.58402205">
+        <state line="3" column="12" selection-start="0" selection-end="188" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sensors/_form.html.erb">
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p286@rails3tutorial2ndEd/gems/jquery-ui-rails-2.0.2/vendor/assets/stylesheets/jquery.ui.theme.css.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="83" selection-start="788" selection-end="788" vertical-scroll-proportion="-0.625">
+        <state line="20" column="10" selection-start="552" selection-end="702" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/config_key.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="38" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/sensors_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="41" selection-start="2231" selection-end="2231" vertical-scroll-proportion="0.4208224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/measurement.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/measurements_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="61" selection-start="557" selection-end="580" vertical-scroll-proportion="0.0">
+        <state line="96" column="1" selection-start="3902" selection-end="3902" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
+    <entry file="file://$PROJECT_DIR$/lib/utilities.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="202" selection-start="5678" selection-end="5678" vertical-scroll-proportion="1.0749185">
-          <folding>
-            <marker date="1363794168096" expanded="false" signature="8465:8491" placeholder="..." />
-            <marker date="1363794168096" expanded="false" signature="12376:12381" placeholder="..." />
-          </folding>
+        <state line="45" column="31" selection-start="1439" selection-end="1439" vertical-scroll-proportion="0.51684535">
+          <folding />
         </state>
       </provider>
     </entry>

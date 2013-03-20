@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130227135631) do
+ActiveRecord::Schema.define(:version => 20130320171508) do
 
   create_table "alerts", :force => true do |t|
     t.integer  "sensor_id"
@@ -21,6 +21,29 @@ ActiveRecord::Schema.define(:version => 20130227135631) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "config_keys", :force => true do |t|
+    t.string   "key"
+    t.string   "value"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "delayed_jobs", :force => true do |t|
+    t.integer  "priority",   :default => 0
+    t.integer  "attempts",   :default => 0
+    t.text     "handler"
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
 
   create_table "measurements", :force => true do |t|
     t.integer  "sensor_id"
@@ -40,7 +63,7 @@ ActiveRecord::Schema.define(:version => 20130227135631) do
     t.datetime "created_at",                              :null => false
     t.datetime "updated_at",                              :null => false
     t.boolean  "color_auto"
-    t.boolean  "alerts_only"
+    t.boolean  "alerts_only",          :default => false
   end
 
   add_index "monitor_sensors", ["monitor_window_id"], :name => "index_monitor_sensors_on_monitor_window_id"

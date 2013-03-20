@@ -24,4 +24,39 @@ module Utilities
     check_hash
   end
 
+  def check_absence
+  # Check for absence alerts that need to go out
+    puts "Running check absence"
+    Sensor.where("absence_alert", sensor_id).each { |sensor|
+      last_measurement = Measurement.order("created_at desc").where("sensor_id = ?", sensor.id).limit(1)[0]
+      if last_measurement && ((Time.now.utc.to_i - last_measurement.created_at.utc.to_i) > 24*60*60)
+        last_alert = Alert.order("created_at desc").where("sensor_id = ?", sensor.id).limit(1)[0]
+        if !last_alert || ((Time.now.utc.to_i - last_alert.created_at.to_i) > 24*60*60)
+          send_alert(sensor, "", "", last_measurement)
+        end
+      end
+    }
+  end
+
+  def check_purge
+    # Check if we should run the clean-ups
+    last_purge_key = ConfigKey.find_by_key("last_purge")
+    if (!last_purge_key)
+      last_purge_key = ConfigKey.new(key: "last_purge", value: 2.days.ago.strftime("%Y-%m-%d %H:%M:%S"))
+      last_purge_key.save
+    end
+    if (DateTime.new.beginning_of_day > Date.parse(last_purge_key.value))
+      puts "Running purge"
+      puts last_purge_key.value
+      puts "created_at < " + 30.days.ago.strftime("%Y-%m-%d %H:%M:%S")
+      # Measurement.where("created_at < ? ", 30.days.ago.strftime("%Y-%m-%d %H:%M:%S")).delete
+      # Alert.where("created_at < ? ", 30.days.ago.strftime("%Y-%m-%d %H:%M:%S")).delete
+    end
+  end
+
+  def check_daily_reports
+
+  end
+
+
 end

@@ -1,4 +1,7 @@
 class MeasurementsController < ApplicationController
+
+  include Utilities
+
   def create
     sensor_id = params[:sensor_id].to_i
     value = params[:value].to_f
@@ -71,17 +74,6 @@ class MeasurementsController < ApplicationController
 
     puts "In check_alerts"
 
-    # Check for absence alerts that need to go out
-    Sensor.where("id <> ? and absence_alert", sensor_id).each { |sensor|
-      last_measurement = Measurement.order("created_at desc").where("sensor_id = ?", sensor.id).limit(1)[0]
-      if last_measurement && ((Time.now.utc.to_i - last_measurement.created_at.utc.to_i) > 24*60*60)
-        last_alert = Alert.order("created_at desc").where("sensor_id = ?", sensor.id).limit(1)[0]
-        if !last_alert || ((Time.now.utc.to_i - last_alert.created_at.to_i) > 24*60*60)
-          send_alert(sensor, "", "", last_measurement)
-        end
-      end
-    }
-
     # Check for limits hit
     sensor = Sensor.find(sensor_id)
     if sensor.trigger_enabled
@@ -95,6 +87,21 @@ class MeasurementsController < ApplicationController
         end
       end
     end
+
+    # Check if we should run the periodic checks and clean-ups
+    last_check_key = ConfigKey.find_by_key("last_background_check")
+    if (!last_check_key)
+      last_check_key = ConfigKey.new(key: "last_background_check", value: DateTime.now.beginning_of_day.strftime("%Y-%m-%d %H:%M:%S"))
+      last_check_key.save
+    end
+    if (Time.now.utc.to_i - Date.parse(last_check_key.value).utc.to_i) > 600
+      puts "Running periodic checks"
+      puts last_check_key.value
+      check_absence
+      check_purge
+      check_daily_reports
+    end
+
   end
 
 

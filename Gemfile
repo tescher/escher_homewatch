@@ -14,6 +14,7 @@ gem 'validates_existence'
 gem 'jquery-ui-rails'
 gem 'rack-ssl-enforcer'
 gem 'enumerated_attribute'
+gem 'delayed_job_active_record'
 
 group :development, :test do
   # gem 'sqlite3', '1.3.5'
