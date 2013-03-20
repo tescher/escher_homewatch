@@ -68,7 +68,7 @@ class MeasurementsController < ApplicationController
 
   end
 
-  private
+  # private
 
   def check_alerts(sensor_id, value)
 
@@ -91,12 +91,14 @@ class MeasurementsController < ApplicationController
     # Check if we should run the periodic checks and clean-ups
     last_check_key = ConfigKey.find_by_key("last_background_check")
     if (!last_check_key)
-      last_check_key = ConfigKey.new(key: "last_background_check", value: DateTime.now.beginning_of_day.strftime("%Y-%m-%d %H:%M:%S"))
+      last_check_key = ConfigKey.new(key: "last_background_check", value: DateTime.now.beginning_of_day.strftime("%Y-%m-%d %H:%M:%S %z"))
       last_check_key.save
     end
-    if (Time.now.utc.to_i - Date.parse(last_check_key.value).utc.to_i) > 600
+    if (Time.now.to_i - DateTime.parse(last_check_key.value).to_i) > 600
       puts "Running periodic checks"
-      puts last_check_key.value
+      puts Time.now.to_i - DateTime.parse(last_check_key.value).to_i
+      last_check_key.value = DateTime.now.strftime("%Y-%m-%d %H:%M:%S %z")
+      last_check_key.save
       check_absence
       check_purge
       check_daily_reports
