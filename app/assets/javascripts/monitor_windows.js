@@ -131,7 +131,7 @@ function MonitorWindow(config, windowDiv) {
                 });
             }
             $.ajax({
-                url: "/measurements?type="+config.monitor_type+"&monitor_sensor_id="+ms.id+"&sensor_id="+ms.sensor_id+"&alerts=true"+(start_date ? "+&start="+$.datepicker.formatDate("yy-mm-dd", start_date),
+                url: "/measurements?type="+config.monitor_type+"&monitor_sensor_id="+ms.id+"&sensor_id="+ms.sensor_id+"&alerts=true"+(start_date ? "+&start="+$.datepicker.formatDate("yy-mm-dd", start_date) : ""),
                 method: 'GET',
                 dataType: 'json',
                 success: function(data) {

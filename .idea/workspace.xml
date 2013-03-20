@@ -13,7 +13,7 @@
     <file path="/application_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360248559032" ignored="false" />
     <file path="/development.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360252776771" ignored="false" />
     <file path="/alert_email.text.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360256978135" ignored="false" />
-    <file path="/monitor_windows.js" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363793478048" ignored="false" />
+    <file path="/monitor_windows.js" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363794160448" ignored="false" />
     <file path="/monitor_windows_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1362794546017" ignored="false" />
     <file path="/production.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360261824163" ignored="false" />
     <file path="/monitor_window.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360262287238" ignored="false" />
@@ -66,10 +66,10 @@
           <file leaf-file-name="monitor_windows.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="133" column="205" selection-start="6005" selection-end="6005" vertical-scroll-proportion="1.3680782">
+                <state line="127" column="202" selection-start="5678" selection-end="5678" vertical-scroll-proportion="1.0749185">
                   <folding>
-                    <marker date="1363793982836" expanded="false" signature="8459:8485" placeholder="..." />
-                    <marker date="1363793982836" expanded="false" signature="12370:12375" placeholder="..." />
+                    <marker date="1363794168096" expanded="false" signature="8465:8491" placeholder="..." />
+                    <marker date="1363794168096" expanded="false" signature="12376:12381" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -1953,10 +1953,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="205" selection-start="6005" selection-end="6005" vertical-scroll-proportion="1.3680782">
+        <state line="127" column="202" selection-start="5678" selection-end="5678" vertical-scroll-proportion="1.0749185">
           <folding>
-            <marker date="1363793982836" expanded="false" signature="8459:8485" placeholder="..." />
-            <marker date="1363793982836" expanded="false" signature="12370:12375" placeholder="..." />
+            <marker date="1363794168096" expanded="false" signature="8465:8491" placeholder="..." />
+            <marker date="1363794168096" expanded="false" signature="12376:12381" placeholder="..." />
           </folding>
         </state>
       </provider>
