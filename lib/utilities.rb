@@ -91,7 +91,7 @@ module Utilities
             body += "\n\tAverage: "+average_value.to_s
             body += "\n\tHigh: "+high_value.to_s
             body += "\n\tLow: "+low_value.to_s
-            alerts = Alerts.where("sensor_id = ? and created_at < ? and created_at >=?", sensor.id, date.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S"),date.yesterday.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S"))
+            alerts = Alert.where("sensor_id = ? and created_at < ? and created_at >=?", sensor.id, date.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S"),date.yesterday.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S"))
             if (!alerts)
               body += "No alerts."
             else
