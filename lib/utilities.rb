@@ -78,7 +78,7 @@ module Utilities
         # For each sensor
         Sensor.find_all_by_user_id(user.id).each {|sensor|
           body += "\n" + sensor.name + ": "
-          last_value = Measurement.order("created_at desc").where("sensor_id = ? and created_at < ?", sensor.id, date.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S")).limit(1)[0]
+          last_value = Measurement.order("created_at desc").where("sensor_id = ? and created_at < ?", sensor.id, Date.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S")).limit(1)[0]
           if (!last_value)
             body += "No measurement yet received."
           elsif (last_value.created_at < Date.yesterday.midnight.in_time_zone(user.time_zone))
