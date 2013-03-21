@@ -15,6 +15,7 @@
 #  state                  :string(255)
 #  confirmation_token     :string(255)
 #  time_zone              :string(255)
+#  summary_report         :boolean
 
 require 'spec_helper'
 
@@ -45,6 +46,7 @@ describe User do
   it { should respond_to(:state) }
   it { should respond_to(:confirmation_token) }
   it { should respond_to(:time_zone) }
+  it { should respond_to(:summary_report) }
 
   it { should be_valid }
   it { should_not be_admin }

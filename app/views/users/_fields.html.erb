@@ -15,4 +15,8 @@
 <%= f.label :time_zone, "Time zone" %>
 <%= f.collection_select :time_zone, ActiveSupport::TimeZone.us_zones, :name, :to_s %>
 
+<%= f.check_box :summary_report %><span class="check-label">&nbsp;</span>
+<%= f.label :summary_report, "Daily Summary Report" %>
+
+
 

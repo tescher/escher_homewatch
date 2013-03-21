@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130320171508) do
+ActiveRecord::Schema.define(:version => 20130320232045) do
 
   create_table "alerts", :force => true do |t|
     t.integer  "sensor_id"
@@ -133,6 +133,7 @@ ActiveRecord::Schema.define(:version => 20130320171508) do
     t.string   "state"
     t.string   "confirmation_token"
     t.string   "time_zone",              :default => "Central Time (US & Canada)"
+    t.boolean  "summary_report",         :default => true
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

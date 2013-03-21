@@ -15,12 +15,13 @@
 #  state                  :string(255)
 #  confirmation_token     :string(255)
 #  time_zone              :string(255)
+#  summary_report         :boolean
 #
 
 require 'state_machine'
 
 class User < ActiveRecord::Base
-  attr_accessible :name, :email, :password, :password_confirmation, :time_zone
+  attr_accessible :name, :email, :password, :password_confirmation, :time_zone, :summary_report
   has_secure_password
   has_many :sensors
   has_many :monitor_windows

@@ -59,7 +59,64 @@ module Utilities
 
   def check_daily_reports
 
-  end
+    # Check if we should run the daily reports
+    last_report_key = ConfigKey.find_by_key("last_report")
+    if (!last_report_key)
+      last_report_key = ConfigKey.new(key: "last_report", value: 2.days.ago.strftime("%Y-%m-%d %H:%M:%S %z"))
+      last_report_key.save
+    end
 
+    if (Time.now.beginning_of_day > DateTime.parse(last_report_key.value))
+      puts "Running reports"
+      puts last_report_key.value
+      last_report_key.value = DateTime.now.strftime("%Y-%m-%d %H:%M:%S %z")
+      last_report_key.save
+
+      date = Date.yesterday
+      # For each user, who is set to get reports
+      User.where("summary_report").each {|user|
+        body = "Homewatch Daily Summary Report for " + date.strftime("%a %b %e, %Y") + "\n\n"
+        # For each sensor
+        Sensor.find_all_by_user_id(user.id).each {|sensor|
+          body += "\n" + sensor.name + ": "
+          last_value = Measurement.order("created_at desc").where("sensor_id = ? and created_at < ?", sensor.id, date.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S")).limit(1)[0]
+          if (!last_value)
+            body += "No measurement yet received."
+          elsif (last_value.created_at < date.yesterday.midnight.in_time_zone(user.time_zone))
+            body += "No measurement received yesterday."
+          else
+            high_value = Measurement.maximum(:value, conditions: ["sensor_id = ? and created_at < ? and created_at >=?", sensor.id, date.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S"),date.yesterday.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S")])
+            low_value = Measurement.minimum(:value, conditions: ["sensor_id = ? and created_at < ? and created_at >=?", sensor.id, date.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S"),date.yesterday.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S")])
+            average_value = Measurement.average(:value, conditions: ["sensor_id = ? and created_at < ? and created_at >=?", sensor.id, date.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S"),date.yesterday.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S")])
+            body += "\n\tAverage: "+average_value.to_s
+            body += "\n\tHigh: "+high_value.to_s
+            body += "\n\tLow: "+low_value.to_s
+            alerts = Alerts.where("sensor_id = ? and created_at < ? and created_at >=?", sensor.id, date.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S"),date.yesterday.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S"))
+            if (!alerts)
+              body += "No alerts."
+            else
+              body += "\n\tAlerts:"
+              alerts.each {|alert|
+                if (alert.value = "")
+                  body += "\n\t\t"+sensor.name + " absence alert - "
+                else
+                  if (alert.value > alert.limit)
+                    body += "\n\t\t"+(sensor.trigger_upper_name.empty? ? (sensor.name + " upper limit reached") : sensor.trigger_upper_name)
+                  else
+                    body += "\n\t\t"+(sensor.trigger_lower_name.empty? ? (sensor.name + " lower limit reached") : sensor.trigger_lower_name)
+                  end
+                  body += ", Value: " + alert.value.to_s
+                  body += ", Limit: " + alert.limit.to_s
+                end
+                body += ", Time: " + alert.created_at.in_time_zone(User.find(sensor.user_id).time_zone).strftime("%a %b %e, %Y, %l:%M %p")
+              }
+            end
+          end
+        }
+        UserMailer.user_report_email("Homewatch Daily Summary",body,user).deliver
+
+      }
+    end
+  end
 
 end

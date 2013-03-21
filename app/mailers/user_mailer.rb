@@ -14,4 +14,9 @@ class UserMailer < ActionMailer::Base
     @user = user
     mail :to => user.email, :subject => "User Confirmation"
   end
+  def user_report_email(subject, body, user)
+    @body = body
+    mail :to => user.email, :subject => subject
+  end
+
 end
