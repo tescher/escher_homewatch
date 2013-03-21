@@ -97,8 +97,8 @@ module Utilities
             else
               body += "\n\tAlerts:"
               alerts.each {|alert|
-                if (alert.value = "")
-                  body += "\n\t\t"+sensor.name + " absence alert - "
+                if (alert.value.nil?)
+                  body += "\n\t\t"+sensor.name + " absence alert"
                 else
                   if (alert.value > alert.limit)
                     body += "\n\t\t"+(sensor.trigger_upper_name.empty? ? (sensor.name + " upper limit reached") : sensor.trigger_upper_name)
