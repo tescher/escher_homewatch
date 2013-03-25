@@ -41,7 +41,7 @@
     <file path="/public.html.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1362793056196" ignored="false" />
     <file path="/sessions_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1362871446428" ignored="false" />
     <file path="/sensor.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363535306961" ignored="false" />
-    <file path="/utilities.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1364240340605" ignored="false" />
+    <file path="/utilities.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1364242760108" ignored="false" />
     <file path="/schema.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363821791575" ignored="false" />
     <file path="/20130320232045_add_summary_report_to_users.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363821893125" ignored="false" />
     <file path="/_user.html.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363822362610" ignored="false" />
@@ -69,7 +69,7 @@
       <file leaf-file-name="utilities.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/utilities.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="94" selection-start="5099" selection-end="5099" vertical-scroll-proportion="0.7641066">
+            <state line="101" column="168" selection-start="4753" selection-end="4753" vertical-scroll-proportion="0.7963801">
               <folding />
             </state>
           </provider>
@@ -201,9 +201,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1254" />
+    <option name="x" value="428" />
     <option name="y" value="19" />
-    <option name="width" value="1290" />
+    <option name="width" value="2116" />
     <option name="height" value="1518" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -1652,7 +1652,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1254" y="19" width="1290" height="1518" extended-state="0" />
+    <frame x="428" y="19" width="2116" height="1518" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943755" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1660,7 +1660,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24143426" sideWeight="0.32395384" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2795082" sideWeight="0.9992701" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16666667" sideWeight="0.9992701" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52958155" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24143426" sideWeight="0.32756132" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4963925" sideWeight="0.5067935" order="9" side_tool="true" content_ui="tabs" />
@@ -1826,13 +1826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/constants.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/measurements_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="101" column="100" selection-start="4397" selection-end="4397" vertical-scroll-proportion="0.0">
@@ -1840,9 +1833,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/constants.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/utilities.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="94" selection-start="5099" selection-end="5099" vertical-scroll-proportion="0.7641066">
+        <state line="101" column="168" selection-start="4753" selection-end="4753" vertical-scroll-proportion="0.7963801">
           <folding />
         </state>
       </provider>
