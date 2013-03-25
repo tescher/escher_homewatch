@@ -91,13 +91,13 @@ class MeasurementsController < ApplicationController
     # Check if we should run the periodic checks and clean-ups
     last_check_key = ConfigKey.find_by_key("last_background_check")
     if (!last_check_key)
-      last_check_key = ConfigKey.new(key: "last_background_check", value: DateTime.now.beginning_of_day.strftime("%Y-%m-%d %H:%M:%S %z"))
+      last_check_key = ConfigKey.new(key: "last_background_check", value: DateTime.now.beginning_of_day.in_time_zone(DEFAULT_TIME_ZONE).strftime("%Y-%m-%d %H:%M:%S %z"))
       last_check_key.save
     end
-    if (Time.now.to_i - DateTime.parse(last_check_key.value).to_i) > 600
+    if (Time.now.in_time_zone(DEFAULT_TIME_ZONE).to_i - DateTime.parse(last_check_key.value).in_time_zone(DEFAULT_TIME_ZONE).to_i) > 600
       puts "Running periodic checks"
-      puts Time.now.to_i - DateTime.parse(last_check_key.value).to_i
-      last_check_key.value = DateTime.now.strftime("%Y-%m-%d %H:%M:%S %z")
+      puts Time.now.in_time_zone(DEFAULT_TIME_ZONE).to_i - DateTime.parse(last_check_key.value).in_time_zone(DEFAULT_TIME_ZONE).to_i
+      last_check_key.value = DateTime.now.in_time_zone(DEFAULT_TIME_ZONE).strftime("%Y-%m-%d %H:%M:%S %z")
       last_check_key.save
       check_absence
       check_purge
