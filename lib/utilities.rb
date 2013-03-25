@@ -108,7 +108,7 @@ module Utilities
                   body += ", Value: " + alert.value.to_s
                   body += ", Limit: " + alert.limit.to_s
                 end
-                body += ", Time: " + alert.created_at.strftime("%a %b %e, %Y, %l:%M %p")
+                body += ", Time: " + alert.created_at.in_time_zone(user.time_zone).strftime("%a %b %e, %Y, %l:%M %p %Z")
               }
             end
           end
