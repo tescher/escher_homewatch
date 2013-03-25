@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/escher_homewatch.iml" afterPath="$PROJECT_DIR$/.idea/escher_homewatch.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/measurements_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/measurements_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/utilities.rb" afterPath="$PROJECT_DIR$/lib/utilities.rb" />
     </list>
     <ignored path="sample_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,7 +41,7 @@
     <file path="/public.html.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1362793056196" ignored="false" />
     <file path="/sessions_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1362871446428" ignored="false" />
     <file path="/sensor.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363535306961" ignored="false" />
-    <file path="/utilities.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363831404154" ignored="false" />
+    <file path="/utilities.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1364240089077" ignored="false" />
     <file path="/schema.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363821791575" ignored="false" />
     <file path="/20130320232045_add_summary_report_to_users.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363821893125" ignored="false" />
     <file path="/_user.html.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363822362610" ignored="false" />
@@ -68,10 +66,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="utilities.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="utilities.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/utilities.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="24" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
+            <state line="77" column="266" selection-start="2717" selection-end="2717" vertical-scroll-proportion="0.44670847">
               <folding />
             </state>
           </provider>
@@ -86,10 +84,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="measurements_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="measurements_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/measurements_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="100" selection-start="4397" selection-end="4397" vertical-scroll-proportion="0.8863636">
+            <state line="101" column="100" selection-start="4397" selection-end="4397" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -190,8 +188,8 @@
         <option value="$PROJECT_DIR$/app/views/users/_fields.html.erb" />
         <option value="$PROJECT_DIR$/app/views/alert_mailer/alert_email.text.erb" />
         <option value="$PROJECT_DIR$/app/mailers/user_mailer.rb" />
-        <option value="$PROJECT_DIR$/lib/utilities.rb" />
         <option value="$PROJECT_DIR$/app/controllers/measurements_controller.rb" />
+        <option value="$PROJECT_DIR$/lib/utilities.rb" />
       </list>
     </option>
   </component>
@@ -1828,13 +1826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/utilities.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="24" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/constants.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0">
@@ -1844,7 +1835,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/measurements_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="100" selection-start="4397" selection-end="4397" vertical-scroll-proportion="0.8863636">
+        <state line="101" column="100" selection-start="4397" selection-end="4397" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/utilities.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="266" selection-start="2717" selection-end="2717" vertical-scroll-proportion="0.44670847">
           <folding />
         </state>
       </provider>

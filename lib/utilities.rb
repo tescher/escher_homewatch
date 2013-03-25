@@ -79,19 +79,19 @@ module Utilities
         # For each sensor
         Sensor.find_all_by_user_id(user.id).each {|sensor|
           body += " \n\n" + sensor.name + ": "
-          last_value = Measurement.order("created_at desc").where("sensor_id = ? and created_at < ?", sensor.id, date.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S")).limit(1)[0]
+          last_value = Measurement.order("created_at desc").where("sensor_id = ? and created_at < ?", sensor.id, date.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S %z")).limit(1)[0]
           if (!last_value)
             body += "No measurement yet received."
           elsif (last_value.created_at < date.yesterday.midnight.in_time_zone(user.time_zone))
             body += "No measurement received yesterday."
           else
-            high_value = Measurement.maximum(:value, conditions: ["sensor_id = ? and created_at < ? and created_at >=?", sensor.id, date.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S"),date.yesterday.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S")])
-            low_value = Measurement.minimum(:value, conditions: ["sensor_id = ? and created_at < ? and created_at >=?", sensor.id, date.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S"),date.yesterday.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S")])
-            average_value = Measurement.average(:value, conditions: ["sensor_id = ? and created_at < ? and created_at >=?", sensor.id, date.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S"),date.yesterday.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S")])
+            high_value = Measurement.maximum(:value, conditions: ["sensor_id = ? and created_at < ? and created_at >=?", sensor.id, date.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S %z"),date.yesterday.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S %z")])
+            low_value = Measurement.minimum(:value, conditions: ["sensor_id = ? and created_at < ? and created_at >=?", sensor.id, date.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S %z"),date.yesterday.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S %z")])
+            average_value = Measurement.average(:value, conditions: ["sensor_id = ? and created_at < ? and created_at >=?", sensor.id, date.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S %z"),date.yesterday.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S %z")])
             body += "\n\tAverage: "+average_value.to_s
             body += "\n\tHigh: "+high_value.to_s
             body += "\n\tLow: "+low_value.to_s
-            alerts = Alert.where("sensor_id = ? and created_at < ? and created_at >=?", sensor.id, date.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S"),date.yesterday.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S"))
+            alerts = Alert.where("sensor_id = ? and created_at < ? and created_at >=?", sensor.id, date.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S %z"),date.yesterday.midnight.in_time_zone(user.time_zone).strftime("%Y-%m-%d %H:%M:%S %z"))
             if (alerts.length < 1)
               body += "\n\tNo alerts."
             else
