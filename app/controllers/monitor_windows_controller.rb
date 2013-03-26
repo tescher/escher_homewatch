@@ -75,6 +75,7 @@ class MonitorWindowsController < ApplicationController
       mw.position = params["mc"].index(mw.id.to_s) + 1
       mw.save
     end
+    render nothing: true
   end
 
   def public
