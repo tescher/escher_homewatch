@@ -160,6 +160,8 @@ function MonitorWindow(config, windowDiv) {
 
 $(function() {
 
+
+
     $("#dialogMonitorWindows").dialog({
         modal: true,
         title: "Monitor Window Properties",
@@ -244,6 +246,13 @@ $(function() {
         async: false
     })
 
+    // Make them draggable and sortable
+    $(".monitors-container").sortable({
+        items: '.monitor-container-parent',
+        handle: ".monitor-move",
+        update: function() {alert(this.sortable('serialize'))}
+    })
+
 
 });
 
@@ -294,11 +303,12 @@ function finishPlot(that) {
             return false;
         });
     }
-    $('<div class="monitor-refresh" id="ref-'+that.config.id+'" style="right:40px;top:'+mwControlTop+'"><img src="/assets/refresh.png" alt="Config" /></div>').appendTo(that.windowDiv).click(function (e) {
+    $('<div class="monitor-refresh" id="ref-'+that.config.id+'" style="right:40px;top:'+mwControlTop+'"><img src="/assets/refresh.png" alt="Refresh" /></div>').appendTo(that.windowDiv).click(function (e) {
         e.preventDefault();
         mw[this.id.split("-")[1]].display();
         return false;
     });
+    $('<div class="monitor-move" id="ref-'+that.config.id+'" style="right:60px;top:'+mwControlTop+'"><img src="/assets/move.png" alt="Move" /></div>').appendTo(that.windowDiv);
     $('<span class="monitor-title ui-corner-all" style="left:'+mwControlLeft+';top:'+mwControlTop+'">'+that.config.name+'</span>').appendTo(that.windowDiv);
 
 
