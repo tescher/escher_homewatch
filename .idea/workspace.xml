@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
     </list>
     <ignored path="sample_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,14 +82,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="monitor_windows.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="monitor_windows.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="243" column="43" selection-start="9791" selection-end="9791" vertical-scroll-proportion="0.5596184">
+            <state line="243" column="43" selection-start="9791" selection-end="9791" vertical-scroll-proportion="-22.709677">
               <folding>
                 <marker date="1364262377333" expanded="false" signature="8467:8493" placeholder="..." />
                 <marker date="1364262377333" expanded="false" signature="12784:12789" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="43" selection-start="579" selection-end="579" vertical-scroll-proportion="0.1280062">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,15 +134,6 @@
         <entry file="file://$PROJECT_DIR$/app/models/sensor.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="47" column="78" selection-start="1576" selection-end="1576" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="0" selection-start="2254" selection-end="2301" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -175,7 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/sensors_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/sensor.rb" />
         <option value="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
@@ -191,6 +190,7 @@
         <option value="$PROJECT_DIR$/app/controllers/measurements_controller.rb" />
         <option value="$PROJECT_DIR$/lib/utilities.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
       </list>
     </option>
   </component>
@@ -1744,11 +1744,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/user_mailer/user_report_email.text.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/mailers/alert_mailer.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="13" selection-start="272" selection-end="384" vertical-scroll-proportion="0.0" />
@@ -1845,11 +1840,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="243" column="43" selection-start="9791" selection-end="9791" vertical-scroll-proportion="0.5596184">
+        <state line="243" column="43" selection-start="9791" selection-end="9791" vertical-scroll-proportion="-22.709677">
           <folding>
             <marker date="1364262377333" expanded="false" signature="8467:8493" placeholder="..." />
             <marker date="1364262377333" expanded="false" signature="12784:12789" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="43" selection-start="579" selection-end="579" vertical-scroll-proportion="0.1280062">
+          <folding />
         </state>
       </provider>
     </entry>
