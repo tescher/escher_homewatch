@@ -17,6 +17,7 @@
 #  url              :string(255)
 #  width            :string(255)
 #  initial_token    :string(255)
+#  position         :integer
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #
@@ -47,6 +48,7 @@ describe MonitorWindow do
   it { should respond_to(:url) }
   it { should respond_to(:width) }
   it { should respond_to(:initial_token) }
+  it { should respond_to(:position) }
 
   it { should be_valid }
 
@@ -63,7 +65,7 @@ describe MonitorWindow do
       @monitor_window.monitor_type.should == :graph
     end
     it "should have dark grey color" do
-      @monitor_window.background_color.should == "#404040"
+      @monitor_window.background_color.should == "#ffffff"
     end
     it "should have a legend" do
       @monitor_window.legend.should == true

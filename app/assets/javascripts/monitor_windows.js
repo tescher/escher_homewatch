@@ -236,6 +236,7 @@ $(function() {
                 var mw_container_div = document.createElement("div");
                 mw_container_div.className = "monitor-container-parent mw-parent-" + config.width;
                 mw_container_div.innerHTML = config.html;
+                mw_container_div.id = "mc_" + config.id;
                 container_div.appendChild(mw_container_div);
                 var placeholder = document.getElementById("mw-"+config.id);
                 mw[config.id] = new MonitorWindow(config, placeholder);
@@ -250,7 +251,15 @@ $(function() {
     $(".monitors-container").sortable({
         items: '.monitor-container-parent',
         handle: ".monitor-move",
-        update: function() {alert(this.sortable('serialize'))}
+        cursor: 'move',
+        update: function() {
+            $.ajax({
+                type: 'post',
+                data: $(".monitors-container").sortable('serialize'),
+                datatType: 'script',
+                url: '/monitor_windows/sort'
+            })
+        }
     })
 
 

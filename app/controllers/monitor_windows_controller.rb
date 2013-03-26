@@ -1,6 +1,6 @@
 class MonitorWindowsController < ApplicationController
 
-  before_filter :signed_in_user, only: [:new, :create, :index]
+  before_filter :signed_in_user, only: [:new, :create, :index, :sort]
   before_filter :correct_or_admin_user,   only: [:edit, :update, :destroy]
 
 
@@ -59,7 +59,7 @@ class MonitorWindowsController < ApplicationController
       format.js do
 
         # Get windows for this user
-        monitor_windows = MonitorWindow.find_all_by_user_id(current_user.id, :order => "id")
+        monitor_windows = MonitorWindow.find_all_by_user_id(current_user.id, :order => "position, id")
 
         # Rendering
         render_window_info(monitor_windows)
@@ -67,6 +67,14 @@ class MonitorWindowsController < ApplicationController
       end #format.js
 
     end #respond_to  end
+  end
+
+  def sort
+    @monitor_windows = MonitorWindow.find_all_by_user_id(current_user.id)
+    @monitor_windows.each do |mw|
+      mw.position = params["mc"].index(mw.id.to_s) + 1
+      mw.save
+    end
   end
 
   def public
