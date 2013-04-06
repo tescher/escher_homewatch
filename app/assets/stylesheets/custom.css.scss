@@ -325,6 +325,7 @@ input.my_color {
   height: auto;
   width: auto;
   display: inline-block;
+  vertical-align: top;
 }
 
 .mw-parent-normal {
@@ -337,6 +338,10 @@ input.my_color {
   margin-right: 10px;
 }
 
+.mw-parent-small {
+  margin-left: 25px;
+  margin-right: 10px;
+}
 
 
 .monitor-window {
@@ -351,6 +356,11 @@ input.my_color {
 .mw-wide {
   width: 800px;
   display: block;
+}
+.mw-small {
+  width: 400px;
+  height: 300px;;
+  display: inline-block;
 }
 
 .monitor-title {

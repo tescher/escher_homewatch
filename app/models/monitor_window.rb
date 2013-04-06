@@ -28,7 +28,7 @@ require 'enumerated_attribute'
 
 class MonitorWindow < ActiveRecord::Base
   enum_attr :monitor_type, %w(^graph table)
-  enum_attr :width, %w(^normal wide)
+  enum_attr :width, %w(^normal wide small)
   attr_accessible :background_color, :background_color_auto, :monitor_type, :name, :user_id, :legend, :public, :url, :width, :x_axis_auto, :x_axis_days, :y_axis_max, :y_axis_max_auto, :y_axis_min, :y_axis_min_auto, :initial_token, :position
 
   belongs_to :user

@@ -285,7 +285,7 @@ function finishPlot(that) {
                 ],
                 usepager: false,
                 width: 'auto',
-                height: 500,
+                height: (that.config.width == 'small') ? 300 : 500,
                 title: "&nbsp;&nbsp;&nbsp;.",
                 onSuccess : function () {
                     $("#flexMonitor_"+that.config.id+" tr").each ( function () {
