@@ -26,7 +26,7 @@
     <file path="/a.dummy" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363795553561" ignored="false" />
     <file path="/20130211221501_add_index_to_measurements_sensor_id.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360620936597" ignored="false" />
     <file path="/20130211221627_add_index_to_monitor_sensors_monitor_window.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360621010120" ignored="false" />
-    <file path="/sensors_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1375014002428" ignored="false" />
+    <file path="/sensors_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1375014828760" ignored="false" />
     <file path="/20130221224412_add_time_zone_to_user.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1361487115640" ignored="false" />
     <file path="/user.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363821703978" ignored="false" />
     <file path="/constants.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1361487077501" ignored="false" />
@@ -124,7 +124,7 @@
       <file leaf-file-name="sensors_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/sensors_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="50" selection-start="2745" selection-end="2745" vertical-scroll-proportion="0.5376712">
+            <state line="114" column="40" selection-start="2818" selection-end="2818" vertical-scroll-proportion="0.5890411">
               <folding />
             </state>
           </provider>
@@ -1867,7 +1867,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/sensors_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="50" selection-start="2745" selection-end="2745" vertical-scroll-proportion="0.5376712">
+        <state line="114" column="40" selection-start="2818" selection-end="2818" vertical-scroll-proportion="0.5890411">
           <folding />
         </state>
       </provider>
