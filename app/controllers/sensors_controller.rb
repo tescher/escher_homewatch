@@ -112,7 +112,7 @@ class SensorsController < ApplicationController
 
   def destroy
     if request.xhr?
-      Sensor.find(params[:id]).destroy
+      Sensor.find(params[:id]).destroy  #TODO Delete corresponding Monitor_Sensor(s) also.
       render nothing: true
     else
       redirect_to root_url
