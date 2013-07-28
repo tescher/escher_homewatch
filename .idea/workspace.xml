@@ -124,7 +124,7 @@
       <file leaf-file-name="sensors_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/sensors_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="40" selection-start="2818" selection-end="2818" vertical-scroll-proportion="0.5890411">
+            <state line="110" column="39" selection-start="2744" selection-end="2744" vertical-scroll-proportion="0.5205479">
               <folding />
             </state>
           </provider>
@@ -1867,7 +1867,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/sensors_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="40" selection-start="2818" selection-end="2818" vertical-scroll-proportion="0.5890411">
+        <state line="110" column="39" selection-start="2744" selection-end="2744" vertical-scroll-proportion="0.5205479">
           <folding />
         </state>
       </provider>
