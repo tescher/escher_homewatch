@@ -96,7 +96,12 @@ class SensorsController < ApplicationController
     end
     cntrl = params[:cntrl]
     key_hash = params[:key]
+    log_content = params[:log]
     if request_key_valid(key_hash, cntrl)
+      if !log_content.empty?
+        @log = Log.new(controller: cntrl, content: log_content)
+        @log.save
+      end
       sensors = Sensor.find_all_by_controller(cntrl)
       render :json =>
           sensors.collect{|s| {
