@@ -98,7 +98,7 @@ class SensorsController < ApplicationController
     key_hash = params[:key]
     log_content = params[:log]
     if request_key_valid(key_hash, cntrl)
-      if !log_content.empty?
+      if !log_content.blank?
         @log = Log.new(controller: cntrl, content: log_content)
         @log.save
       end

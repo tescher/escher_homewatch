@@ -137,7 +137,7 @@ describe "SensorPages" do
     describe "get config" do
       let(:sensor) { Sensor.first }
 
-      it "should list this controller's sensors, and log a message" do
+      it "should list this controller's sensors, and log if log sent" do
         cntrl = sensor.controller
         key_hash = 0
         cntrl.each_byte do |b|
@@ -150,6 +150,10 @@ describe "SensorPages" do
           get getconfig_sensors_path, cntrl: cntrl, key: key_hash, log: "Testing"
           pp response.body
         end.to change(Log, :count).by(1)
+        expect do
+          get getconfig_sensors_path, cntrl: cntrl, key: key_hash
+          pp response.body
+        end.to change(Log, :count).by(0)
         response.body.should_not be_blank
         parsed_body = JSON.parse(response.body)
         parsed_body.count.should == 8
