@@ -67,5 +67,9 @@ module EscherHomewatch
 
     # Load custom libraries
     config.autoload_paths += %W(#{config.root}/lib)
+
+    # prevent precompile failures on Herolu
+    config.assets.initialize_on_precompile = false
+
   end
 end
