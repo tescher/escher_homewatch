@@ -122,7 +122,7 @@ describe Sensor do
       @sensor.interval = nil
       @sensor.save!
     end
-    it { @sensor.interval.should eql(30000) }
+    it { @sensor.interval.should eql(60) }
   end
 
   describe "when another device already has that address" do
