@@ -23,3 +23,4 @@
 //= require spectrum
 //= require bootstrap
 //= require utilities
+//= require tree .
