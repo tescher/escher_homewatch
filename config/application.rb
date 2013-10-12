@@ -71,5 +71,7 @@ module EscherHomewatch
     # prevent precompile failures on Herolu
     config.assets.initialize_on_precompile = false
 
+    config.log_level = :debug
+
   end
 end
