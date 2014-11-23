@@ -25,7 +25,7 @@
 #  trigger_upper_name  :string(255)
 #
 
-require 'spec_helper'
+require 'rails_helper'
 
 describe Sensor do
 

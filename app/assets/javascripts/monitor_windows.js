@@ -90,28 +90,55 @@ function MonitorWindow(config, windowDiv) {
         var series_count = 0;
         var series_total = 0;
         $('<div class="screenblock"></div>').appendTo(this.windowDiv).show();
-        for (var index in config.monitor_sensors) {
-            if (config.monitor_sensors[index].alerts_only) {
-                series_total++
-            } else {
-                series_total += 2
+        if (config.monitor_sensors.length < 1) {
+            finishPlot(this);
+        } else {
+            for (var index in config.monitor_sensors) {
+                if (config.monitor_sensors[index].alerts_only) {
+                    series_total++
+                } else {
+                    series_total += 2
+                }
             }
-        }
-        for (var index in config.monitor_sensors) {
-            var ms = config.monitor_sensors[index];
-            var that = this;
-            start_date = ((!config.x_axis_auto && config.x_axis_days != "") ? new Date(now_utc.getTime() - 1000*60*60*24*config.x_axis_days) : null);
-            if (!ms.alerts_only) {
+            for (var index in config.monitor_sensors) {
+                var ms = config.monitor_sensors[index];
+                var that = this;
+                start_date = ((!config.x_axis_auto && config.x_axis_days != "") ? new Date(now_utc.getTime() - 1000 * 60 * 60 * 24 * config.x_axis_days) : null);
+                if (!ms.alerts_only) {
+                    $.ajax({
+                        url: "/measurements?type=" + config.monitor_type + "&monitor_sensor_id=" + ms.id + "&sensor_id=" + ms.sensor_id + (start_date ? "+&start=" + $.datepicker.formatDate("yy-mm-dd", start_date) : ""),
+                        method: 'GET',
+                        dataType: 'json',
+                        success: function (data) {
+                            if (that.config.monitor_type == "graph") {
+                                ++color_count;
+                                if (data.color_auto || (data.color == "")) {
+                                    data.color = color_count;
+                                }
+                                that.series_all.push(data)
+                            } else {
+                                if (!that.series_all["rows"]) {
+                                    that.series_all["rows"] = [];
+                                    that.series_all["total"] = 0;
+                                }
+                                that.series_all["rows"] = that.series_all["rows"].concat(data.rows);
+                                that.series_all["total"] += data.total;
+                            }
+                            ++series_count;
+                            if (series_count == series_total) {
+                                finishPlot(that);
+                            }
+                        },
+                        cache: false,
+                        async: true
+                    });
+                }
                 $.ajax({
-                    url: "/measurements?type="+config.monitor_type+"&monitor_sensor_id="+ms.id+"&sensor_id="+ms.sensor_id+(start_date ? "+&start="+$.datepicker.formatDate("yy-mm-dd", start_date) : ""),
+                    url: "/measurements?type=" + config.monitor_type + "&monitor_sensor_id=" + ms.id + "&sensor_id=" + ms.sensor_id + "&alerts=true" + (start_date ? "+&start=" + $.datepicker.formatDate("yy-mm-dd", start_date) : ""),
                     method: 'GET',
                     dataType: 'json',
-                    success: function(data) {
+                    success: function (data) {
                         if (that.config.monitor_type == "graph") {
-                            ++color_count;
-                            if (data.color_auto || (data.color == "")) {
-                                data.color = color_count;
-                            }
                             that.series_all.push(data)
                         } else {
                             if (!that.series_all["rows"]) {
@@ -130,29 +157,6 @@ function MonitorWindow(config, windowDiv) {
                     async: true
                 });
             }
-            $.ajax({
-                url: "/measurements?type="+config.monitor_type+"&monitor_sensor_id="+ms.id+"&sensor_id="+ms.sensor_id+"&alerts=true"+(start_date ? "+&start="+$.datepicker.formatDate("yy-mm-dd", start_date) : ""),
-                method: 'GET',
-                dataType: 'json',
-                success: function(data) {
-                    if (that.config.monitor_type == "graph") {
-                        that.series_all.push(data)
-                    } else {
-                        if (!that.series_all["rows"]) {
-                            that.series_all["rows"] = [];
-                            that.series_all["total"] = 0;
-                        }
-                        that.series_all["rows"] = that.series_all["rows"].concat(data.rows);
-                        that.series_all["total"] += data.total;
-                    }
-                    ++series_count;
-                    if (series_count == series_total) {
-                        finishPlot(that);
-                    }
-                },
-                cache: false,
-                async: true
-            });
         }
     }
 

@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 include SensorsHelper
 
@@ -12,8 +12,8 @@ describe SensorsHelper do
     end
     key_hash *= REQUEST_KEY_MAGIC
     key_hash %= 65536
-    request_key_valid(key_hash, controller).should be_true
-    request_key_valid(key_hash, "Random Name").should be_false
+    request_key_valid(key_hash, controller).should be_truthy
+    request_key_valid(key_hash, "Random Name").should be_falsey
   end
 
 end

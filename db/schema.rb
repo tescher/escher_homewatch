@@ -68,10 +68,10 @@ ActiveRecord::Schema.define(:version => 20131006210957) do
     t.string   "legend"
     t.string   "color"
     t.string   "initial_window_token"
-    t.datetime "created_at",                              :null => false
-    t.datetime "updated_at",                              :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
     t.boolean  "color_auto"
-    t.boolean  "alerts_only",          :default => false
+    t.boolean  "alerts_only"
   end
 
   add_index "monitor_sensors", ["monitor_window_id"], :name => "index_monitor_sensors_on_monitor_window_id"

@@ -10,8 +10,7 @@
  *
  *= require_self
  *= require_tree .
- *= require jquery.ui.button
- *= require jquery.ui.dialog
+ *= require jquery-ui
  *= require flexigrid
  *= require spectrum
  */

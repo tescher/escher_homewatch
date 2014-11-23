@@ -15,15 +15,15 @@ end
 RSpec::Matchers.define :have_valid_header_and_title do |heading, page_title|
   match do |page|
     if (heading) then
-      page.should have_selector('h1', text: heading)
+      expect(page.body).to have_selector('h1', text: heading)
     end
-    page.should have_selector('title', text: full_title(page_title))
+    Capybara.string(page.body).has_selector?('title', text: full_title(page_title), visible: false)
   end
 end
 
 RSpec::Matchers.define :have_home_title do
   match do |page|
-    page.should have_selector('title', text: '| Home')
+    page.should have_selector('title', text: '| Home', visible: false)
   end
 end
 
@@ -34,7 +34,7 @@ def valid_signin(user)
   fill_in "Password", with: user.password
   click_button "Sign in"
   # Sign in when not using Capybara as well.
-  cookies[:remember_token] = user.remember_token
+  # cookies[:remember_token] = user.remember_token
 end
 
 def valid_email_check(subject)

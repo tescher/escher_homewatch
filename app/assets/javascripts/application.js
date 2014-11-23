@@ -12,10 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.button
-//= require jquery.ui.dialog
-//= require jquery.ui.datepicker
-//= require jquery.ui.sortable
+//= require jquery-ui
 //= require jquery.flot
 //= require jquery.flot.navigate
 //= require jquery.flot.time

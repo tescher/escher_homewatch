@@ -2,60 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/requests/authentication_pages_spec.rb" afterPath="$PROJECT_DIR$/spec/features/authentication_pages_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/requests/measurement_pages_spec.rb" afterPath="$PROJECT_DIR$/spec/features/measurement_pages_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/requests/monitor_window_pages_spec.rb" afterPath="$PROJECT_DIR$/spec/features/monitor_window_pages_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/requests/password_reset_pages_spec.rb" afterPath="$PROJECT_DIR$/spec/features/password_reset_pages_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/requests/sensor_pages_spec.rb" afterPath="$PROJECT_DIR$/spec/features/sensor_pages_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/requests/static_pages_spec.rb" afterPath="$PROJECT_DIR$/spec/features/static_pages_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/requests/user_confirmation_pages_spec.rb" afterPath="$PROJECT_DIR$/spec/features/user_confirmation_pages_spec.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/requests/user_pages_spec.rb" afterPath="$PROJECT_DIR$/spec/features/user_pages_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.rspec" afterPath="$PROJECT_DIR$/.rspec" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/alert_spec.rb" afterPath="$PROJECT_DIR$/spec/models/alert_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/helpers/application_helper_spec.rb" afterPath="$PROJECT_DIR$/spec/helpers/application_helper_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/config_key_spec.rb" afterPath="$PROJECT_DIR$/spec/models/config_key_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/escher_homewatch.iml" afterPath="$PROJECT_DIR$/.idea/escher_homewatch.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/log_spec.rb" afterPath="$PROJECT_DIR$/spec/models/log_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/measurement_spec.rb" afterPath="$PROJECT_DIR$/spec/models/measurement_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/monitor_sensors_spec.rb" afterPath="$PROJECT_DIR$/spec/models/monitor_sensors_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/monitor_window_spec.rb" afterPath="$PROJECT_DIR$/spec/models/monitor_window_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/password_resets_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/password_resets_controller_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/sensor_spec.rb" afterPath="$PROJECT_DIR$/spec/models/sensor_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/sensors.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/sensors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/helpers/sensors_helper_spec.rb" afterPath="$PROJECT_DIR$/spec/helpers/sensors_helper_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/spec_helper.rb" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/user_confirmations_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/user_confirmations_controller_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/mailers/user_mailer_spec.rb" afterPath="$PROJECT_DIR$/spec/mailers/user_mailer_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/user_spec.rb" afterPath="$PROJECT_DIR$/spec/models/user_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/support/utilities.rb" afterPath="$PROJECT_DIR$/spec/support/utilities.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sample_app.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1382361129566" ignored="false" />
-    <file path="/alert_mailer.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360260077440" ignored="false" />
-    <file path="/measurements_helper.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1361488372227" ignored="false" />
-    <file path="/alert.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360249425069" ignored="false" />
-    <file path="/application_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1364324639782" ignored="false" />
-    <file path="/development.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360252776771" ignored="false" />
-    <file path="/alert_email.text.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363823801572" ignored="false" />
-    <file path="/monitor_windows.js" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1365262425147" ignored="false" />
-    <file path="/monitor_windows_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1364324942851" ignored="false" />
-    <file path="/production.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1381600595189" ignored="false" />
-    <file path="/monitor_window.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1365261510038" ignored="false" />
-    <file path="/20130207183232_add_auto_color_to_monitor_windows.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360262052147" ignored="false" />
-    <file path="/_form.html.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1365261427448" ignored="false" />
-    <file path="/monitor_sensor.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1375012682334" ignored="false" />
-    <file path="/measurements_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1364239280319" ignored="false" />
-    <file path="/custom.css.scss" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1365262607388" ignored="false" />
-    <file path="/monitor_sensors_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1361973960072" ignored="false" />
-    <file path="/a.dummy" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1381597863775" ignored="false" />
-    <file path="/20130211221501_add_index_to_measurements_sensor_id.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360620936597" ignored="false" />
-    <file path="/20130211221627_add_index_to_monitor_sensors_monitor_window.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1360621010120" ignored="false" />
-    <file path="/sensors_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1381154781041" ignored="false" />
-    <file path="/20130221224412_add_time_zone_to_user.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1361487115640" ignored="false" />
-    <file path="/user.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363821703978" ignored="false" />
-    <file path="/constants.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1361487077501" ignored="false" />
-    <file path="/_fields.html.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363823177525" ignored="false" />
-    <file path="/user_spec.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363821675686" ignored="false" />
-    <file path="/edit.html.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363822452318" ignored="false" />
-    <file path="/20130227135631_add_alerts_only_to_monitor_sensor.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1361973468401" ignored="false" />
-    <file path="/monitor_sensors_spec.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1361973532929" ignored="false" />
-    <file path="/_window_container.html.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1361994683348" ignored="false" />
-    <file path="/monitor_window_pages_spec.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1362794780563" ignored="false" />
-    <file path="/routes.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1364323014050" ignored="false" />
-    <file path="/public.html.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1362793056196" ignored="false" />
-    <file path="/sessions_controller.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1362871446428" ignored="false" />
-    <file path="/sensor.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1375012666901" ignored="false" />
-    <file path="/utilities.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1364242760108" ignored="false" />
-    <file path="/schema.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363821791575" ignored="false" />
-    <file path="/20130320232045_add_summary_report_to_users.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363821893125" ignored="false" />
-    <file path="/_user.html.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363822362610" ignored="false" />
-    <file path="/user_mailer.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1363826585941" ignored="false" />
-    <file path="/monitor_window_spec.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1364322294529" ignored="false" />
-    <file path="/seeds.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1375717674419" ignored="false" />
-    <file path="/log_spec.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1381094214417" ignored="false" />
-    <file path="/log.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1381094732081" ignored="false" />
-    <file path="/sensor_pages_spec.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1381154621421" ignored="false" />
-    <file path="/Gemfile" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1381527098631" ignored="false" />
-    <file path="/application.html.erb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1381511751401" ignored="false" />
-    <file path="/assets.yml" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1381512157057" ignored="false" />
-    <file path="/application.rb" changelist="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" time="1381596553256" ignored="false" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +52,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/sample_app@Run_spec__static_pages_spec___escher_homewatch.coverage" NAME="Run spec 'static_pages_spec': escher_homewatch Coverage Results" MODIFIED="1416371582319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="escher_homewatch" />
+    <SUITE FILE_PATH="coverage/sample_app@Run_spec__user_spec___escher_homewatch.coverage" NAME="Run spec 'user_spec': escher_homewatch Coverage Results" MODIFIED="1416294069075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="escher_homewatch" />
+    <SUITE FILE_PATH="coverage/sample_app@All_specs_in__spec.coverage" NAME="All specs in: spec Coverage Results" MODIFIED="1416374822916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="escher_homewatch" />
+    <SUITE FILE_PATH="coverage/sample_app@Development.coverage" NAME="Development Coverage Results" MODIFIED="1416758183371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="escher_homewatch" />
+    <SUITE FILE_PATH="coverage/sample_app@Run_spec__sensor_pages_spec___escher_homewatch.coverage" NAME="Run spec 'sensor_pages_spec': escher_homewatch Coverage Results" MODIFIED="1416376169692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="escher_homewatch" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -79,64 +75,93 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <file leaf-file-name="sensor_pages_spec.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/features/sensor_pages_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="0" selection-start="3197" selection-end="3197" vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2670">
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="development.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <file leaf-file-name="sensors_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/sensors_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1254" max-vertical-offset="2295">
+              <caret line="130" column="21" selection-start-line="130" selection-start-column="21" selection-end-line="130" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="production.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <file leaf-file-name="sensors.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/sensors.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="60" selection-start="1501" selection-end="1501" vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2280">
+              <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <file leaf-file-name="monitor_windows.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="2.0873606" vertical-offset="1172" max-vertical-offset="8340">
+              <caret line="153" column="17" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
+              <folding>
+                <marker date="1416781894530" expanded="true" signature="8869:8895" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="monitor_sensors_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/monitor_sensors_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="2055">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="monitor_windows_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/monitor_windows_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="2595">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sessions_helper.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/helpers/sessions_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="690">
+              <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="43" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="330">
+              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="boot.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/boot.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="917" selection-end="917" vertical-scroll-proportion="0.5458515">
+            <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="435">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -144,28 +169,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="monitor_windows_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/monitor_windows_controller.rb">
+      <file leaf-file-name="seeds.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="51" selection-start="1440" selection-end="1440" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="internal_server_error.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/errors/internal_server_error.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="104" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -187,26 +195,43 @@
     </option>
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-        <option value="$PROJECT_DIR$/app/models/sensor.rb" />
-        <option value="$PROJECT_DIR$/app/models/monitor_sensor.rb" />
-        <option value="$PROJECT_DIR$/db/seeds.rb" />
-        <option value="$PROJECT_DIR$/app/models/log.rb" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
+        <option value="$PROJECT_DIR$/spec/controllers/password_resets_controller_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/controllers/user_confirmations_controller_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/features/measurement_pages_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/features/password_reset_pages_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/features/user_confirmation_pages_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/helpers/application_helper_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/mailers/user_mailer_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/models/alert_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/models/config_key_spec.rb" />
         <option value="$PROJECT_DIR$/spec/models/log_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/requests/sensor_pages_spec.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/sensors_controller.rb" />
-        <option value="$PROJECT_DIR$/config/assets.yml" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/spec/models/measurement_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/models/monitor_sensors_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/models/monitor_window_spec.rb" />
         <option value="$PROJECT_DIR$/spec/models/sensor_spec.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/config/application.rb" />
-        <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/spec/models/user_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/helpers/sensors_helper_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
+        <option value="$PROJECT_DIR$/spec/rails_helper.rb" />
+        <option value="$PROJECT_DIR$/spec/features/static_pages_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/support/utilities.rb" />
+        <option value="$PROJECT_DIR$/spec/features/monitor_window_pages_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/features/authentication_pages_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/features/user_pages_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/features/sensor_pages_spec.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/sensors.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js" />
       </list>
     </option>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -216,9 +241,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="27" />
-    <option name="width" value="1440" />
-    <option name="height" value="873" />
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="1777" />
+    <option name="height" value="1119" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -234,7 +260,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -265,166 +291,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery-ui-rails (v2.0.2, RVM: ruby-1.9.3-p286 [rails3tutorial2ndEd]) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery-ui-rails (v2.0.2, RVM: ruby-1.9.3-p286 [rails3tutorial2ndEd]) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery-ui-rails (v2.0.2, RVM: ruby-1.9.3-p286 [rails3tutorial2ndEd]) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery-ui-rails (v2.0.2, RVM: ruby-1.9.3-p286 [rails3tutorial2ndEd]) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-sass (v2.0.4.0, RVM: ruby-1.9.3-p286 [rails3tutorial2ndEd]) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-sass (v2.0.4.0, RVM: ruby-1.9.3-p286 [rails3tutorial2ndEd]) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-sass (v2.0.4.0, RVM: ruby-1.9.3-p286 [rails3tutorial2ndEd]) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-sass (v2.0.4.0, RVM: ruby-1.9.3-p286 [rails3tutorial2ndEd]) [gem]" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-sass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="escher_homewatch" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -515,7 +381,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="requests" />
+              <option name="myItemId" value="support" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -592,6 +458,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="user_mailer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="escher_homewatch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="features" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -715,6 +599,50 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="escher_homewatch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="escher_homewatch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -786,54 +714,6 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="escher_homewatch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user_mailer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="escher_homewatch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user_confirmations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -854,204 +734,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="static_pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="escher_homewatch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shared" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="escher_homewatch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sessions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="escher_homewatch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sensors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="escher_homewatch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="password_resets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="escher_homewatch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monitor_windows" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="escher_homewatch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monitor_sensors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="escher_homewatch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="escher_homewatch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="errors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="escher_homewatch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alert_mailer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1202,7 +884,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="editor" />
+    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
@@ -1213,17 +895,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-  </component>
-  <component name="PublishConfig">
-    <servers>
-      <server id="179773ca-bba8-4180-83ce-25bcd19cf507">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
-      </server>
-    </servers>
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1233,35 +905,16 @@
       <recent name="$PROJECT_DIR$/app/mailers" />
       <recent name="$PROJECT_DIR$/app/controllers" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spec/features" />
+    </key>
   </component>
-  <component name="RunManager" selected="Rails.Rails Development">
-    <configuration default="false" name="utilities" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
-      <module name="escher_homewatch" />
-      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$PROJECT_DIR$/lib" />
-      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$PROJECT_DIR$/lib/utilities.rb" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="user_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+  <component name="RunManager" selected="Rails.Development">
+    <configuration default="false" name="Run spec 'user_spec': escher_homewatch" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="escher_homewatch" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
@@ -1270,7 +923,7 @@
         <env name="JRUBY_OPTS" value="-X+O" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
@@ -1278,7 +931,7 @@
       </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/models/user_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/models/user_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
@@ -1287,16 +940,18 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="monitor_window_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+    <configuration default="false" name="Run spec 'static_pages_spec': escher_homewatch" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="escher_homewatch" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
@@ -1305,7 +960,7 @@
         <env name="JRUBY_OPTS" value="-X+O" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
@@ -1313,7 +968,7 @@
       </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/models/monitor_window_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/features/static_pages_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
@@ -1322,16 +977,18 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="log_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+    <configuration default="false" name="Run spec 'sensor_pages_spec': escher_homewatch" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="escher_homewatch" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
@@ -1340,7 +997,7 @@
         <env name="JRUBY_OPTS" value="-X+O" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
@@ -1348,7 +1005,7 @@
       </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/models/log_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/features/sensor_pages_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
@@ -1357,41 +1014,8 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="sensor_pages_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
-      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
-      <module name="escher_homewatch" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/requests/sensor_pages_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
@@ -1406,7 +1030,7 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <envs />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
@@ -1425,13 +1049,13 @@
       <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
       <module name="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <envs />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
@@ -1457,7 +1081,7 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <envs />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
@@ -1474,6 +1098,8 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <method />
     </configuration>
@@ -1486,7 +1112,7 @@
       <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
       <envs />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
@@ -1495,6 +1121,9 @@
       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
@@ -1507,7 +1136,7 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <envs />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
@@ -1520,6 +1149,8 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
@@ -1532,7 +1163,7 @@
       <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
       <envs />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
@@ -1556,7 +1187,7 @@
         <env name="ANSICON" value="" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
@@ -1574,238 +1205,95 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
-      <method />
-    </configuration>
-    <configuration default="false" name="All specs in: spec" type="RSpecRunConfigurationType" factoryName="RSpec">
-      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
-      <module name="escher_homewatch" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="$PROJECT_DIR$/spec" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="ALL_IN_FOLDER" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Rails Development" type="RailsRunConfigurationType" factoryName="Rails">
-      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
-      <module name="escher_homewatch" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-envs>true</pass-parent-envs>
       <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="default" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
-      <RunnerSettings RunnerId="RubyDebugRunner" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyDebugRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="development" type="RubyRunConfigurationType" factoryName="Ruby">
-      <module name="escher_homewatch" />
-      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$PROJECT_DIR$/config/environments" />
-      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$PROJECT_DIR$/config/environments/development.rb" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
-    <list size="8">
-      <item index="0" class="java.lang.String" itemvalue="Ruby.utilities" />
-      <item index="1" class="java.lang.String" itemvalue="RSpec.user_spec" />
-      <item index="2" class="java.lang.String" itemvalue="RSpec.monitor_window_spec" />
-      <item index="3" class="java.lang.String" itemvalue="RSpec.log_spec" />
-      <item index="4" class="java.lang.String" itemvalue="RSpec.sensor_pages_spec" />
-      <item index="5" class="java.lang.String" itemvalue="RSpec.All specs in: spec" />
-      <item index="6" class="java.lang.String" itemvalue="Rails.Rails Development" />
-      <item index="7" class="java.lang.String" itemvalue="Ruby.development" />
+    <list size="7">
+      <item index="0" class="java.lang.String" itemvalue="RSpec.All specs in: spec" />
+      <item index="1" class="java.lang.String" itemvalue="Rails.Development" />
+      <item index="2" class="java.lang.String" itemvalue="Rails.Rails Development" />
+      <item index="3" class="java.lang.String" itemvalue="Ruby.development" />
+      <item index="4" class="java.lang.String" itemvalue="RSpec.Run spec 'user_spec': escher_homewatch" />
+      <item index="5" class="java.lang.String" itemvalue="RSpec.Run spec 'static_pages_spec': escher_homewatch" />
+      <item index="6" class="java.lang.String" itemvalue="RSpec.Run spec 'sensor_pages_spec': escher_homewatch" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="RSpec.sensor_pages_spec" />
-        <item index="1" class="java.lang.String" itemvalue="RSpec.sensor_pages_spec" />
-        <item index="2" class="java.lang.String" itemvalue="RSpec.log_spec" />
-        <item index="3" class="java.lang.String" itemvalue="RSpec.monitor_window_spec" />
-        <item index="4" class="java.lang.String" itemvalue="RSpec.user_spec" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="RSpec.Run spec 'sensor_pages_spec': escher_homewatch" />
+        <item index="1" class="java.lang.String" itemvalue="RSpec.Run spec 'static_pages_spec': escher_homewatch" />
+        <item index="2" class="java.lang.String" itemvalue="RSpec.Run spec 'user_spec': escher_homewatch" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="mySSHConnectionTimeout" value="30000" />
-    <option name="mySSHReadTimeout" value="30000" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
-    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="DETECT_NESTED_COPIES" value="true" />
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  <component name="SvnConfiguration" myUseAcceleration="nothing">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d89f6d49-4f04-4eee-8802-7c85bda0d8cc" name="Default" comment="" />
       <created>1351897288567</created>
+      <option name="number" value="Default" />
       <updated>1351897288567</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1440" height="873" extended-state="6" />
+    <frame x="65" y="24" width="1777" height="1119" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943755" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24143426" sideWeight="0.32395384" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30935252" sideWeight="0.33333334" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18232977" sideWeight="0.33333334" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52958155" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45751634" sideWeight="0.4884511" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24143426" sideWeight="0.32756132" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4963925" sideWeight="0.5067935" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.54043126" sideWeight="0.4884511" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6666667" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32873276" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_NEW_TODO" value="true" />
     <option name="myTodoPanelSettings">
-      <value>
-        <are-packages-shown value="false" />
-        <are-modules-shown value="false" />
-        <flatten-packages value="false" />
-        <is-autoscroll-to-source value="false" />
-      </value>
+      <TodoPanelSettings />
     </option>
-    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
-    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
-    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
-    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
-    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
-    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
-    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
-    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
-    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
-    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
-    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
-    <option name="LIMIT_HISTORY" value="true" />
-    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
-    <option name="UPDATE_FILTER_SCOPE_NAME" />
-    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
-    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
-    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
-    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
     <option name="LAST_COMMIT_MESSAGE" value="" />
-    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
-    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
-    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
-    <option name="ACTIVE_VCS_NAME" />
-    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
-    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
-    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
-    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
-    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1821,112 +1309,384 @@
       </breakpoints-dialog>
       <option name="time" value="16" />
     </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/measurements_controller.rb">
+    <entry file="file://$PROJECT_DIR$/spec/controllers/password_resets_controller_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/spec/controllers/user_confirmations_controller_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="53" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.ru">
+    <entry file="file://$PROJECT_DIR$/spec/features/password_reset_pages_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
+          <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/helpers/application_helper_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/mailers/user_mailer_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/alert_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/config_key_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/log_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/measurement_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1230">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/monitor_sensors_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/monitor_window_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1605">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/factories.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p551/gems/rack-1.4.5/lib/rack/builder.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="591" max-vertical-offset="2265">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p551/gems/capybara-2.4.4/lib/capybara/rails.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p551/bin/rspec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/features/user_confirmation_pages_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p551/gems/factory_girl-4.5.0/lib/factory_girl/factory_runner.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="495">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.2.18/lib/active_record/connection_adapters/abstract_adapter.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3951" max-vertical-offset="4530">
+          <caret line="274" column="0" selection-start-line="274" selection-start-column="0" selection-end-line="274" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p551/gems/activerecord-3.2.18/lib/active_record/connection_adapters/postgresql_adapter.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="8860" max-vertical-offset="19935">
+          <caret line="649" column="0" selection-start-line="649" selection-start-column="0" selection-end-line="649" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.18/lib/action_dispatch/testing/assertions/routing.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2466" max-vertical-offset="3345">
+          <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p551/gems/actionpack-3.2.18/lib/action_view/test_case.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3286" max-vertical-offset="3765">
+          <caret line="235" column="0" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/helpers/sensors_helper_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/features/measurement_pages_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/static_pages/help.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="479">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/static_pages/contact.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="479">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/static_pages/about.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="479">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="479">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/user_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2436" max-vertical-offset="3345">
+          <caret line="191" column="49" selection-start-line="191" selection-start-column="49" selection-end-line="191" selection-end-column="49" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/sensor_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="39" selection-start="3446" selection-end="3446" vertical-scroll-proportion="0.0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2610">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/requests/authentication_pages_spec.rb">
+    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="58" selection-start="4316" selection-end="4316" vertical-scroll-proportion="0.0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/rails_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1680">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="39" selection-start="897" selection-end="913" vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="975">
+          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/monitor_windows_controller.rb">
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="51" selection-start="1440" selection-end="1440" vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.72025055" vertical-offset="540" max-vertical-offset="3585">
+          <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/features/static_pages_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="765">
+          <caret line="11" column="69" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/support/utilities.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1455">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1395">
+          <caret line="51" column="20" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/features/monitor_window_pages_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2026" max-vertical-offset="2505">
+          <caret line="151" column="42" selection-start-line="151" selection-start-column="42" selection-end-line="151" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1455">
+          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/errors/internal_server_error.html.haml">
+    <entry file="file://$PROJECT_DIR$/spec/features/user_pages_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="104" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2101" max-vertical-offset="2580">
+          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/boot.rb">
+    <entry file="file://$PROJECT_DIR$/spec/features/authentication_pages_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2566" max-vertical-offset="3045">
+          <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+    <entry file="file://$PROJECT_DIR$/spec/features/sensor_pages_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2670">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/sessions_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="0" selection-start="3197" selection-end="3197" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="43" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="60" selection-start="1501" selection-end="1501" vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="917" selection-end="917" vertical-scroll-proportion="0.5458515">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="538">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/monitor_sensors_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2055">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/monitor_windows_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2595">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/sensors_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1254" max-vertical-offset="2295">
+          <caret line="130" column="21" selection-start-line="130" selection-start-column="21" selection-end-line="130" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/sensors.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2280">
+          <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/monitor_windows.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.0873606" vertical-offset="1172" max-vertical-offset="8340">
+          <caret line="153" column="17" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
+          <folding>
+            <marker date="1416781894530" expanded="true" signature="8869:8895" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
-

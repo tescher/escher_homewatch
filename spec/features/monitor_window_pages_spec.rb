@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe "MonitorWindowPages" do
 
@@ -144,17 +144,17 @@ describe "MonitorWindowPages" do
 
       it "Should redirect put to welcome page" do
         put monitor_window_path(MonitorWindow.first)
-        response.should redirect_to(root_url)
+        response.should redirect_to(signin_url)
       end
 
       it "Should redirect delete to welcome page" do
         delete monitor_window_path(MonitorWindow.first)
-        response.should redirect_to(root_url)
+        response.should redirect_to(signin_url)
       end
 
       it "Should redirect post to welcome page" do
         post monitor_windows_path
-        response.should redirect_to(root_url)
+        response.should redirect_to(signin_url)
       end
     end
   end

@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe "UserPages" do
   subject { page }
@@ -154,7 +154,7 @@ describe "UserPages" do
 
         describe "delete other user" do
           it "should be able to delete another user" do
-            expect { click_link('delete') }.to change(User, :count).by(-1)
+            expect { click_link('delete', match: :first) }.to change(User, :count).by(-1)
           end
         end
       end

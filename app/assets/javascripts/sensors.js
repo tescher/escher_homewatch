@@ -21,10 +21,10 @@ $(function() {
               success: function(data) {
                   if (data == "true") {
                       showColumn('#flexSensors','user', true);
-                      $("#flexSensors").dialog("options","width: 680");
+                      // $("#flexSensors").flexigrid({width: 680});
                   } else {
                       showColumn('#flexSensors','user', false);
-                      $("#flexSensors").dialog("options","width: 580");
+                      // $("#flexSensors").flexigrid({width: 580});
                   };
               },
               async: false,

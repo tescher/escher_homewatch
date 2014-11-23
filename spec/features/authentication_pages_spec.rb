@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe "Authentication" do
 
@@ -31,7 +31,7 @@ describe "Authentication" do
       let(:user) { FactoryGirl.create(:user) }
       before { valid_signin(user) }
 
-      it { should have_valid_header_and_title(nil, user.name) }
+      it { should have_selector("title", text: "Monitor", visible: false) }
 
       it { should_not have_link('Users',    href: users_path) }
       it { should have_link('Profile', href: user_path(user)) }
@@ -113,7 +113,7 @@ describe "Authentication" do
           describe "after signing in" do
 
             it "should render the desired protected page" do
-              page.should have_selector('title', text: 'Edit user')
+              page.should have_selector('title', text: 'Edit user', visible: false)
             end
 
             describe "when signing in again" do
@@ -125,8 +125,8 @@ describe "Authentication" do
                 click_button "Sign in"
               end
 
-              it "should render the default (profile) page" do
-                page.should have_selector('title', text: user.name)
+              it "should render the default page" do
+                page.should have_selector("title", text: 'Monitor', visible: false)
               end
             end
           end
@@ -152,7 +152,7 @@ describe "Authentication" do
 
       describe "submitting a PUT request to the Users#update action" do
         before { put user_path(wrong_user) }
-        specify { response.should redirect_to(root_path) }
+        specify { response.should redirect_to(signin_path) }
       end
 
       describe "profile page" do
@@ -170,7 +170,7 @@ describe "Authentication" do
 
       describe "submitting a DELETE request to the Users#destroy action" do
         before { delete user_path(user) }
-        specify { response.should redirect_to(root_path) }
+        specify { response.should redirect_to(signin_path) }
       end
     end
 
@@ -181,7 +181,7 @@ describe "Authentication" do
       describe "trying to sign up" do
         before { visit signup_path }
         it { should have_valid_header_and_title('Homewatch', '') }
-        # specify { response.should redirect_to(root_path) }
+        specify { response.should redirect_to(root_path) }
       end
 
       describe "trying to create user" do

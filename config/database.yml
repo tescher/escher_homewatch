@@ -14,7 +14,7 @@ development:
   database: escherhomewatch_development
   pool: 5
   username: postgres
-  password: Mariann1
+  password: terrid1
   timeout: 5000
 
 # Warning: The database defined as "test" will be erased and
@@ -26,7 +26,7 @@ test:
   database: escherhomewatch_test
   pool: 5
   username: postgres
-  password: Mariann1
+  password: terrid1
   timeout: 5000
 
 production:

@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe "SensorPages" do
 
@@ -120,17 +120,17 @@ describe "SensorPages" do
 
       it "Should redirect put to welcome page" do
         put sensor_path(Sensor.first)
-        response.should redirect_to(root_url)
+        response.should redirect_to(signin_url)
       end
 
       it "Should redirect delete to welcome page" do
         delete sensor_path(Sensor.first)
-        response.should redirect_to(root_url)
+        response.should redirect_to(signin_url)
       end
 
       it "Should redirect post to welcome page" do
         post sensors_path
-        response.should redirect_to(root_url)
+        response.should redirect_to(signin_url)
       end
     end
 

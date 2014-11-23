@@ -17,7 +17,7 @@
 #  time_zone              :string(255)
 #  summary_report         :boolean
 
-require 'spec_helper'
+require 'rails_helper'
 
 describe User do
 
@@ -189,7 +189,7 @@ describe User do
       let(:user_for_invalid_password) { found_user.authenticate("invalid") }
 
       it { should_not == user_for_invalid_password }
-      specify { user_for_invalid_password.should be_false }
+      specify { user_for_invalid_password.should be_falsey }
     end
   end
 
