@@ -171,7 +171,7 @@ GEM
       rspec-mocks (~> 3.1.0)
       rspec-support (~> 3.1.0)
     rspec-support (3.1.2)
-    sass (3.4.8)
+    sass (3.2.13)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -226,6 +226,7 @@ DEPENDENCIES
   rails_12factor
   rspec-its
   rspec-rails (< 4.0.0)
+  sass (= 3.2.13)
   sass-rails (= 3.2.5)
   state_machine
   uglifier (= 1.2.3)
