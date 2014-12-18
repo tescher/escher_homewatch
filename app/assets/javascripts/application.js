@@ -20,4 +20,5 @@
 //= require spectrum
 //= require bootstrap
 //= require utilities
+//= require monitor_utilities
 

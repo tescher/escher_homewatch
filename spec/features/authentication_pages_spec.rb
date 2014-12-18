@@ -176,17 +176,16 @@ describe "Authentication" do
 
     describe "as signed in user" do
       let(:user) { FactoryGirl.create(:user) }
-      before { valid_signin user }
+      before(:each) { valid_signin user }
 
       describe "trying to sign up" do
         before { visit signup_path }
-        it { should have_valid_header_and_title('Homewatch', '') }
-        specify { response.should redirect_to(root_path) }
+        specify { current_path.should == root_path }
       end
 
       describe "trying to create user" do
-        before { post signup_path }
-        specify { response.should redirect_to(root_path) }
+        before { page.driver.post signup_path }
+        specify { current_path.should == root_path }
       end
     end
 

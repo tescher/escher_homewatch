@@ -65,7 +65,7 @@ class UsersController < ApplicationController
 
   def signed_out_user
     unless !signed_in?
-      redirect_to root_path
+      redirect_to root_path, status: 303
     end
   end
 

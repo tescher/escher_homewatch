@@ -4,7 +4,7 @@ class SensorsController < ApplicationController
   include Utilities
 
   before_filter :signed_in_user, only: [:new, :create, :index]
-  before_filter :correct_or_admin_user,   only: [:edit, :update, :destroy]
+  before_filter :correct_or_admin_user,   only: [:edit, :update, :destroy, :snapshot]
 
 
   def new

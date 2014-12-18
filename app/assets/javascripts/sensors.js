@@ -102,13 +102,25 @@ function loadSensorDialog(editing, id) {
         async: false,
         cache: false
     });
-    var buttons =  [{
+    var buttons = [];
+
+    if (editing) {
+        buttons.push({
+            text: "Snapshot",
+            click: function() {
+                window.location.href = "/sensors/" + id + "/snapshot"
+            },
+            class: "btn btn-large btn-primary btn-left"
+
+        })
+    }
+    buttons.push({
         text: "Save",
         click: function() {
             $("form[id*='sensor']").submit()
         },
         class: "btn btn-large btn-primary"
-    }];
+    });
 
     if (editing) {
         buttons.push({

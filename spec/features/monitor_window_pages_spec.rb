@@ -91,6 +91,11 @@ describe "MonitorWindowPages" do
         page.should have_valid_header_and_title(nil, 'Sign in')
       end
 
+      it "Should redirect temp to signin page" do
+        visit temp_monitor_windows_path
+        page.should have_valid_header_and_title(nil, 'Sign in')
+      end
+
       it "Should redirect put to signin page" do
         put monitor_window_path(MonitorWindow.first)
         response.should redirect_to(signin_path)
