@@ -1,0 +1,7 @@
+<% provide(:title, 'Sensor Snapshot - ' + @sensor.name) %>
+<% javascript 'sensor_snapshot' %>
+
+<div class="page-title" data-id=<%= params[:id] %>><h1>Sensor Snapshot - <%= @sensor.name %></h1></div>
+
+<div id="monitors-container" class="monitors-container"></div>
+

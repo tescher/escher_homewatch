@@ -5,6 +5,7 @@
 #  id         :integer          not null, primary key
 #  sensor_id  :integer
 #  value      :float
+#  raw        :float
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -20,6 +21,7 @@ class Measurement < ActiveRecord::Base
   before_create do |measurement|
     sensor = Sensor.find(measurement.sensor_id)
     if sensor
+      measurement.raw = measurement.value
       measurement.value = sensor.scale * measurement.value + sensor.offset
     end
   end

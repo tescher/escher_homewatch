@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131006210957) do
+ActiveRecord::Schema.define(:version => 20141222010211) do
 
   create_table "alerts", :force => true do |t|
     t.integer  "sensor_id"
@@ -49,8 +49,11 @@ ActiveRecord::Schema.define(:version => 20131006210957) do
     t.integer  "sensor_id"
     t.string   "controller"
     t.string   "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "IP_address"
+    t.string   "restart_location"
+    t.datetime "outage"
   end
 
   create_table "measurements", :force => true do |t|
@@ -58,6 +61,7 @@ ActiveRecord::Schema.define(:version => 20131006210957) do
     t.float    "value"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.float    "raw"
   end
 
   add_index "measurements", ["sensor_id"], :name => "index_measurements_on_sensor_id"

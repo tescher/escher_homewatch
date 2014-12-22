@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2848981466">
+  <component name="DataSourceManagerImpl" format="xml" hash="2597293001">
     <data-source source="LOCAL" name="Rails escher_homewatch: test" uuid="095379f2-694c-4b8e-80c6-c38f98b87439">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>

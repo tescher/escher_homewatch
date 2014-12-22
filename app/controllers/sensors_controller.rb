@@ -88,6 +88,10 @@ class SensorsController < ApplicationController
     end #respond_to  end
   end
 
+  def snapshot
+    @sensor = Sensor.find(params[:id])
+  end
+
   def getconfig
     @count = 0 if !@count
     @count += 1

@@ -69,16 +69,23 @@ class MonitorWindowsController < ApplicationController
     end #respond_to  end
   end
 
-  # Create a temporary window, pass to the client for display in the dashboard, then immediately destroy.
+  # Create temporary windows, pass to the client for display in the dashboard, then immediately destroy.
   def temp
     if request.xhr?
-      @monitor_window = MonitorWindow.new()
-      @monitor_window.user_id = current_user.id
-      @monitor_window.name = "Temp"
-      @monitor_window.width = "small"
-      if @monitor_window.save
-        render_window_info(Array(@monitor_window))
-        @monitor_window.destroy
+      count = (params[:count].nil? ? 1 : params[:count].to_i)
+      mws = Array.new()
+      for i in 1..count
+        @monitor_window = MonitorWindow.new()
+        @monitor_window.user_id = current_user.id
+        @monitor_window.name = "Temp"
+        @monitor_window.width = "small"
+        @monitor_window.monitor_type = (params[:monitor_type].nil? ? "graph" : params[:monitor_type].to_s)
+        @monitor_window.save
+        mws.push(@monitor_window)
+      end
+      render_window_info(mws)
+      for mw in mws
+        mw.destroy
       end
     else
       redirect_to root_url

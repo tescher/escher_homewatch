@@ -43,13 +43,17 @@ class MeasurementsController < ApplicationController
     else
       ms = (params[:monitor_sensor_id].nil? ? nil : MonitorSensor.find(params[:monitor_sensor_id]))
       sensor = Sensor.find(params[:sensor_id])
-      data = Measurement.order("created_at desc").where("sensor_id = ? and created_at >= ? and created_at <= ?", params[:sensor_id].to_i, params[:start], params[:end])
+      if (params[:limit])
+          data = Measurement.order("created_at desc").where("sensor_id = ? and created_at >= ? and created_at <= ?", params[:sensor_id].to_i, params[:start], params[:end]).limit(params[:limit])
+      else
+          data = Measurement.order("created_at desc").where("sensor_id = ? and created_at >= ? and created_at <= ?", params[:sensor_id].to_i, params[:start], params[:end])
+      end
       if params[:type] == "table"
         render :json => {
             :total => data.size,
             :rows => data.collect{|m| { :id => m.id, :cell => [
                 m.created_at.to_i*1000,
-                (ms.nil? || ms.legend.empty? ? sensor.name : ms.legend),
+                params[:snapshot] ? m.raw : (ms.nil? || ms.legend.empty? ? sensor.name : ms.legend),
                 m.value]
             }}
         }.to_json

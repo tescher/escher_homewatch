@@ -9,13 +9,7 @@
       <user-name>postgres</user-name>
       <user-password>dfe7dfcbdfd8dfc3dfcbdfc4dfc4df9b</user-password>
     </data-source>
-    <data-source name="Rails escher_homewatch: development" uuid="924d18aa-8945-4c1a-bc4b-30485ab5ba3d">
-      <user-name>postgres</user-name>
-      <user-password>dfe7dfcbdfd8dfc3dfcbdfc4dfc4df9b</user-password>
-    </data-source>
-    <data-source name="Rails escher_homewatch: test" uuid="e65c0452-23f8-441c-ab3d-376352bee5f9">
-      <user-name>postgres</user-name>
-      <user-password>dfe7dfcbdfd8dfc3dfcbdfc4dfc4df9b</user-password>
-    </data-source>
+    <data-source name="Rails escher_homewatch: development" uuid="924d18aa-8945-4c1a-bc4b-30485ab5ba3d" />
+    <data-source name="Rails escher_homewatch: test" uuid="e65c0452-23f8-441c-ab3d-376352bee5f9" />
   </component>
 </project>
