@@ -55,7 +55,7 @@ $(function() {
     $("#flexRestartsLong").flexigrid(
         {
             method: 'GET',
-            url: 'sensors/log.js?outage=long',
+            url: 'log.js?outage=long',
             dataType: 'json',
             colModel : [
                 {display: 'Time', name : 'time', width : 170, sortable : true, align: 'left'},
