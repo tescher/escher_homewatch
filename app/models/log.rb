@@ -23,7 +23,7 @@ class Log < ActiveRecord::Base
       log_values = log.content.split('|')
       log.restart_location = log_values[1]
       log.IP_address = log_values[3]
-      last_measurement = Measurement.joins(:sensors).where(sensors: { controller: log.controller}).order('created_at DESC').limit(1)[0]
+      last_measurement = Measurement.joins(:sensor).where(sensors: { controller: log.controller}).order('created_at DESC').limit(1)[0]
       if last_measurement
         log.outage = Date.now - last_measurement.created_at
       end
