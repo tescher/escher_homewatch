@@ -14,7 +14,7 @@
 #
 
 class Log < ActiveRecord::Base
-  attr_accessible :content, :controller, :sensor_id, :IP_address, :restart_location
+  attr_accessible :content, :controller, :sensor_id, :IP_address, :restart_location, :outage
 
   validates :content, presence: true
 
@@ -25,7 +25,7 @@ class Log < ActiveRecord::Base
       log.IP_address = log_values[3]
       last_measurement = Measurement.joins(:sensor).where(sensors: { controller: log.controller}).order('created_at DESC').limit(1)[0]
       if last_measurement
-        log.outage = Date.now - last_measurement.created_at
+        log.outage = DateTime.now - last_measurement.created_at
       end
     end
   end
