@@ -104,7 +104,7 @@ function MonitorWindow(config, windowDiv) {
                 start_date = ((!config.x_axis_auto && config.x_axis_days != "") ? new Date(now_utc.getTime() - 1000 * 60 * 60 * 24 * config.x_axis_days) : null);
                 if (!ms.alerts_only) {
                     $.ajax({
-                        url: "/measurements?type=" + config.monitor_type + (ms.id? "&monitor_sensor_id=" + ms.id : "") + (config.snapshot ? "&snapshot=true": "") + ((config.monitor_type="table" && config.snapshot) ? "&limit=5" : "") +  "&sensor_id=" + ms.sensor_id + (start_date ? "+&start=" + $.datepicker.formatDate("yy-mm-dd", start_date) : ""),
+                        url: "/measurements?type=" + config.monitor_type + (ms.id? "&monitor_sensor_id=" + ms.id : "") + (config.snapshot ? "&snapshot=true": "") + (config.monitor_type == "table" ? "&limit=25" : "") +  "&sensor_id=" + ms.sensor_id + (start_date ? "+&start=" + $.datepicker.formatDate("yy-mm-dd", start_date) : ""),
                         method: 'GET',
                         dataType: 'json',
                         success: function (data) {
