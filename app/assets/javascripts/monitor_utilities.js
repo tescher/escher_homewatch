@@ -104,7 +104,7 @@ function MonitorWindow(config, windowDiv) {
                 start_date = ((!config.x_axis_auto && config.x_axis_days != "") ? new Date(now_utc.getTime() - 1000 * 60 * 60 * 24 * config.x_axis_days) : null);
                 if (!ms.alerts_only) {
                     $.ajax({
-                        url: "/measurements?type=" + config.monitor_type + (ms.id? "&monitor_sensor_id=" + ms.id : "") + (config.snapshot ? "&snapshot=true&limit=5" : "") +  "&sensor_id=" + ms.sensor_id + (start_date ? "+&start=" + $.datepicker.formatDate("yy-mm-dd", start_date) : ""),
+                        url: "/measurements?type=" + config.monitor_type + (ms.id? "&monitor_sensor_id=" + ms.id : "") + (config.snapshot ? "&snapshot=true": "") + ((config.monitor_type="table" && config.snapshot) ? "&limit=5" : "") +  "&sensor_id=" + ms.sensor_id + (start_date ? "+&start=" + $.datepicker.formatDate("yy-mm-dd", start_date) : ""),
                         method: 'GET',
                         dataType: 'json',
                         success: function (data) {
@@ -131,29 +131,31 @@ function MonitorWindow(config, windowDiv) {
                         async: true
                     });
                 }
-                $.ajax({
-                    url: "/measurements?type=" + config.monitor_type + (ms.id? "&monitor_sensor_id=" + ms.id : "") + "&sensor_id=" + ms.sensor_id + "&alerts=true" + (start_date ? "+&start=" + $.datepicker.formatDate("yy-mm-dd", start_date) : ""),
-                    method: 'GET',
-                    dataType: 'json',
-                    success: function (data) {
-                        if (that.config.monitor_type == "graph") {
-                            that.series_all.push(data)
-                        } else {
-                            if (!that.series_all["rows"]) {
-                                that.series_all["rows"] = [];
-                                that.series_all["total"] = 0;
+                if (config.monitor_type == "graph" || !config.snapshot) {
+                    $.ajax({
+                        url: "/measurements?type=" + config.monitor_type + (ms.id ? "&monitor_sensor_id=" + ms.id : "") + "&sensor_id=" + ms.sensor_id + "&alerts=true" + (start_date ? "+&start=" + $.datepicker.formatDate("yy-mm-dd", start_date) : ""),
+                        method: 'GET',
+                        dataType: 'json',
+                        success: function (data) {
+                            if (that.config.monitor_type == "graph") {
+                                that.series_all.push(data)
+                            } else {
+                                if (!that.series_all["rows"]) {
+                                    that.series_all["rows"] = [];
+                                    that.series_all["total"] = 0;
+                                }
+                                that.series_all["rows"] = that.series_all["rows"].concat(data.rows);
+                                that.series_all["total"] += data.total;
                             }
-                            that.series_all["rows"] = that.series_all["rows"].concat(data.rows);
-                            that.series_all["total"] += data.total;
-                        }
-                        ++series_count;
-                        if (series_count == series_total) {
-                            finishPlot(that);
-                        }
-                    },
-                    cache: false,
-                    async: true
-                });
+                            ++series_count;
+                            if (series_count == series_total) {
+                                finishPlot(that);
+                            }
+                        },
+                        cache: false,
+                        async: true
+                    });
+                }
             }
         }
     }
