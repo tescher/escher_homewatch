@@ -62,9 +62,9 @@ $(function() {
                 url: 'log.js?outage='+olen.toLowerCase(),
                 dataType: 'json',
                 colModel: [
-                    {display: 'Time', name: 'time', width: 170, sortable: true, align: 'left'},
-                    {display: 'Outage', name: 'outage', width: 70, sortable: false, align: 'left'},
-                    {display: 'Stall Loc', name: 'stall', width: 70, sortable: false, align: 'left'},
+                    {display: 'Time', name: 'time', width: 200, sortable: true, align: 'left'},
+                    {display: 'Outage', name: 'outage', width: 100, sortable: false, align: 'left'},
+                    {display: 'Stall Loc', name: 'stall', width: 100, sortable: false, align: 'left'},
                     {display: 'IP', name: 'ip', width: 100, sortable: false, align: 'left'}
                 ],
                 usepager: false,
@@ -75,7 +75,8 @@ $(function() {
                     $("#flexRestarts"+olen+" tr").each(function () {
                         var cell = $('td[abbr="time"] >div', this);
                         // $(cell).css("background-color", (cell.text() && (cell.text != "auto") ? cell.text() : "#FFFFFF"));
-                        var d = new Date(parseInt(cell.text()));
+                        var t = cwll.text().split(/[- :T]/);
+                        var d = new Date(t[0], t[1]-1, t[2], t[3], t[4], t[5]);
                         $(cell).html($.datepicker.formatDate('DD, M d, yy', d) + ", " + niceTime(d));
                     })
                 },
