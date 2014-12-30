@@ -52,7 +52,10 @@ $(function() {
 
     // Display the restart log tables
 
-    for (olen in ["Long","Short"]) {
+    var oLengths = ["Long", "Short"];
+
+    for (i=0; i< oLengths.length; i++) {
+        var olen = oLengths[i];
         $("#flexRestarts"+olen).flexigrid(
             {
                 method: 'GET',
