@@ -4,7 +4,7 @@ class SensorsController < ApplicationController
   include Utilities
 
   before_filter :signed_in_user, only: [:new, :create, :index]
-  before_filter :correct_or_admin_user,   only: [:edit, :update, :destroy, :snapshot]
+  before_filter :correct_or_admin_user,   only: [:edit, :update, :destroy, :snapshot, :log]
 
 
   def new
@@ -88,6 +88,40 @@ class SensorsController < ApplicationController
     end #respond_to  end
   end
 
+  def log
+    respond_to do |format|
+      format.html # index.html.erb
+
+      # With the Flexigrid, we need to render Json data
+      format.js do
+
+        @sensor = Sensor.find(params[:id])
+        controller = @sensor.controller
+
+        outage_cutoff = 120 * 60  # Seconds after which we consider it a long outage
+
+        if params[:outage] == "short"
+          logs = Log.where(controller: controller).where("outage <= ? ", outage_cutoff ).order("created_at desc").limit(25)
+        else
+          logs = Log.where(controller: controller).where("outage > ? ", outage_cutoff ).order("created_at desc").limit(25)
+        end
+
+
+          # Rendering
+        render :json => {
+                   :total=>logs.size,
+                   :rows=>logs.collect{|r| {:id=>r.id, :cell=>[
+                       r.created_at,
+                       r.outage,
+                       r.restart_location,
+                       r.IP_address]}},
+               }.to_json
+
+      end #format.js
+
+    end #respond_to  end
+
+  end
   def snapshot
     @sensor = Sensor.find(params[:id])
   end
