@@ -15,7 +15,7 @@ class Measurement < ActiveRecord::Base
   include Utilities
 
   attr_accessor :check_value, :check_hash
-  attr_accessible :sensor_id, :value, :check_value, :check_hash, :created_at
+  attr_accessible :sensor_id, :value, :check_value, :check_hash, :created_at, :raw
   belongs_to :sensor
 
   before_create do |measurement|
