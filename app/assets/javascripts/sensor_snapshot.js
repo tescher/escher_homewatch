@@ -52,32 +52,34 @@ $(function() {
 
     // Display the restart log tables
 
-    $("#flexRestartsLong").flexigrid(
-        {
-            method: 'GET',
-            url: 'log.js?outage=long',
-            dataType: 'json',
-            colModel : [
-                {display: 'Time', name : 'time', width : 170, sortable : true, align: 'left'},
-                {display: 'Outage', name : 'outage', width : 70, sortable : false, align: 'left'},
-                {display: 'Stall Loc', name : 'stall', width : 70, sortable : false, align: 'left'},
-                {display: 'IP', name : 'ip', width: 100, sortable: false, align: 'left'}
-            ],
-            usepager: false,
-            width: 'auto',
-            height: 200,
-            title: "Controller Restarts, Long Outages",
-            onSuccess : function () {
-                $("#flexRestartsLong tr").each ( function () {
-                    var cell = $('td[abbr="time"] >div', this);
-                    // $(cell).css("background-color", (cell.text() && (cell.text != "auto") ? cell.text() : "#FFFFFF"));
-                    var d = new Date(parseInt(cell.text()));
-                    $(cell).html($.datepicker.formatDate('DD, M d, yy', d) + ", " + niceTime(d));
-                })
-            },
-            sortorder: "asc"
-        }
-    );
+    for (olen in ["Long","Short"]) {
+        $("#flexRestarts"+olen).flexigrid(
+            {
+                method: 'GET',
+                url: 'log.js?outage='+olen.toLowerCase(),
+                dataType: 'json',
+                colModel: [
+                    {display: 'Time', name: 'time', width: 170, sortable: true, align: 'left'},
+                    {display: 'Outage', name: 'outage', width: 70, sortable: false, align: 'left'},
+                    {display: 'Stall Loc', name: 'stall', width: 70, sortable: false, align: 'left'},
+                    {display: 'IP', name: 'ip', width: 100, sortable: false, align: 'left'}
+                ],
+                usepager: false,
+                width: 'auto',
+                height: 200,
+                title: "Controller Restarts, "+olen+" Outages",
+                onSuccess: function () {
+                    $("#flexRestarts"+olen+" tr").each(function () {
+                        var cell = $('td[abbr="time"] >div', this);
+                        // $(cell).css("background-color", (cell.text() && (cell.text != "auto") ? cell.text() : "#FFFFFF"));
+                        var d = new Date(parseInt(cell.text()));
+                        $(cell).html($.datepicker.formatDate('DD, M d, yy', d) + ", " + niceTime(d));
+                    })
+                },
+                sortorder: "asc"
+            }
+        );
+    }
 
 
 
