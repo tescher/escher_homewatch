@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141222010211) do
+ActiveRecord::Schema.define(:version => 20141230191231) do
 
   create_table "alerts", :force => true do |t|
     t.integer  "sensor_id"
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(:version => 20141222010211) do
     t.datetime "updated_at",       :null => false
     t.string   "IP_address"
     t.string   "restart_location"
-    t.datetime "outage"
+    t.integer  "outage"
   end
 
   create_table "measurements", :force => true do |t|

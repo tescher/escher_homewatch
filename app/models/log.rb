@@ -8,7 +8,7 @@
 #  content    :string
 #  IP_address :string
 #  restart_location  :string
-#  outage     :datetime
+#  outage     :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -25,7 +25,7 @@ class Log < ActiveRecord::Base
       log.IP_address = log_values[3]
       last_measurement = Measurement.joins(:sensor).where(sensors: { controller: log.controller}).order('created_at DESC').limit(1)[0]
       if last_measurement
-        log.outage = Time.zone.now - last_measurement.created_at
+        log.outage = (Time.zone.now - last_measurement.created_at).to_i
       end
     end
   end
