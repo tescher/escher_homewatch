@@ -92,7 +92,7 @@ function MonitorWindow(config, windowDiv) {
             finishPlot(this);
         } else {
             for (var index in config.monitor_sensors) {
-                if (config.monitor_sensors[index].alerts_only) {
+                if (config.monitor_sensors[index].alerts_only || (config.snapshot && (config.monitor_type == "table")))  {
                     series_total++
                 } else {
                     series_total += 2
