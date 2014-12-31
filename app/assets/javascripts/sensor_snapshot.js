@@ -76,10 +76,11 @@ $(function() {
                         var cell = $('td[abbr="time"] >div', this);
                         // $(cell).css("background-color", (cell.text() && (cell.text != "auto") ? cell.text() : "#FFFFFF"));
                         var t = cell.text().split(/[- :TZ]/);
-                        alert(cell.text());
-                        alert(t);
                         var d = new Date(t[0], t[1]-1, t[2], t[3], t[4], t[5]);
                         $(cell).html($.datepicker.formatDate('DD, M d, yy', d) + ", " + niceTime(d));
+                        cell = $('td[abbr="outage"] >div', this);
+                        $(cell).html(cell.text().toHHMMSS)
+
                     })
                 },
                 sortorder: "asc"
