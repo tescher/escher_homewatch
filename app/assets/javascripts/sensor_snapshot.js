@@ -63,7 +63,7 @@ $(function() {
                 dataType: 'json',
                 colModel: [
                     {display: 'Time', name: 'time', width: 200, sortable: true, align: 'left'},
-                    {display: 'Outage', name: 'outage', width: 100, sortable: false, align: 'left'},
+                    {display: 'Outage', name: 'outage', width: 100, sortable: true, align: 'left'},
                     {display: 'Stall Loc', name: 'stall', width: 100, sortable: false, align: 'left'},
                     {display: 'IP', name: 'ip', width: 100, sortable: false, align: 'left'}
                 ],
