@@ -79,8 +79,7 @@ $(function() {
                         var d = new Date(t[0], t[1]-1, t[2], t[3], t[4], t[5]);
                         $(cell).html($.datepicker.formatDate('DD, M d, yy', d) + ", " + niceTime(d));
                         cell = $('td[abbr="outage"] >div', this);
-                        alert(cell.text());
-                        $(cell).html(cell.text().toHHMMSS)
+                        $(cell).html(cell.text().toHHMMSS())
 
                     })
                 },
