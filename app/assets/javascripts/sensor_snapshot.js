@@ -71,24 +71,25 @@ $(function() {
                 width: 'auto',
                 height: 200,
                 title: "Controller Restarts, "+olen+" Outages",
-                onSuccess: function () { format_rows(olen, this) },
+                onSuccess: function () {
+                    $("#flexRestarts" + olen + " tr").each(function () {
+                        format_rows(olen, this)
+                    })
+                },
                 sortorder: "asc"
             }
         );
     }
-    function format_rows(olen, grid) {
-        $("#flexRestarts" + olen + " tr").each(function () {
-            alert("Grid: " + JSON.stringify(grid));
-            var cell = $('td[abbr="time"] >div', grid);
+    function format_rows(olen, row) {
+            alert("Grid: " + JSON.stringify(row));
+            var cell = $('td[abbr="time"] >div', row);
             alert("Cell: " + JSON.stringify(cell));
             // $(cell).css("background-color", (cell.text() && (cell.text != "auto") ? cell.text() : "#FFFFFF"));
             var t = cell.text().split(/[- :TZ]/);
             var d = new Date(t[0], t[1] - 1, t[2], t[3], t[4], t[5]);
             $(cell).html($.datepicker.formatDate('DD, M d, yy', d) + ", " + niceTime(d));
-            cell = $('td[abbr="outage"] >div', grid);
+            cell = $('td[abbr="outage"] >div', row);
             $(cell).html(cell.text().toHHMMSS())
-
-        })
     }
 
 });
