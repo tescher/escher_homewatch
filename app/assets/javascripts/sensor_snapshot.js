@@ -71,25 +71,23 @@ $(function() {
                 width: 'auto',
                 height: 200,
                 title: "Controller Restarts, "+olen+" Outages",
-                onSuccess: function () {
-                    $("#flexRestarts"+olen+" tr").each(function () {
-                        var cell = $('td[abbr="time"] >div', this);
-                        // $(cell).css("background-color", (cell.text() && (cell.text != "auto") ? cell.text() : "#FFFFFF"));
-                        var t = cell.text().split(/[- :TZ]/);
-                        var d = new Date(t[0], t[1]-1, t[2], t[3], t[4], t[5]);
-                        $(cell).html($.datepicker.formatDate('DD, M d, yy', d) + ", " + niceTime(d));
-                        cell = $('td[abbr="outage"] >div', this);
-                        $(cell).html(cell.text().toHHMMSS())
-
-                    })
-                },
+                onSuccess: function () { format_rows(olen) },
                 sortorder: "asc"
             }
         );
     }
+    function format_rows(olen) {
+        $("#flexRestarts" + olen + " tr").each(function () {
+            var cell = $('td[abbr="time"] >div', this);
+            // $(cell).css("background-color", (cell.text() && (cell.text != "auto") ? cell.text() : "#FFFFFF"));
+            var t = cell.text().split(/[- :TZ]/);
+            var d = new Date(t[0], t[1] - 1, t[2], t[3], t[4], t[5]);
+            $(cell).html($.datepicker.formatDate('DD, M d, yy', d) + ", " + niceTime(d));
+            cell = $('td[abbr="outage"] >div', this);
+            $(cell).html(cell.text().toHHMMSS())
 
-
-
+        })
+    }  
 
 });
 
