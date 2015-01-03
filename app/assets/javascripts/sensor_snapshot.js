@@ -81,9 +81,9 @@ $(function() {
         );
     }
     function format_rows(olen, row) {
-            // alert("Grid: " + JSON.stringify(row));
+            alert("Row: " + row);
             var cell = $('td[abbr="time"] >div', row);
-            // alert("Cell: " + JSON.stringify(cell));
+            alert("Cell: " + JSON.stringify(cell));
             // $(cell).css("background-color", (cell.text() && (cell.text != "auto") ? cell.text() : "#FFFFFF"));
             var t = cell.text().split(/[- :TZ]/);
             var d = new Date(t[0], t[1] - 1, t[2], t[3], t[4], t[5]);

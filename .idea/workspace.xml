@@ -75,8 +75,8 @@
       <file leaf-file-name="sensor_snapshot.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/sensor_snapshot.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.69727546" vertical-offset="494" max-vertical-offset="1545">
-              <caret line="79" column="13" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.66700304" vertical-offset="494" max-vertical-offset="1545">
+              <caret line="77" column="18" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -1432,8 +1432,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/sensor_snapshot.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69727546" vertical-offset="494" max-vertical-offset="1545">
-          <caret line="79" column="13" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.66700304" vertical-offset="494" max-vertical-offset="1545">
+          <caret line="77" column="18" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
           <folding />
         </state>
       </provider>
