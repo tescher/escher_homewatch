@@ -72,7 +72,7 @@ $(function() {
                 height: 200,
                 title: "Controller Restarts, "+olen+" Outages",
                 onSuccess: function () {
-                    $("#flexRestarts" + olen + " tr").each(function () {
+                    $("[name^='#flexRestarts'] tr").each(function () {
                         format_rows(olen, this)
                     })
                 },
