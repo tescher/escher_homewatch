@@ -78,7 +78,9 @@ $(function() {
     }
     function format_rows(olen, grid) {
         $("#flexRestarts" + olen + " tr").each(function () {
+            alert("Grid: " + grid);
             var cell = $('td[abbr="time"] >div', grid);
+            alert("Cell: " + cell);
             // $(cell).css("background-color", (cell.text() && (cell.text != "auto") ? cell.text() : "#FFFFFF"));
             var t = cell.text().split(/[- :TZ]/);
             var d = new Date(t[0], t[1] - 1, t[2], t[3], t[4], t[5]);
