@@ -59,6 +59,7 @@ $(function() {
         $("#flexRestarts"+olen).flexigrid(
             {
                 method: 'GET',
+                olen: olen,
                 url: 'log.js?outage='+olen.toLowerCase(),
                 dataType: 'json',
                 colModel: [
@@ -72,25 +73,23 @@ $(function() {
                 height: 200,
                 title: "Controller Restarts, "+olen+" Outages",
                 onSuccess: function () {
-                    $("[id*='flexRestarts"+olen+"'] tr").each(function () {
-                        format_rows(this)
-                    })
-                },
+                    format_rows(this.olen);
+                 },
                 sortorder: "asc"
             }
         );
     }
-    function format_rows(row) {
-            // alert("olen: " + olen);
-            // alert("Row: " + row);
-            var cell = $('td[abbr="time"] >div', row);
+    function format_rows(olen) {
+        $("[id*='flexRestarts"+olen+"'] tr").each(function () {
+            var cell = $('td[abbr="time"] >div', this);
             // alert("Cell: " + JSON.stringify(cell));
             // $(cell).css("background-color", (cell.text() && (cell.text != "auto") ? cell.text() : "#FFFFFF"));
             var t = cell.text().split(/[- :TZ]/);
             var d = new Date(t[0], t[1] - 1, t[2], t[3], t[4], t[5]);
             $(cell).html($.datepicker.formatDate('DD, M d, yy', d) + ", " + niceTime(d));
-            cell = $('td[abbr="outage"] >div', row);
+            cell = $('td[abbr="outage"] >div', this);
             $(cell).html(cell.text().toHHMMSS())
+        })
     }
 
 });
