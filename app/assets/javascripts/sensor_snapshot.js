@@ -72,7 +72,7 @@ $(function() {
                 height: 200,
                 title: "Controller Restarts, "+olen+" Outages",
                 onSuccess: function () {
-                    $("[id*='flexRestarts'] tr").each(function () {
+                    $("[id*='flexRestarts"+olen+"'] tr").each(function () {
                         format_rows(this)
                     })
                 },
