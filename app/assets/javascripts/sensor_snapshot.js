@@ -72,16 +72,16 @@ $(function() {
                 height: 200,
                 title: "Controller Restarts, "+olen+" Outages",
                 onSuccess: function () {
-                    $("[name*='flexRestarts'] tr").each(function () {
-                        format_rows(olen, this)
+                    $("[id*='flexRestarts'] tr").each(function () {
+                        format_rows(this)
                     })
                 },
                 sortorder: "asc"
             }
         );
     }
-    function format_rows(olen, row) {
-            alert("olen: " + olen);
+    function format_rows(row) {
+            // alert("olen: " + olen);
             // alert("Row: " + row);
             var cell = $('td[abbr="time"] >div', row);
             // alert("Cell: " + JSON.stringify(cell));

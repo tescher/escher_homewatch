@@ -16,6 +16,7 @@
 //= require jquery.flot
 //= require jquery.flot.navigate
 //= require jquery.flot.time
+//= require jquery-migrate-1.2.1
 //= require flexigrid
 //= require spectrum
 //= require bootstrap
