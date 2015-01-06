@@ -162,12 +162,35 @@ function MonitorWindow(config, windowDiv) {
 
 }
 
+var previousPoint = null;
+
 function finishPlot(that) {
     var mwControlTop = "20px";
     var mwControlLeft = "50px";
     if (that.config.monitor_type == "graph") {
         var plot = $.plot(that.windowDiv, that.series_all, that.plotOptions);
         $('div.legend').className = "legend ui-corner-all";
+        $(that.windowDiv).bind("plothover", function (event, pos, item) {
+
+            if (item) {
+                if (previousPoint != item.dataIndex) {
+                    previousPoint = item.dataIndex;
+
+                    $("#data-tooltip").remove();
+                    var x = item.datapoint[0],
+                        y = item.datapoint[1];
+                    var d1 = new Date();
+                    // x += d1.getTimezoneOffset() * 60000;
+                    var d = new Date(x);
+                    var label = item.series.label;
+                    if (!label) label = "<span style='color:red;font-weight:bold'>Alert</span>";
+                    showTooltip(item.pageX, item.pageY, $.datepicker.formatDate('DD, M d, yy', d) + ", " + niceTime(d) + "<br/>" + label + ": " + y.toFixed(1));
+                }
+            } else {
+                $("#data-tooltip").remove();
+                previousPoint = null;
+            }
+        });
     } else {
         that.series_all.rows.sort(function(a,b) {return b.cell[0] - a.cell[0]});
         mwControlTop = "8px";
@@ -231,28 +254,8 @@ function finishPlot(that) {
 
 // Set up the tooltips for the data points
 
-var previousPoint = null;
-$(".monitor-window").bind("plothover", function (event, pos, item) {
 
-    if (item) {
-        if (previousPoint != item.dataIndex) {
-            previousPoint = item.dataIndex;
 
-            $("#data-tooltip").remove();
-            var x = item.datapoint[0],
-                y = item.datapoint[1];
-            var d1 = new Date();
-            // x += d1.getTimezoneOffset() * 60000;
-            var d = new Date(x);
-            var label = item.series.label;
-            if (!label) label = "<span style='color:red;font-weight:bold'>Alert</span>";
-            showTooltip(item.pageX, item.pageY, $.datepicker.formatDate('DD, M d, yy', d) + ", " + niceTime(d) + "<br/>" + label + ": " + y.toFixed(1));
-        }
-    } else {
-        $("#data-tooltip").remove();
-        previousPoint = null;
-    }
-});
 
 function showTooltip(x, y, contents) {
     $('<div id="data-tooltip">' + contents + '</div>').css( {
