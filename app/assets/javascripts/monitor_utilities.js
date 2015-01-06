@@ -232,7 +232,7 @@ function finishPlot(that) {
 // Set up the tooltips for the data points
 
 var previousPoint = null;
-$(document.body).on("plothover", ".monitor-window", function (event, pos, item) {
+$(".monitor-window").bind("plothover", function (event, pos, item) {
 
     if (item) {
         if (previousPoint != item.dataIndex) {
