@@ -22,7 +22,7 @@ $(function() {
         return false;
     })
 
-    $("form[id*='monitor_window']").live('ajax:success', function(evt, data) {
+    $(document.body).on('ajax:success', "form[id*='monitor_window']", function(evt, data) {
         if (data.length < 2) {
             $("#dialogMonitorWindows").dialog("close");
         } else {
@@ -30,7 +30,7 @@ $(function() {
         }
     })
 
-    $("form[id*='monitor_sensor']").live('ajax:success', function(evt, data) {
+    $(document.body).on('ajax:success', "form[id*='monitor_sensor']", function(evt, data) {
         if (data.length < 2) {
             $("#dialogMonitorSensors").dialog("close");
             $("#flexMonitorSensors").flexReload();

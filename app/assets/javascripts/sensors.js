@@ -68,7 +68,7 @@ $(function() {
         return false;
     })
 
-    $("form[id*='sensor']").live('ajax:success', function(evt, data) {
+    $(document.body).live('ajax:success', "form[id*='sensor']", function(evt, data) {
         if (data.length < 2) {
             $("#dialogSensors").dialog("close");
         } else {
