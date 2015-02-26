@@ -29,8 +29,14 @@ test:
   password: Mariann1
   timeout: 5000
 
+# Production DB on WebFaction (Heroku handles through environment vars I think)
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: ehw_production
   pool: 5
+  username: ehw_connection
+  password: ehwit
   timeout: 5000
+  port: 32297
+  host: localhost
