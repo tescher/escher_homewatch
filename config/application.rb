@@ -71,5 +71,8 @@ module EscherHomewatch
     # prevent precompile failures on Herolu
     config.assets.initialize_on_precompile = false
 
+    # Custom configuration
+    config.x.hosting_vendor = ENV["HOSTING_VENDOR"]
+
   end
 end
