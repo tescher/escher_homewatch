@@ -21,6 +21,8 @@ EscherHomewatch::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  config.relative_url_root = ENV["RAILS_RELATIVE_URL_ROOT"]
+
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 
