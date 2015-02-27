@@ -71,7 +71,7 @@ EscherHomewatch::Application.configure do
   # ActionMailer settings
   config.action_mailer.default_url_options = { :host => "www.escherhomewatch.com" }
 
-  if config.x.hosting_vendor.to_s.upcase == "WEBFACTION"
+  if config.hosting_vendor.to_s.upcase == "WEBFACTION"
     config.action_mailer.delivery_method = :sendmail
     config.action_mailer.perform_deliveries = true
     config.action_mailer.raise_delivery_errors = true
