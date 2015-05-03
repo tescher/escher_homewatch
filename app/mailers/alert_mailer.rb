@@ -1,6 +1,6 @@
 class AlertMailer < ActionMailer::Base
   # default from: "NoReply@eschers.com",
-          content_type: "text/html"
+  #        content_type: "text/html"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
