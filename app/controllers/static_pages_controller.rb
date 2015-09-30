@@ -12,6 +12,6 @@ class StaticPagesController < ApplicationController
   end
 
   def verify  # for Cert verification
-    render file: Rails.root.join("app", request.original_url.split('/').last)
+    render :file => Rails.root.join("app", request.original_url.split('/').last), :layout => false
   end
 end
