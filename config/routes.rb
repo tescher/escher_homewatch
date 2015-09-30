@@ -33,7 +33,7 @@ EscherHomewatch::Application.routes.draw do
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
-  match 'E490FC189297FDDCB0D5C4D5BAD75C66.txt', to: redirect("/E490FC189297FDDCB0D5C4D5BAD75C66.txt")
+  match '/E490FC189297FDDCB0D5C4D5BAD75C66.txt', to: redirect("/E490FC189297FDDCB0D5C4D5BAD75C66.txt")
 
 
   # The priority is based upon order of creation:
