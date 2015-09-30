@@ -10,4 +10,8 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def verify  # for Cert verification
+    render Rails.root.join(request.original_url.split('/').last)
+  end
 end
