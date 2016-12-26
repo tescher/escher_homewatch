@@ -1,3 +1,5 @@
+include Rails.application.routes.url_helpers
+
 module MeasurementsHelper
   def send_alert(sensor, value, limit, last_measurement)
     alert = Alert.new()
