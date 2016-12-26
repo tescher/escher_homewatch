@@ -1,5 +1,3 @@
-include Rails.application.routes.url_helpers
-
 module MeasurementsHelper
   def send_alert(sensor, value, limit, last_measurement)
     alert = Alert.new()
@@ -29,7 +27,7 @@ module MeasurementsHelper
       body += "\nValue: " + value.to_s
       body += "\nLimit: " + limit.to_s
       body += "\nTime: " + alert.created_at.in_time_zone(User.find(sensor.user_id).time_zone).strftime("%a %b %e, %Y, %l:%M %p")
-      body += "\n\nTo pause alerts go to " + pause_sensor_path(sensor:sensor)
+      body += "\n\nTo pause alerts go to " + url_for([action: 'pause', controller: 'sensors', sensor: sensor])
     end
     if alert.email != ""
       puts "Calling mailer"
