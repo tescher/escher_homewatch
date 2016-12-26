@@ -156,7 +156,7 @@ class SensorsController < ApplicationController
   def pause
     @sensor = Sensor.find(params[:id])
     pause = (params[:pause] || '0').to_i
-    if pause
+    if pause > 0
       @sensor.pause_until = DateTime.now + pause.minutes
       if @sensor.save
         flash[:success] = "Sensor paused " + (pause/60).to_s + " hours"
