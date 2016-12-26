@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 describe "SensorPages" do
+  include SessionsHelper
 
   before(:each) do
     3.times { FactoryGirl.create(:user) }
@@ -30,6 +31,7 @@ describe "SensorPages" do
 
       it "should list this user's sensors" do
         get sensors_path, format: "js"
+        pp "Signed in: " + signed_in?.to_s
         pp response.body
         parsed_body = JSON.parse(response.body)
         parsed_body["rows"].count.should == 2
