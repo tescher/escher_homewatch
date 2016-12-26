@@ -13,6 +13,8 @@ EscherHomewatch::Application.routes.draw do
     get 'getconfig', on: :collection
     get 'snapshot', on: :member
     get 'log', on: :member
+    get 'pause', on: :member
+    post 'pause', on: :member
   end
   resources :monitor_windows, only: [:new, :create, :update, :edit, :index, :destroy] do
     get 'public', on: :member

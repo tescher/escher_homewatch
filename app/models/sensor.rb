@@ -50,7 +50,7 @@ class Sensor < ActiveRecord::Base
   validates :scale, presence: true
   validates :sensor_type_id, existence: true
   validates :user_id, existence: true
-  validates :controller, presence: true, length: { maximum: 50 }
+  validates :controller, presence: true, length: { maximum: 50 }, format: { without: /\s/ }
   validates :trigger_email, format: { with: VALID_EMAIL_REGEX }, allow_blank: true
   validate :no_duplicate_addresses
 
