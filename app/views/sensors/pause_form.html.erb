@@ -1,0 +1,10 @@
+<div class="center hero-unit">
+  <%= render 'shared/error_messages', :subject => @sensor %>
+  <h2>Pause Alerts for <%= @sensor.name %></h2>
+
+  <table class="center"><tr>
+    <td class="btn-cell"><%= link_to "1 Hour", pause_sensor_path(sensor: @sensor, pause: 60), class: "btn btn-large btn-primary" %></td>
+    <td class="btn-cell"><%= link_to "8 Hours", pause_sensor_path(sensor: @sensor, pause: 8*60), class: "btn btn-large btn-primary" %></td>
+    <td class="btn-cell"><%= link_to "24 Hours", pause_sensor_path(sensor: @sensor, pause: 24*60), class: "btn btn-large btn-primary" %></td>
+  </tr></table>
+</div>

@@ -4,7 +4,7 @@ class SensorsController < ApplicationController
   include Utilities
 
   before_filter :signed_in_user, only: [:new, :create, :index]
-  before_filter :correct_or_admin_user,   only: [:edit, :update, :destroy, :snapshot, :log]
+  before_filter :correct_or_admin_user,   only: [:edit, :update, :destroy, :snapshot, :log, :pause]
 
 
   def new
@@ -73,15 +73,15 @@ class SensorsController < ApplicationController
         render :json => {
             :total=>sensors.size,
             :rows=>sensors.collect{|r| {:id=>r.id, :cell=>[
-                                        r.name,
-                                        r.controller,
-                                        r.trigger_enabled,
-                                        r.trigger_upper_limit,
-                                        r.trigger_lower_limit,
-                                        r.trigger_email,
-                                        r.absence_alert,
-                                        User.find_by_id(r.user_id).name]}},
-         }.to_json
+                r.name,
+                r.controller,
+                r.trigger_enabled,
+                r.trigger_upper_limit,
+                r.trigger_lower_limit,
+                r.trigger_email,
+                r.absence_alert,
+                User.find_by_id(r.user_id).name]}},
+        }.to_json
 
       end #format.js
 
@@ -107,15 +107,15 @@ class SensorsController < ApplicationController
         end
 
 
-          # Rendering
+        # Rendering
         render :json => {
-                   :total=>logs.size,
-                   :rows=>logs.collect{|r| {:id=>r.id, :cell=>[
-                       r.created_at,
-                       r.outage,
-                       r.restart_location,
-                       r.IP_address]}},
-               }.to_json
+            :total=>logs.size,
+            :rows=>logs.collect{|r| {:id=>r.id, :cell=>[
+                r.created_at,
+                r.outage,
+                r.restart_location,
+                r.IP_address]}},
+        }.to_json
 
       end #format.js
 
@@ -142,15 +142,29 @@ class SensorsController < ApplicationController
       end
       sensors = Sensor.find_all_by_controller(cntrl)
       render :json =>
-          sensors.collect{|s| {
-              :id => s.id,
-              :addressH => s.addressH,
-              :addressL => s.addressL,
-              :interval => (s.interval.to_s + 's'),
-              :type => SensorType.find(s.sensor_type_id).name}}
+                 sensors.collect{|s| {
+                     :id => s.id,
+                     :addressH => s.addressH,
+                     :addressL => s.addressL,
+                     :interval => (s.interval.to_s + 's'),
+                     :type => SensorType.find(s.sensor_type_id).name}}
     else
       render nothing: true
     end
+  end
+
+  def pause
+    @sensor = Sensor.find(params[:id])
+    pause = (params[:pause] || '0').to_i
+    if pause
+      @sensor.pause_until = DateTime.now + pause.minutes
+      if @sensor.save
+        flash[:success] = "Sensor paused " + (pause/60).to_s + " hours"
+      else
+        flash[:error] = "Could not pause sensor"
+      end
+    end
+    render :pause_form
   end
 
   def destroy
@@ -177,6 +191,7 @@ class SensorsController < ApplicationController
       @user = User.find(Sensor.find(params[:id]).user_id)
       redirect_to(root_path) unless (current_user?(@user) || (current_user && current_user.admin?))
     else
+      store_location
       redirect_to signin_url, notice: "Please sign in."
     end
   end

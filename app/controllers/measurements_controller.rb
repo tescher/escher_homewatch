@@ -34,19 +34,19 @@ class MeasurementsController < ApplicationController
         }.to_json
       else
         render :json =>  {
-              :id=>"",
-              :color=> "red",
-              :lines=> {show: false},
-              :points=> {show: true},
-              :data=> data.collect{|m| [m.created_at.to_i*1000, m.value ]}}.to_json
+            :id=>"",
+            :color=> "red",
+            :lines=> {show: false},
+            :points=> {show: true},
+            :data=> data.collect{|m| [m.created_at.to_i*1000, m.value ]}}.to_json
       end
     else
       ms = (params[:monitor_sensor_id].nil? ? nil : MonitorSensor.find(params[:monitor_sensor_id]))
       sensor = Sensor.find(params[:sensor_id])
       if (params[:limit])
-          data = Measurement.order("created_at desc").where("sensor_id = ? and created_at >= ? and created_at <= ?", params[:sensor_id].to_i, params[:start], params[:end]).limit(params[:limit])
+        data = Measurement.order("created_at desc").where("sensor_id = ? and created_at >= ? and created_at <= ?", params[:sensor_id].to_i, params[:start], params[:end]).limit(params[:limit])
       else
-          data = Measurement.order("created_at desc").where("sensor_id = ? and created_at >= ? and created_at <= ?", params[:sensor_id].to_i, params[:start], params[:end])
+        data = Measurement.order("created_at desc").where("sensor_id = ? and created_at >= ? and created_at <= ?", params[:sensor_id].to_i, params[:start], params[:end])
       end
       if params[:type] == "table"
         render :json => {
@@ -59,13 +59,13 @@ class MeasurementsController < ApplicationController
         }.to_json
       else
         render :json =>  {
-          :id=>params[:sensor_id],
-          :label=> (ms.nil? || ms.legend.empty? ? sensor.name : ms.legend),
-          :color=> (ms.nil? || ms.color.empty? ? "" : ms.color),
-          :color_auto=> (ms.nil? ? true : ms.color_auto),
-          :trigger_upper_limit => sensor.trigger_upper_limit,
-          :trigger_lower_limit => sensor.trigger_lower_limit,
-          :data=> data.collect{|m| [m.created_at.to_i*1000, m.value ]}}.to_json
+            :id=>params[:sensor_id],
+            :label=> (ms.nil? || ms.legend.empty? ? sensor.name : ms.legend),
+            :color=> (ms.nil? || ms.color.empty? ? "" : ms.color),
+            :color_auto=> (ms.nil? ? true : ms.color_auto),
+            :trigger_upper_limit => sensor.trigger_upper_limit,
+            :trigger_lower_limit => sensor.trigger_lower_limit,
+            :data=> data.collect{|m| [m.created_at.to_i*1000, m.value ]}}.to_json
       end
     end
 
@@ -82,12 +82,14 @@ class MeasurementsController < ApplicationController
     sensor = Sensor.find(sensor_id)
     if sensor.trigger_enabled
       last_alert = Alert.order("created_at desc").where("sensor_id = ?", sensor.id).limit(1)[0]
-      if !last_alert || ((Time.now.utc.to_i - last_alert.created_at.utc.to_i) > sensor.trigger_delay)
-        if sensor.trigger_upper_limit && (value > sensor.trigger_upper_limit)
-          send_alert(sensor, value, sensor.trigger_upper_limit, nil)
-        end
-        if sensor.trigger_lower_limit && (value < sensor.trigger_lower_limit)
-          send_alert(sensor, value, sensor.trigger_lower_limit, nil)
+      if (DateTime.now.to_i > sensor.pause_until.to_i)
+        if !last_alert || ((Time.now.utc.to_i - last_alert.created_at.utc.to_i) > sensor.trigger_delay)
+          if sensor.trigger_upper_limit && (value > sensor.trigger_upper_limit)
+            send_alert(sensor, value, sensor.trigger_upper_limit, nil)
+          end
+          if sensor.trigger_lower_limit && (value < sensor.trigger_lower_limit)
+            send_alert(sensor, value, sensor.trigger_lower_limit, nil)
+          end
         end
       end
     end

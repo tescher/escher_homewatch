@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141230191231) do
+ActiveRecord::Schema.define(:version => 20161226132402) do
 
   create_table "alerts", :force => true do |t|
     t.integer  "sensor_id"
@@ -131,6 +131,7 @@ ActiveRecord::Schema.define(:version => 20141230191231) do
     t.datetime "updated_at",          :null => false
     t.string   "trigger_lower_name"
     t.string   "trigger_upper_name"
+    t.datetime "pause_until"
   end
 
   create_table "users", :force => true do |t|
