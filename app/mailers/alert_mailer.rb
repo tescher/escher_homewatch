@@ -2,13 +2,8 @@ class AlertMailer < ActionMailer::Base
   # default from: "NoReply@eschers.com",
   #        content_type: "text/html"
 
-  # Subject can be set in your I18n file at config/locales/en.yml
-  # with the following lookup:
-  #
-  #   en.user_mailer.password_reset.subject
-  #
-  def alert_email(subject, body, alert)
+  def alert_email(subject, body, email)
     @body = body
-    mail :to => alert.email, :subject => subject
+    mail :to => email, :subject => subject
   end
 end

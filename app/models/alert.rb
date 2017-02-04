@@ -16,8 +16,10 @@ class Alert < ActiveRecord::Base
   belongs_to :sensor
 
   def send_email(subject, body)
-    message =  AlertMailer.alert_email(subject, body, self)
-    message.deliver
+    self.email.split(/\s*,\s*/).split(/\s*;\s*/).each { |email|
+      message =  AlertMailer.alert_email(subject, body, email)
+      message.deliver
+    }
   end
 
 
