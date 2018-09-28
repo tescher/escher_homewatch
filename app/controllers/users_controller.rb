@@ -64,8 +64,10 @@ class UsersController < ApplicationController
   end
 
   def signed_out_user
+    puts "Checking if signed out #{signed_in?}"
     unless !signed_in?
-      redirect_to root_path, status: 303
+      puts "Redirecting to #{root_path}"
+      redirect_to root_path, status: :see_other
     end
   end
 

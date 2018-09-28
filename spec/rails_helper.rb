@@ -4,6 +4,7 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/its'
 require 'capybara/rails'
+require 'pp'
 
 # require 'rspec/autorun'
 require 'spec_helper'

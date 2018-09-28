@@ -3,12 +3,12 @@ require 'rails_helper'
 describe "MonitorWindowPages" do
 
   before(:each) do
-    3.times { FactoryGirl.create(:user) }
+    3.times { FactoryBot.create(:user) }
     User.all.each do |user|
-      monitor_window = FactoryGirl.create(:monitor_window, user_id: user.id, name: "Window 1")
+      monitor_window = FactoryBot.create(:monitor_window, user_id: user.id, name: "Window 1")
       2.times {
-        sensor = FactoryGirl.create(:sensor, user_id: user.id, controller: "BasementArduino")
-        monitor_sensor = FactoryGirl.create(:monitor_sensor, monitor_window_id: monitor_window.id, sensor_id: sensor.id)
+        sensor = FactoryBot.create(:sensor, user_id: user.id, controller: "BasementArduino")
+        monitor_sensor = FactoryBot.create(:monitor_sensor, monitor_window_id: monitor_window.id, sensor_id: sensor.id)
         }
     end
   end
@@ -24,12 +24,12 @@ describe "MonitorWindowPages" do
 
   describe "index" do
     describe "with non-admin user"  do
-      let(:user) { FactoryGirl.create(:user) }
+      let(:user) { FactoryBot.create(:user) }
       before do
-        monitor_window = FactoryGirl.create(:monitor_window, user_id: user.id, name: "Window 1")
+        monitor_window = FactoryBot.create(:monitor_window, user_id: user.id, name: "Window 1")
         2.times {
-          sensor = FactoryGirl.create(:sensor, user_id: user.id, controller: "BasementArduino")
-          monitor_sensor = FactoryGirl.create(:monitor_sensor, monitor_window_id: monitor_window.id, initial_window_token: monitor_window.initial_token, sensor_id: sensor.id)
+          sensor = FactoryBot.create(:sensor, user_id: user.id, controller: "BasementArduino")
+          monitor_sensor = FactoryBot.create(:monitor_sensor, monitor_window_id: monitor_window.id, initial_window_token: monitor_window.initial_token, sensor_id: sensor.id)
         }
         valid_signin(user)
       end
@@ -66,12 +66,12 @@ describe "MonitorWindowPages" do
   end
 
   describe "with direct accesses" do
-    let(:user) { FactoryGirl.create(:user) }
+    let(:user) { FactoryBot.create(:user) }
     before do
-      monitor_window = FactoryGirl.create(:monitor_window, user_id: user.id, name: "Window 1")
+      monitor_window = FactoryBot.create(:monitor_window, user_id: user.id, name: "Window 1")
       2.times {
-        sensor = FactoryGirl.create(:sensor, user_id: user.id, controller: "BasementArduino")
-        monitor_sensor = FactoryGirl.create(:monitor_sensor, monitor_window_id: monitor_window.id, sensor_id: sensor.id)
+        sensor = FactoryBot.create(:sensor, user_id: user.id, controller: "BasementArduino")
+        monitor_sensor = FactoryBot.create(:monitor_sensor, monitor_window_id: monitor_window.id, sensor_id: sensor.id)
       }
     end
 

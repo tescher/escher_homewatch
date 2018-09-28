@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe UserMailer do
   describe "password_reset" do
-    let(:user) { FactoryGirl.create(:user) }
+    let(:user) { FactoryBot.create(:user) }
     let(:mail) { UserMailer.password_reset(user) }
 
     it "renders the headers" do

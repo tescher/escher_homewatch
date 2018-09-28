@@ -38,6 +38,7 @@ EscherHomewatch::Application.configure do
   config.log_level = :debug
 
   # ActionMailer settings
+  ActionMailer::Base.default :from => 'no-reply@escherhomewatch.com'
   config.action_mailer.default_url_options = { :host => "192.168.0.123:3000" }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.raise_delivery_errors = true

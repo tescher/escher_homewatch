@@ -28,7 +28,7 @@ describe "Authentication" do
 
     describe "with valid information" do
 
-      let(:user) { FactoryGirl.create(:user) }
+      let(:user) { FactoryBot.create(:user) }
       before { valid_signin(user) }
 
       it { should have_selector("title", text: "Monitor", visible: false) }
@@ -46,13 +46,13 @@ describe "Authentication" do
       end
 
       describe "with admin user" do
-        let(:admin) { FactoryGirl.create(:admin) }
+        let(:admin) { FactoryBot.create(:admin) }
         before { valid_signin(admin) }
         it { should have_link('Users',    href: users_path) }
       end
 
       describe "as pending user" do
-        let(:pended) { FactoryGirl.create(:pended) }
+        let(:pended) { FactoryBot.create(:pended) }
         before { valid_signin(pended) }
         it { should have_valid_header_and_title('User Confirmation', 'User Confirmation') }
         it { should have_error_message('not confirmed') }
@@ -76,7 +76,7 @@ describe "Authentication" do
   describe "authorization" do
 
     describe "for non-signed-in users" do
-      let(:user) { FactoryGirl.create(:user) }
+      let(:user) { FactoryBot.create(:user) }
 
       describe "in the Users controller" do
 
@@ -141,8 +141,8 @@ describe "Authentication" do
     end
 
     describe "as wrong user" do
-      let(:user) { FactoryGirl.create(:user) }
-      let(:wrong_user) { FactoryGirl.create(:user, email: "wrong@example.com") }
+      let(:user) { FactoryBot.create(:user) }
+      let(:wrong_user) { FactoryBot.create(:user, email: "wrong@example.com") }
       before { valid_signin user }
 
       describe "visiting Users#edit page" do
@@ -163,8 +163,8 @@ describe "Authentication" do
     end
 
     describe "as non-admin user" do
-      let(:user) { FactoryGirl.create(:user) }
-      let(:non_admin) { FactoryGirl.create(:user) }
+      let(:user) { FactoryBot.create(:user) }
+      let(:non_admin) { FactoryBot.create(:user) }
 
       before { valid_signin non_admin }
 
@@ -175,7 +175,7 @@ describe "Authentication" do
     end
 
     describe "as signed in user" do
-      let(:user) { FactoryGirl.create(:user) }
+      let(:user) { FactoryBot.create(:user) }
       before(:each) { valid_signin user }
 
       describe "trying to sign up" do
@@ -185,7 +185,7 @@ describe "Authentication" do
 
       describe "trying to create user" do
         before { page.driver.post signup_path }
-        specify { current_path.should == root_path }
+        specify { page.should have_current_path(root_path) }
       end
     end
 

@@ -30,7 +30,6 @@ end
 
 
 def valid_signin(user)
-  pp user
   #sign_in user
   visit signin_path
   fill_in "Email",    with: user.email
@@ -41,7 +40,6 @@ def valid_signin(user)
 end
 
 def valid_email_check(subject)
-  pp subject
   describe "when email format is invalid" do
     it "should be invalid" do
       addresses = %w[user@foo,com user_at_foo.org example.user@foo.

@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "Password reset pages" do
   subject { page }
 
-  before(:all) { @user = FactoryGirl.create(:user) }
+  before(:all) { @user = FactoryBot.create(:user) }
   after(:all) { @user.delete }
 
   @password_reset_token = ""

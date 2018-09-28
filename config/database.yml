@@ -8,14 +8,17 @@
 #   gem install pg
 #       Choose the win32 build.
 #       Install PostgreSQL and put its /bin directory on your path.
+
 development:
   adapter: postgresql
   encoding: unicode
-  database: escherhomewatch_development
+  database: <%= ENV["RAILS_DB_DATABASE"] || "escherhomewatch_development" %>
   pool: 5
-  username: postgres
-  password: Mariann1
+  username: <%= ENV["RAILS_DB_USER"] || "ehw_dev" %>
+  password: <%= ENV["RAILS_DB_PASSWORD"] || "^nHYebFYbsd9" %>
   timeout: 5000
+  host: localhost
+  # host: postgresql-common
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -23,20 +26,22 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: escherhomewatch_test
+  database: <%= ENV["RAILS_DB_DATABASE"] || "escherhomewatch_test" %>
   pool: 5
-  username: postgres
-  password: Mariann1
+  username: <%= ENV["RAILS_DB_USER"] || "ehw_test" %>
+  password: <%= ENV["RAILS_DB_PASSWORD"] || "^nHYebFYbsd9" %>
   timeout: 5000
+  host: localhost
+
 
 # Production DB on WebFaction (Heroku handles through environment vars I think)
 production:
   adapter: postgresql
   encoding: unicode
-  database: ehw_production
+  database: <%= ENV["RAILS_DB_DATABASE"] %>
   pool: 5
-  username: ehw_connection
-  password: ehwit
+  username: <%= ENV["RAILS_DB_USER"] %>
+  password: <%= ENV["RAILS_DB_PASSWORD"] %>
   timeout: 5000
-  port: 32297
+  port: <%= ENV["RAILS_DB_PORT"] %>
   host: localhost

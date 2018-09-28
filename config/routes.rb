@@ -29,13 +29,13 @@ EscherHomewatch::Application.routes.draw do
   root to: 'static_pages#home'
 
 
-  match '/help',    to: 'static_pages#help'
-  match '/about',   to: 'static_pages#about'
-  match '/contact', to: 'static_pages#contact'
-  match '/signup',  to: 'users#new'
-  match '/signin',  to: 'sessions#new'
+  match '/help',    to: 'static_pages#help', via: :get
+  match '/about',   to: 'static_pages#about', via: :get
+  match '/contact', to: 'static_pages#contact', via: :get
+  match '/signup',  to: 'users#new', via: [:get, :post]
+  match '/signin',  to: 'sessions#new', via: :get
   match '/signout', to: 'sessions#destroy', via: :delete
-  match '/E490FC189297FDDCB0D5C4D5BAD75C66.txt', to: 'static_pages#verify'
+  match '/E490FC189297FDDCB0D5C4D5BAD75C66.txt', to: 'static_pages#verify', via: :get
 
 
   # The priority is based upon order of creation:

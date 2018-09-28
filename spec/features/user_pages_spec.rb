@@ -56,7 +56,7 @@ describe "UserPages" do
   end
 
   describe "edit" do
-    let(:user) { FactoryGirl.create(:user) }
+    let(:user) { FactoryBot.create(:user) }
     before do
       valid_signin(user)
       visit edit_user_path(user)
@@ -94,7 +94,7 @@ describe "UserPages" do
   end
 
   describe "show" do
-    let(:user) { FactoryGirl.create(:user) }
+    let(:user) { FactoryBot.create(:user) }
     before do
       valid_signin(user)
       visit user_path(user)    # should redirect to Home
@@ -104,7 +104,7 @@ describe "UserPages" do
 
   describe "index" do
     describe "with non-admin user" do
-      let(:user) { FactoryGirl.create(:user) }
+      let(:user) { FactoryBot.create(:user) }
       before do
         valid_signin(user)
         visit users_path    # should redirect to Home
@@ -115,9 +115,9 @@ describe "UserPages" do
     describe "with admin user" do
 
 
-      let(:admin) { FactoryGirl.create(:admin) }
-      # FactoryGirl.create(:user, name: "Bob", email: "bob@example.com")
-      # FactoryGirl.create(:user, name: "Ben", email: "ben@example.com")
+      let(:admin) { FactoryBot.create(:admin) }
+      # FactoryBot.create(:user, name: "Bob", email: "bob@example.com")
+      # FactoryBot.create(:user, name: "Ben", email: "ben@example.com")
       before do
         valid_signin admin
         visit users_path
@@ -127,7 +127,7 @@ describe "UserPages" do
 
       describe "pagination" do
 
-        before(:all) { 30.times { FactoryGirl.create(:user) } }
+        before(:all) { 30.times { FactoryBot.create(:user) } }
         after(:all)  { User.delete_all }
 
         it { should have_selector('div.pagination') }

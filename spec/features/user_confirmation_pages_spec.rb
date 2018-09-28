@@ -4,7 +4,7 @@ describe "User confirmation pages" do
   subject { page }
 
   before(:all) {
-    @user = FactoryGirl.create(:pended)
+    @user = FactoryBot.create(:pended)
     pp @user
   }
   after(:all) { @user.delete }

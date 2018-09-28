@@ -4,9 +4,9 @@ describe "SensorPages" do
   include SessionsHelper
 
   before(:each) do
-    3.times { FactoryGirl.create(:user) }
+    3.times { FactoryBot.create(:user) }
     User.all.each do |user|
-      2.times { FactoryGirl.create(:sensor, user_id: user.id, controller: "BasementArduino") }
+      2.times { FactoryBot.create(:sensor, user_id: user.id, controller: "BasementArduino") }
     end
   end
   after(:each) do
@@ -19,9 +19,9 @@ describe "SensorPages" do
 
   describe "index" do
     describe "with non-admin user"  do
-      let(:user) { FactoryGirl.create(:user) }
+      let(:user) { FactoryBot.create(:user) }
       before do
-        2.times { FactoryGirl.create(:sensor, user_id: user.id) }
+        2.times { FactoryBot.create(:sensor, user_id: user.id) }
         valid_signin(user)
       end
       it {
@@ -53,7 +53,7 @@ describe "SensorPages" do
 
 
     describe "with admin user" do
-      let(:admin) { FactoryGirl.create(:admin) }
+      let(:admin) { FactoryBot.create(:admin) }
        before do
         valid_signin admin
         visit sensors_path
@@ -70,9 +70,9 @@ describe "SensorPages" do
   end
 
   describe "with direct accesses" do
-    let(:user) { FactoryGirl.create(:user) }
+    let(:user) { FactoryBot.create(:user) }
     before do
-      2.times { FactoryGirl.create(:sensor, user_id: user.id, controller: "BasementArduino") }
+      2.times { FactoryBot.create(:sensor, user_id: user.id, controller: "BasementArduino") }
     end
 
     describe "with logged out user" do

@@ -1,6 +1,6 @@
 class MonitorWindowsController < ApplicationController
 
-  before_filter :signed_in_user, only: [:new, :create, :index, :sort]
+  before_filter :signed_in_user, only: [:new, :create, :index, :sort, :temp]
   before_filter :correct_or_admin_user,   only: [:edit, :update, :destroy]
 
 
