@@ -55,6 +55,7 @@ group :test do
   gem "minitest"
   gem "minitest-reporters", '< 1.0.0'
   gem 'test-unit', '~> 3.0'
+  gem 'rubocop-rspec'
 
   # gem 'launchy', '2.1.0'
   # gem 'rb-fsevent', '0.9.1', :require => false

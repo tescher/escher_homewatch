@@ -6,7 +6,7 @@ describe "MeasurementPages" do
   before(:each) do
     3.times { FactoryBot.create(:user) }
     User.all.each do |user|
-      2.times { FactoryBot.create(:sensor, user_id: user.id, controller: user.name, offset: 15, scale: 2) }
+      2.times { FactoryBot.create(:sensor, user_id: user.id, controller: user.name.gsub(/\s+/, ""), offset: 15, scale: 2) }
     end
   end
   after(:each) do

@@ -152,7 +152,7 @@ describe "Authentication" do
 
       describe "submitting a PUT request to the Users#update action" do
         before { put user_path(wrong_user) }
-        specify { response.should redirect_to(signin_path) }
+        specify { response.should redirect_to(root_path) }
       end
 
       describe "profile page" do
@@ -170,7 +170,7 @@ describe "Authentication" do
 
       describe "submitting a DELETE request to the Users#destroy action" do
         before { delete user_path(user) }
-        specify { response.should redirect_to(signin_path) }
+        specify { response.should redirect_to(root_path) }
       end
     end
 
@@ -184,8 +184,10 @@ describe "Authentication" do
       end
 
       describe "trying to create user" do
-        before { page.driver.post signup_path }
-        specify { page.should have_current_path(root_path) }
+        it "Should redirect post to signin page" do
+          post signup_path
+          response.should redirect_to(root_path)
+        end
       end
     end
 

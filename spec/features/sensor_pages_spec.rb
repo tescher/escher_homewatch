@@ -122,17 +122,17 @@ describe "SensorPages" do
 
       it "Should redirect put to welcome page" do
         put sensor_path(Sensor.first)
-        response.should redirect_to(signin_url)
+        response.should redirect_to(root_path)
       end
 
       it "Should redirect delete to welcome page" do
         delete sensor_path(Sensor.first)
-        response.should redirect_to(signin_url)
+        response.should redirect_to(root_path)
       end
 
       it "Should redirect post to welcome page" do
         post sensors_path
-        response.should redirect_to(signin_url)
+        response.should redirect_to(root_path)
       end
     end
 
