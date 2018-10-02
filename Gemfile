@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby "2.2.7"
 
 gem 'rails', '4.2.10'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '< 3.0'
 gem 'bcrypt'
 gem 'faker'
 gem 'will_paginate', '3.0.3'
@@ -11,7 +11,7 @@ gem 'bootstrap-will_paginate', '0.0.6'
 # gem 'jquery-rails', '2.1.4'
 gem 'jquery-rails'
 gem 'pg', '~> 0.18'
-gem 'state_machine'
+gem 'state_machines-activerecord'
 gem 'validates_existence'
 gem 'jquery-ui-rails'
 gem 'rack-ssl-enforcer'
@@ -51,7 +51,7 @@ group :test do
   gem 'launchy'
   gem 'factory_bot_rails', '~> 4.0'
   gem 'cucumber-rails', :require => false
-  gem 'database_cleaner', '0.7.0'
+  gem 'database_cleaner'
   gem "minitest"
   gem "minitest-reporters", '< 1.0.0'
   gem 'test-unit', '~> 3.0'

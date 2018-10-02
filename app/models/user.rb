@@ -18,7 +18,7 @@
 #  summary_report         :boolean
 #
 
-require 'state_machine'
+# require 'state_machine'
 
 class User < ActiveRecord::Base
   has_secure_password

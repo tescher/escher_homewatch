@@ -114,7 +114,7 @@ class MeasurementsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def measurement_params
-    params.require(:measurement).permit(:sensor_id, :value, :key, :raw)
+    params.permit(:sensor_id, :value, :key, :raw)
   end
 
 
