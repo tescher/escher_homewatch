@@ -20,7 +20,7 @@ class MonitorSensorsController < ApplicationController
 
   def create
     if request.xhr?
-      @monitor_sensor = MonitorSensor.new(params[:monitor_sensor])
+      @monitor_sensor = MonitorSensor.new(monitor_sensor_params)
       if @monitor_sensor.save
         render nothing: true
       else
@@ -45,7 +45,7 @@ class MonitorSensorsController < ApplicationController
   def update
     if request.xhr?
       @monitor_sensor = MonitorSensor.find(params[:id])
-      if @monitor_sensor.update_attributes(params[:monitor_sensor])
+      if @monitor_sensor.update_attributes(monitor_sensor_params)
         render nothing: true
       else
         puts "Errors found: "
@@ -62,7 +62,7 @@ class MonitorSensorsController < ApplicationController
       format.js do
 
         # Get sensors for this window
-        monitor_sensors = MonitorSensor.order("id asc").find_all_by_monitor_window(params[:monitor_window_id], params[:initial_window_token])
+        monitor_sensors = MonitorSensor.order("id asc").find_all_monitor_window_sensors(params[:monitor_window_id], params[:initial_window_token])
 
         # Rendering
         if monitor_sensors
@@ -122,9 +122,15 @@ class MonitorSensorsController < ApplicationController
     if user.admin?
       Sensor.all
     else
-      Sensor.find_all_by_user_id(user.id)
+      Sensor.where(user_id: user.id)
     end
   end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def monitor_sensor_params
+    params.require(:monitor_sensor).permit(:color, :color_auto, :legend, :monitor_window_id, :sensor_id, :initial_window_token, :alerts_only)
+  end
+
 
 
 end

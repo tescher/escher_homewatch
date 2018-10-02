@@ -14,7 +14,7 @@
 #
 
 class Log < ActiveRecord::Base
-  attr_accessible :content, :controller, :sensor_id, :IP_address, :restart_location, :outage
+  # attr_accessible :content, :controller, :sensor_id, :IP_address, :restart_location, :outage
 
   validates :content, presence: true
 

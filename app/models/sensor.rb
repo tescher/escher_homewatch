@@ -27,7 +27,6 @@
 
 class Sensor < ActiveRecord::Base
 
-  attr_accessible :absence_alert, :addressH, :addressL, :controller, :group, :interval, :name, :offset, :scale, :sensor_type_id, :trigger_delay, :trigger_email, :trigger_enabled, :trigger_lower_limit, :trigger_upper_limit, :user_id, :trigger_lower_name, :trigger_upper_name
   belongs_to :user
   belongs_to :sensor_type
   has_many :monitor_sensors

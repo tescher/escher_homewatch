@@ -3,9 +3,9 @@ class MeasurementsController < ApplicationController
   include Utilities
 
   def create
-    sensor_id = params[:sensor_id].to_i
-    value = params[:value].to_f
-    @measurement = Measurement.new(sensor_id: sensor_id, value: value, check_value: params[:value], check_hash: params[:key])
+    sensor_id = measurement_params[:sensor_id].to_i
+    value = measurement_params[:value].to_f
+    @measurement = Measurement.new(sensor_id: sensor_id, value: value, check_value: measurement_params[:value], check_hash: measurement_params[:key])
     if @measurement.save
       render text: "Filed successfully"
       check_alerts(sensor_id, @measurement.reload.value)
@@ -111,6 +111,12 @@ class MeasurementsController < ApplicationController
     end
 
   end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def measurement_params
+    params.require(:measurement).permit(:sensor_id, :value, :key, :raw)
+  end
+
 
 
 end

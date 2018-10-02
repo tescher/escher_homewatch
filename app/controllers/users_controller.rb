@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params[:user])
+    @user = User.new(user_params)
     if @user.save
       send_user_confirmation
       redirect_to root_url
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
 
   def update
     # @user = User.find(params[:id])  # Not needed, @user defined in correct_user
-    if @user.update_attributes(params[:user])
+    if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
       sign_in @user
       redirect_to @user
@@ -84,6 +84,12 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     redirect_to(root_path) unless (current_user?(@user) || (current_user && current_user.admin?))
   end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def user_params
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :time_zone, :summary_report)
+  end
+
 
 
 end

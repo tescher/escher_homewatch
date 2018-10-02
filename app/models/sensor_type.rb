@@ -11,6 +11,6 @@
 #
 
 class SensorType < ActiveRecord::Base
-  attr_accessible :name, :offset, :scale
+#  attr_accessible :name, :offset, :scale
   has_many  :sensors
 end

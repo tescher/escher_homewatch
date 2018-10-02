@@ -1,3 +1,3 @@
 class ConfigKey < ActiveRecord::Base
-  attr_accessible :key, :value
+  # attr_accessible :key, :value
 end

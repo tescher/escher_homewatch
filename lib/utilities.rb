@@ -79,7 +79,7 @@ module Utilities
         tz = ActiveSupport::TimeZone[user.time_zone]
         beginning_of_today = tz.local(date.year, date.month, date.day)
         beginning_of_yesterday = tz.local(date.yesterday.year, date.yesterday.month, date.yesterday.day)
-        Sensor.find_all_by_user_id(user.id).each {|sensor|
+        Sensor.where(user_id: user.id).each {|sensor|
           body += " \n\n" + sensor.name + ": "
           last_value = Measurement.order("created_at desc").where("sensor_id = ? and created_at < ?", sensor.id, beginning_of_today.strftime("%Y-%m-%d %H:%M:%S %z")).limit(1)[0]
           if (!last_value)

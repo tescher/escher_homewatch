@@ -16,7 +16,7 @@ class MonitorWindowsController < ApplicationController
 
   def create
     if request.xhr?
-      @monitor_window = MonitorWindow.new(params[:monitor_window])
+      @monitor_window = MonitorWindow.new(monitor_window_params)
       @monitor_window.user_id = current_user.id
       if @monitor_window.save
         render nothing: true
@@ -40,7 +40,7 @@ class MonitorWindowsController < ApplicationController
   def update
     if request.xhr?
       @monitor_window = MonitorWindow.find(params[:id])
-      if @monitor_window.update_attributes(params[:monitor_window])
+      if @monitor_window.update_attributes(monitor_window_params)
         render nothing: true
       else
         puts "Errors found: "
@@ -59,7 +59,7 @@ class MonitorWindowsController < ApplicationController
       format.js do
 
         # Get windows for this user
-        monitor_windows = MonitorWindow.find_all_by_user_id(current_user.id, :order => "position, id")
+        monitor_windows = MonitorWindow.where(user_id: current_user.id).order("position, id")
 
         # Rendering
         render_window_info(monitor_windows)
@@ -94,7 +94,7 @@ class MonitorWindowsController < ApplicationController
   end
 
   def sort
-    @monitor_windows = MonitorWindow.find_all_by_user_id(current_user.id)
+    @monitor_windows = MonitorWindow.where(user_id: current_user.id)
     @monitor_windows.each do |mw|
       mw.position = params["mc"].index(mw.id.to_s) + 1
       mw.save
@@ -114,7 +114,7 @@ class MonitorWindowsController < ApplicationController
       end
 
       format.js do
-        monitor_windows = MonitorWindow.find_all_by_initial_token(params[:id])
+        monitor_windows = MonitorWindow.where(initial_token: params[:id])
         render_window_info(monitor_windows)
       end
     end
@@ -123,8 +123,8 @@ class MonitorWindowsController < ApplicationController
   def destroy
     if request.xhr?
       mw = MonitorWindow.find(params[:id])
-      MonitorSensor.find_all_by_monitor_window_id(mw.id).each{ |ms| ms.destroy }
-      MonitorSensor.find_all_by_initial_window_token(mw.initial_token).each{ |ms| ms.destroy }
+      MonitorSensor.where(monitor_window_id: mw.id).each{ |ms| ms.destroy }
+      MonitorSensor.where(initial_window_token: mw.initial_token).each{ |ms| ms.destroy }
       mw.destroy
       render nothing: true
     else
@@ -169,7 +169,7 @@ class MonitorWindowsController < ApplicationController
             :y_axis_max_auto => mw.y_axis_max_auto,
             :y_axis_min => mw.y_axis_min,
             :y_axis_min_auto => mw.y_axis_min_auto,
-            :monitor_sensors => MonitorSensor.find_all_by_monitor_window(mw.id, mw.initial_token).collect{|ms|
+            :monitor_sensors => MonitorSensor.find_all_monitor_window_sensors(mw.id, mw.initial_token).collect{|ms|
               sensor_name =  Sensor.find(ms.sensor_id).name
               {
                   :sensor_id => ms.sensor_id,
@@ -186,6 +186,12 @@ class MonitorWindowsController < ApplicationController
     }.to_json
 
   end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def monitor_window_params
+    params.require(:monitor_window).permit(:background_color, :background_color_auto, :monitor_type, :name, :user_id, :legend, :public, :url, :width, :x_axis_auto, :x_axis_days, :y_axis_max, :y_axis_max_auto, :y_axis_min, :y_axis_min_auto, :initial_token, :position)
+  end
+
 
 end
 

@@ -18,7 +18,7 @@ class SensorsController < ApplicationController
 
   def create
     if request.xhr?
-      @sensor = Sensor.new(params[:sensor])
+      @sensor = Sensor.new(sensor_params)
       @sensor.user_id = current_user.id
       if @sensor.save
         render nothing: true
@@ -43,7 +43,7 @@ class SensorsController < ApplicationController
   def update
     if request.xhr?
       @sensor = Sensor.find(params[:id])
-      if @sensor.update_attributes(params[:sensor])
+      if @sensor.update_attributes(sensor_params)
         render nothing: true
       else
         puts "Errors found: "
@@ -64,7 +64,7 @@ class SensorsController < ApplicationController
 
         # Get sensors for this user, or all for admin
         if !current_user.admin?
-          sensors = Sensor.find_all_by_user_id(current_user.id)
+          sensors = Sensor.where(user_id: current_user.id)
         else
           sensors = Sensor.all
         end
@@ -140,7 +140,7 @@ class SensorsController < ApplicationController
         @log = Log.new(controller: cntrl, content: log_content)
         @log.save
       end
-      sensors = Sensor.find_all_by_controller(cntrl)
+      sensors = Sensor.where(controller: cntrl)
       render :json =>
                  sensors.collect{|s| {
                      :id => s.id,
@@ -195,6 +195,12 @@ class SensorsController < ApplicationController
       redirect_to signin_url, notice: "Please sign in."
     end
   end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def sensor_params
+    params.require(:sensor).permit(:absence_alert, :addressH, :addressL, :controller, :group, :interval, :name, :offset, :scale, :sensor_type_id, :trigger_delay, :trigger_email, :trigger_enabled, :trigger_lower_limit, :trigger_upper_limit, :user_id, :trigger_lower_name, :trigger_upper_name)
+  end
+
 
 end
 

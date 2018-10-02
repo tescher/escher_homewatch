@@ -12,7 +12,6 @@
 #
 
 class Alert < ActiveRecord::Base
-  attr_accessible :email, :limit, :sensor_id, :value, :created_at
   belongs_to :sensor
 
   def send_email(subject, body)
