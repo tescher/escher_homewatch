@@ -39,7 +39,7 @@ describe "MonitorWindowPages" do
       }
 
       it "should list this user's monitors and sensors" do
-        get monitor_windows_path, format: "js"
+        xhr :get, monitor_windows_path, format: "js"
         pp response.body
         parsed_body = JSON.parse(response.body)
         parsed_body["monitor_windows"].count.should == 1

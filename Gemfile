@@ -53,7 +53,7 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
   gem "minitest"
-  gem "minitest-reporters", '< 1.0.0'
+  gem "minitest-reporters"
   gem 'test-unit', '~> 3.0'
   gem 'rubocop-rspec'
 

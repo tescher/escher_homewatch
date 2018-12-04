@@ -1,1 +1,1 @@
-Rails.application.config.assets.precompile += %w( monitor_windows.js )
+Rails.application.config.assets.precompile += %w( monitor_windows.js sensors.js )

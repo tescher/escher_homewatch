@@ -30,7 +30,7 @@ describe "SensorPages" do
       }
 
       it "should list this user's sensors" do
-        get sensors_path, format: "js"
+        xhr :get, sensors_path, format: "js"
         pp "Signed in: " + signed_in?.to_s
         pp response.body
         parsed_body = JSON.parse(response.body)
@@ -62,7 +62,7 @@ describe "SensorPages" do
       it { should have_valid_header_and_title('Manage Sensors','Manage Sensors') }
 
       it "should list this user's sensors" do
-        get sensors_path, format: "js"
+        xhr :get, sensors_path, format: "js"
         parsed_body = JSON.parse(response.body)
         parsed_body["rows"].count.should == 6
       end
